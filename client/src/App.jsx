@@ -1,3 +1,9 @@
+/**
+ * App
+ * Top-level routes — one <Route> per page above, wrapped in <Layout>.
+ * "/" -> Dashboard
+ */
+
 import { useEffect, useState } from 'react'
 import { listSightings, createSighting, deleteSighting } from './api'
 import DemoNotice from './components/DemoNotice.jsx'
