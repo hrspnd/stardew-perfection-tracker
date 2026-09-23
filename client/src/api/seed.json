@@ -1,8 +1,65 @@
-[
-  { "id": "seed-1", "place": "Library, third floor", "description": "Chairs rearranged overnight, every time. The night guard says he locks the room himself.", "spookiness": 3, "reported_at": "2026-08-01T14:20:00.000Z" },
-  { "id": "seed-2", "place": "Old gym", "description": "Lights flicker in a fixed pattern after 9pm, always three short and one long.", "spookiness": 4, "reported_at": "2026-08-03T11:05:00.000Z" },
-  { "id": "seed-3", "place": "Parking basement", "description": "Footsteps with no one there. Reported separately by three different people in one week, which is what makes this one hard to dismiss. Two of them were alone at the time and did not know about the others. This entry is deliberately long, because a seed row of four words hides every text-wrapping bug you have.", "spookiness": 5, "reported_at": "2026-08-05T22:40:00.000Z" },
-  { "id": "seed-4", "place": "Canteen", "description": "A cold spot near the back door, every morning before seven.", "spookiness": 1, "reported_at": "2026-08-06T07:15:00.000Z" },
-  { "id": "seed-5", "place": "AB Building stairwell", "description": "", "spookiness": 2, "reported_at": "2026-08-08T18:30:00.000Z" },
-  { "id": "seed-6", "place": "Chapel garden", "description": "Someone humming. Stops the moment you turn around.", "spookiness": 3, "reported_at": "2026-08-10T05:50:00.000Z" }
-]
+{
+  "shipped": [
+    { "id": "parsnip", "name": "Parsnip", "checked": false, "columns": ["Spring", "35g", "0"] },
+    { "id": "cauliflower", "name": "Cauliflower", "checked": false, "columns": ["Spring", "175g", "0"] },
+    { "id": "blueberry", "name": "Blueberry", "checked": false, "columns": ["Summer", "50g", "12"] }
+  ],
+  "walnuts": [
+    { "id": "walnut-01", "name": "Walnut Hidden in Tree Stump", "checked": false },
+    { "id": "walnut-02", "name": "Walnut Buried on Beach", "checked": false },
+    { "id": "walnut-03", "name": "Walnut Behind Waterfall", "checked": true }
+  ],
+  "fish": [
+    { "id": "sturgeon", "name": "Sturgeon", "checked": false },
+    { "id": "catfish", "name": "Catfish", "checked": false },
+    { "id": "legend", "name": "Legend", "checked": false }
+  ],
+  "bundles": [
+    { "id": "spring-crops", "name": "Spring Crops Bundle", "checked": false },
+    { "id": "summer-crops", "name": "Summer Crops Bundle", "checked": false },
+    { "id": "fall-crops", "name": "Fall Crops Bundle", "checked": true }
+  ],
+  "cooking": [
+    { "id": "fried-egg", "name": "Fried Egg", "checked": true },
+    { "id": "pancakes", "name": "Pancakes", "checked": false },
+    { "id": "tortilla", "name": "Tortilla", "checked": false }
+  ],
+  "crafting": [
+    { "id": "scarecrow", "name": "Scarecrow", "checked": true },
+    { "id": "sprinkler", "name": "Sprinkler", "checked": true },
+    { "id": "cheese-press", "name": "Cheese Press", "checked": false }
+  ],
+  "obelisks": [
+    { "id": "earth-obelisk", "name": "Earth Obelisk", "checked": false },
+    { "id": "water-obelisk", "name": "Water Obelisk", "checked": false },
+    { "id": "desert-obelisk", "name": "Desert Obelisk", "checked": false }
+  ],
+  "goldenClock": [
+    { "id": "golden-clock", "name": "Golden Clock", "checked": false }
+  ],
+  "stardrops": [
+    { "id": "stardrop-01", "name": "The Mines Level 100", "checked": false },
+    { "id": "stardrop-02", "name": "Old Master Cannoli", "checked": false },
+    { "id": "stardrop-03", "name": "Fair Star Drop", "checked": true }
+  ],
+  "monsterSlayer": [
+    { "id": "slimes", "name": "Slimes", "checked": true },
+    { "id": "void-spirits", "name": "Void Spirits", "checked": false },
+    { "id": "mummies", "name": "Mummies", "checked": false }
+  ],
+  "museum": [
+    { "id": "dwarf-scroll-1", "name": "Dwarf Scroll I", "checked": true },
+    { "id": "chipped-amphora", "name": "Chipped Amphora", "checked": false },
+    { "id": "emerald", "name": "Emerald", "checked": false }
+  ],
+  "greatFriends": [
+    { "id": "abigail", "name": "Abigail", "checked": false },
+    { "id": "sebastian", "name": "Sebastian", "checked": true },
+    { "id": "penny", "name": "Penny", "checked": false }
+  ],
+  "farmerLevel": [
+    { "id": "farming", "name": "Farming", "checked": false },
+    { "id": "mining", "name": "Mining", "checked": false },
+    { "id": "combat", "name": "Combat", "checked": false }
+  ]
+} 

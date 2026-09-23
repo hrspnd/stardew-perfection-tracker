@@ -6,11 +6,11 @@
 //
 // This exists so the template's GitHub Pages link works on day one and so you
 // can build the interface before your API is deployed. It is NOT a finished
-// project. See content/extending-your-app page 3.
+// project.
 
 import seed from './seed.json'
 
-const KEY = 'final-project:sightings'
+const KEY = 'stardew-tracker:progress'
 
 // A real network is not instant. Keeping this delay is what forces you to build
 // a loading state now, while it is cheap, instead of discovering you need one
@@ -31,45 +31,38 @@ function read() {
   return seed
 }
 
-function write(rows) {
-  localStorage.setItem(KEY, JSON.stringify(rows))
-  return rows
+function write(data) {
+  localStorage.setItem(KEY, JSON.stringify(data))
+  return data
 }
 
-export async function listSightings() {
+export async function listCategory(category) {
   await delay()
-  return read().slice().sort((a, b) => b.reported_at.localeCompare(a.reported_at))
+  const data = read()
+  if (!(category in data)) throw new Error(`Unknown category: ${category}`)
+  return data[category]
 }
 
-export async function getSighting(id) {
+export async function toggleItem(category, itemId) {
   await delay()
-  const found = read().find((row) => String(row.id) === String(id))
-  if (!found) throw new Error('Not found')
-  return found
-}
-
-export async function createSighting(input) {
-  await delay()
-  const created = {
-    ...input,
-    id: crypto.randomUUID(),
-    reported_at: new Date().toISOString(),
-  }
-  write([...read(), created])
-  return created
-}
-
-export async function updateSighting(id, input) {
-  await delay()
-  const rows = read()
-  const index = rows.findIndex((row) => String(row.id) === String(id))
+  const data = read()
+  const items = data[category] ?? []
+  const index = items.findIndex((item) => String(item.id) === String(itemId))
   if (index === -1) throw new Error('Not found')
-  rows[index] = { ...rows[index], ...input }
-  write(rows)
-  return rows[index]
+  items[index] = { ...items[index], checked: !items[index].checked }
+  write(data)
+  return items[index]
 }
 
-export async function deleteSighting(id) {
+export async function getSummary() {
   await delay()
-  write(read().filter((row) => String(row.id) !== String(id)))
+  const data = read()
+  const summary = {}
+  for (const [category, items] of Object.entries(data)) {
+    summary[category] = {
+      total: items.length,
+      completed: items.filter((item) => item.checked).length,
+    }
+  }
+  return summary
 }
