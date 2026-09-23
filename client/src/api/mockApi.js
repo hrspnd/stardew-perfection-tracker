@@ -59,9 +59,23 @@ export async function getSummary() {
   const data = read()
   const summary = {}
   for (const [category, items] of Object.entries(data)) {
-    summary[category] = {
-      total: items.length,
-      completed: items.filter((item) => item.checked).length,
+    if (category === 'farmerLevel') {
+      // Skills don't have a flat `checked` field - progress here means
+      // how many of the 10 levels (5 + 5) are checked, summed across skills.
+      const totalLevels = items.length * 10
+      const completedLevels = items.reduce(
+        (sum, skill) =>
+          sum +
+          skill.levels1to5.filter(Boolean).length +
+          skill.levels6to10.filter(Boolean).length,
+        0
+      )
+      summary[category] = { total: totalLevels, completed: completedLevels }
+    } else {
+      summary[category] = {
+        total: items.length,
+        completed: items.filter((item) => item.checked).length,
+      }
     }
   }
   return summary
