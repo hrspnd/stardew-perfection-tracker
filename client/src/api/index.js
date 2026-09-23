@@ -21,10 +21,12 @@ export const USING_MOCK_API = import.meta.env.VITE_USE_MOCK_API !== 'false'
 const implementation = USING_MOCK_API ? mockApi : httpApi
 
 // category is one of: shipped, walnuts, fish, bundles, cooking, crafting,
-// obelisks, goldenClock, stardrops, monsterSlayer, museum, greatFriends,
-// farmerLevel (see seed.json for the full set of keys)
+// obelisks, goldenClock, stardrops, monsterSlayer, museum, greatFriends
+// (farmerLevel uses its own functions below, not listCategory/toggleItem)
 export const {
   listCategory,
   toggleItem,
   getSummary,
+  toggleSkillLevel,
+  setSkillProfession,
 } = implementation

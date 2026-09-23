@@ -66,3 +66,45 @@ export async function getSummary() {
   }
   return summary
 }
+
+// --- Farmer Level only: skills don't fit the flat checked/unchecked shape,
+// so they get their own two functions instead of listCategory/toggleItem.
+
+export async function toggleSkillLevel(skillId, tier, levelIndex) {
+  await delay()
+  const data = read()
+  const skills = data.farmerLevel ?? []
+  const index = skills.findIndex((s) => s.id === skillId)
+  if (index === -1) throw new Error('Not found')
+
+  const key = tier === 5 ? 'levels1to5' : 'levels6to10'
+  const levels = [...skills[index][key]]
+  levels[levelIndex] = !levels[levelIndex]
+  skills[index] = { ...skills[index], [key]: levels }
+  write(data)
+  return skills[index]
+}
+
+export async function setSkillProfession(skillId, tier, value) {
+  await delay()
+  const data = read()
+  const skills = data.farmerLevel ?? []
+  const index = skills.findIndex((s) => s.id === skillId)
+  if (index === -1) throw new Error('Not found')
+
+  if (tier === 5) {
+    const changed = skills[index].profession5 !== value
+    skills[index] = {
+      ...skills[index],
+      profession5: value,
+      // Level-10 options depend on the level-5 pick, so a changed pick
+      // invalidates whatever level-10 profession was previously chosen.
+      profession10: changed ? null : skills[index].profession10,
+    }
+  } else {
+    skills[index] = { ...skills[index], profession10: value }
+  }
+
+  write(data)
+  return skills[index]
+}

@@ -33,3 +33,19 @@ export async function toggleItem(category, itemId) {
 export async function getSummary() {
   return request('/api/summary')
 }
+
+// --- Farmer Level only ---
+
+export async function toggleSkillLevel(skillId, tier, levelIndex) {
+  return request(
+    `/api/farmer-level/${encodeURIComponent(skillId)}/levels/${tier}/${levelIndex}/toggle`,
+    { method: 'PATCH' }
+  )
+}
+
+export async function setSkillProfession(skillId, tier, value) {
+  return request(
+    `/api/farmer-level/${encodeURIComponent(skillId)}/profession/${tier}`,
+    { method: 'PATCH', body: JSON.stringify({ value }) }
+  )
+}

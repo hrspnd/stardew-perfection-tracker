@@ -2,32 +2,32 @@
   "shipped": [
     { "id": "parsnip", "name": "Parsnip", "checked": false, "columns": ["Spring", "35g", "0"] },
     { "id": "cauliflower", "name": "Cauliflower", "checked": false, "columns": ["Spring", "175g", "0"] },
-    { "id": "blueberry", "name": "Blueberry", "checked": false, "columns": ["Summer", "50g", "12"] }
+    { "id": "blueberry", "name": "Blueberry", "checked": true, "columns": ["Summer", "50g", "12"] }
   ],
   "walnuts": [
-    { "id": "walnut-01", "name": "Walnut Hidden in Tree Stump", "checked": false },
-    { "id": "walnut-02", "name": "Walnut Buried on Beach", "checked": false },
-    { "id": "walnut-03", "name": "Walnut Behind Waterfall", "checked": true }
+    { "id": "walnut-01", "name": "Walnut Hidden in Tree Stump", "checked": false, "columns": ["North Island", "Break with axe", "Not found"] },
+    { "id": "walnut-02", "name": "Walnut Buried on Beach", "checked": false, "columns": ["South Island", "Dig with shovel", "Not found"] },
+    { "id": "walnut-03", "name": "Walnut Behind Waterfall", "checked": true, "columns": ["North Island", "Walk behind waterfall", "Found"] }
   ],
   "fish": [
-    { "id": "sturgeon", "name": "Sturgeon", "checked": false },
-    { "id": "catfish", "name": "Catfish", "checked": false },
-    { "id": "legend", "name": "Legend", "checked": false }
+    { "id": "sturgeon", "name": "Sturgeon", "checked": false, "columns": ["Summer/Winter", "Mountain Lake", "6am-7pm"] },
+    { "id": "catfish", "name": "Catfish", "checked": false, "columns": ["Spring/Fall", "River, rain only", "6am-12am"] },
+    { "id": "legend", "name": "Legend", "checked": false, "columns": ["Spring, rain only", "Mountain Lake", "6am-2am"] }
   ],
   "bundles": [
-    { "id": "spring-crops", "name": "Spring Crops Bundle", "checked": false },
-    { "id": "summer-crops", "name": "Summer Crops Bundle", "checked": false },
-    { "id": "fall-crops", "name": "Fall Crops Bundle", "checked": true }
+    { "id": "spring-crops", "name": "Spring Crops Bundle", "checked": false, "columns": ["Parsnip, Green Bean, Cauliflower, Potato"] },
+    { "id": "summer-crops", "name": "Summer Crops Bundle", "checked": false, "columns": ["Tomato, Hot Pepper, Blueberry, Melon"] },
+    { "id": "fall-crops", "name": "Fall Crops Bundle", "checked": true, "columns": ["Corn, Eggplant, Pumpkin, Yam"] }
   ],
   "cooking": [
-    { "id": "fried-egg", "name": "Fried Egg", "checked": true },
-    { "id": "pancakes", "name": "Pancakes", "checked": false },
-    { "id": "tortilla", "name": "Tortilla", "checked": false }
+    { "id": "fried-egg", "name": "Fried Egg", "checked": true, "columns": ["Starter recipe", "1 Egg"] },
+    { "id": "pancakes", "name": "Pancakes", "checked": false, "columns": ["Gus, 3 hearts", "1 Wheat Flour, 1 Egg"] },
+    { "id": "tortilla", "name": "Tortilla", "checked": false, "columns": ["TV Cooking Channel", "1 Corn"] }
   ],
   "crafting": [
-    { "id": "scarecrow", "name": "Scarecrow", "checked": true },
-    { "id": "sprinkler", "name": "Sprinkler", "checked": true },
-    { "id": "cheese-press", "name": "Cheese Press", "checked": false }
+    { "id": "scarecrow", "name": "Scarecrow", "checked": true, "columns": ["Farming level 1", "50 Wood, 1 Coal, 20 Fiber"] },
+    { "id": "sprinkler", "name": "Sprinkler", "checked": true, "columns": ["Farming level 2", "1 Copper Bar, 1 Iron Bar"] },
+    { "id": "cheese-press", "name": "Cheese Press", "checked": false, "columns": ["Farming level 6", "45 Wood, 10 Stone, 10 Copper Bar"] }
   ],
   "obelisks": [
     { "id": "earth-obelisk", "name": "Earth Obelisk", "checked": false },
@@ -43,23 +43,130 @@
     { "id": "stardrop-03", "name": "Fair Star Drop", "checked": true }
   ],
   "monsterSlayer": [
-    { "id": "slimes", "name": "Slimes", "checked": true },
-    { "id": "void-spirits", "name": "Void Spirits", "checked": false },
-    { "id": "mummies", "name": "Mummies", "checked": false }
+    { "id": "slimes", "name": "Slimes", "checked": true, "columns": ["Quantity: 1000", "Reward: Slime Charmer Ring", "Ring that reduces damage from slimes"] },
+    { "id": "void-spirits", "name": "Void Spirits", "checked": false, "columns": ["Quantity: 150", "Reward: Crystal of Reflection", "A crystal to summon a companion"] },
+    { "id": "mummies", "name": "Mummies", "checked": false, "columns": ["Quantity: 100", "Reward: Vampire Ring", "Life drain on hit"] }
   ],
   "museum": [
-    { "id": "dwarf-scroll-1", "name": "Dwarf Scroll I", "checked": true },
-    { "id": "chipped-amphora", "name": "Chipped Amphora", "checked": false },
-    { "id": "emerald", "name": "Emerald", "checked": false }
+    { "id": "dwarf-scroll-1", "name": "Dwarf Scroll I", "checked": true, "columns": ["Artifact", "The Mines, floors 1-40"] },
+    { "id": "chipped-amphora", "name": "Chipped Amphora", "checked": false, "columns": ["Artifact", "Digging on the beach"] },
+    { "id": "emerald", "name": "Emerald", "checked": false, "columns": ["Mineral", "The Mines, floors 1-40, or panning"] }
   ],
   "greatFriends": [
-    { "id": "abigail", "name": "Abigail", "checked": false },
-    { "id": "sebastian", "name": "Sebastian", "checked": true },
-    { "id": "penny", "name": "Penny", "checked": false }
+    { "id": "abigail", "name": "Abigail", "checked": false, "columns": ["Birthday: Fall 13", "Loves: Amethyst, Chocolate Cake, Pufferfish, Pumpkin, Spicy Eel", "Likes: most gems, quartz", "Loved Movies: comedy, spooky", "Loved Concessions: any"] },
+    { "id": "sebastian", "name": "Sebastian", "checked": true, "columns": ["Birthday: Winter 10", "Loves: Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg", "Likes: most gems, quartz", "Loved Movies: horror, thriller", "Loved Concessions: any"] },
+    { "id": "penny", "name": "Penny", "checked": false, "columns": ["Birthday: Fall 2", "Loves: Diamond, Emerald, Melon, Poppy, Red Plate, Roots Platter, Sandfish, Tom Kha Soup", "Likes: fruit, most gems", "Loved Movies: family", "Loved Concessions: fruit snacks"] }
   ],
   "farmerLevel": [
-    { "id": "farming", "name": "Farming", "checked": false },
-    { "id": "mining", "name": "Mining", "checked": false },
-    { "id": "combat", "name": "Combat", "checked": false }
+    {
+      "id": "farming",
+      "name": "Farming",
+      "levels1to5": [true, true, true, false, false],
+      "profession5": null,
+      "profession5Options": [
+        { "name": "Rancher", "description": "Animal products (Eggs, Truffles, Milk, etc.) sell for 20% more." },
+        { "name": "Tiller", "description": "Crops (Blueberries, Carrots, Ancient Fruit, etc.) sell for 10% more." }
+      ],
+      "levels6to10": [false, false, false, false, false],
+      "profession10": null,
+      "profession10OptionsByChoice": {
+        "Rancher": [
+          { "name": "Coopmaster", "description": "Befriend coop animals faster; egg incubation time is halved." },
+          { "name": "Shepherd", "description": "Befriend barn animals faster; sheep produce wool more often." }
+        ],
+        "Tiller": [
+          { "name": "Artisan", "description": "Artisan goods (Wine, Jelly, Cheese, etc.) sell for 40% more." },
+          { "name": "Agriculturist", "description": "Crops grow at least 10% faster." }
+        ]
+      }
+    },
+    {
+      "id": "mining",
+      "name": "Mining",
+      "levels1to5": [true, true, false, false, false],
+      "profession5": null,
+      "profession5Options": [
+        { "name": "Miner", "description": "Ore veins give one extra ore." },
+        { "name": "Geologist", "description": "Gems have a chance to appear in pairs." }
+      ],
+      "levels6to10": [false, false, false, false, false],
+      "profession10": null,
+      "profession10OptionsByChoice": {
+        "Miner": [
+          { "name": "Blacksmith", "description": "Metal bars sell for 50% more." },
+          { "name": "Prospector", "description": "Doubles the chance of finding coal." }
+        ],
+        "Geologist": [
+          { "name": "Excavator", "description": "Doubles the chance of finding geodes." },
+          { "name": "Gemologist", "description": "Gems sell for 30% more." }
+        ]
+      }
+    },
+    {
+      "id": "foraging",
+      "name": "Foraging",
+      "levels1to5": [true, false, false, false, false],
+      "profession5": null,
+      "profession5Options": [
+        { "name": "Forester", "description": "Trees have a 25% higher chance to give extra wood." },
+        { "name": "Gatherer", "description": "20% chance to double the amount of a foraged item." }
+      ],
+      "levels6to10": [false, false, false, false, false],
+      "profession10": null,
+      "profession10OptionsByChoice": {
+        "Forester": [
+          { "name": "Lumberjack", "description": "Normal trees have a chance to drop Hardwood." },
+          { "name": "Tapper", "description": "Syrup products (Maple Syrup, Oak Resin, Pine Tar) sell for 25% more." }
+        ],
+        "Gatherer": [
+          { "name": "Botanist", "description": "Foraged items are always of iridium quality." },
+          { "name": "Tracker", "description": "Shows an on-screen marker pointing to nearby forageable items." }
+        ]
+      }
+    },
+    {
+      "id": "fishing",
+      "name": "Fishing",
+      "levels1to5": [false, false, false, false, false],
+      "profession5": null,
+      "profession5Options": [
+        { "name": "Fisher", "description": "Fish sell for 25% more." },
+        { "name": "Trapper", "description": "Crab pots need fewer resources to craft." }
+      ],
+      "levels6to10": [false, false, false, false, false],
+      "profession10": null,
+      "profession10OptionsByChoice": {
+        "Fisher": [
+          { "name": "Angler", "description": "Fish sell for 50% more (replaces the Fisher bonus rather than stacking)." },
+          { "name": "Pirate", "description": "Doubles the chance of finding treasure while fishing." }
+        ],
+        "Trapper": [
+          { "name": "Mariner", "description": "Crab pots never produce junk items." },
+          { "name": "Luremaster", "description": "Crab pots work without needing bait." }
+        ]
+      }
+    },
+    {
+      "id": "combat",
+      "name": "Combat",
+      "levels1to5": [false, false, false, false, false],
+      "profession5": null,
+      "profession5Options": [
+        { "name": "Fighter", "description": "+10% damage, +15 max HP." },
+        { "name": "Scout", "description": "+50% critical hit chance." }
+      ],
+      "levels6to10": [false, false, false, false, false],
+      "profession10": null,
+      "profession10OptionsByChoice": {
+        "Fighter": [
+          { "name": "Brute", "description": "+15% damage, stacking with Fighter for +25% total." },
+          { "name": "Defender", "description": "+25 max HP." }
+        ],
+        "Scout": [
+          { "name": "Acrobat", "description": "Halves the cooldown on special moves." },
+          { "name": "Desperado", "description": "Doubles critical strike damage." }
+        ]
+      }
+    }
   ]
-} 
+}
