@@ -6,7 +6,7 @@ Screenshots of the Stardew Valley Perfection Tracker.
 
 - Run in demo mode: `npm run dev` in `client/`, then open `http://localhost:5173`.
 - Captured with the Windows Snipping Tool (`Win + Shift + S`) and saved as PNG.
-- Taken on [ADD: date]. The app has no styling yet, so these will be retaken after styling is added.
+- Taken on September 23, 2026. The app has no styling yet, so these will be retaken after styling is added.
 
 ## Updating them
 
