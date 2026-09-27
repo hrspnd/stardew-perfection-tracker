@@ -59,7 +59,21 @@ export async function getSummary() {
   const data = read()
   const summary = {}
   for (const [category, items] of Object.entries(data)) {
-    if (category === 'farmerLevel') {
+    if (category === 'shipped') {
+      // Grouped shape: array of { items: [...] }
+      const allItems = items.flatMap((group) => group.items)
+      summary[category] = {
+        total: allItems.length,
+        completed: allItems.filter((item) => item.checked).length,
+      }
+    } else if (category === 'bundles') {
+      // Nested shape: array of rooms > bundles > items
+      const allItems = items.flatMap((room) => room.bundles.flatMap((bundle) => bundle.items))
+      summary[category] = {
+        total: allItems.length,
+        completed: allItems.filter((item) => item.checked).length,
+      }
+    } else if (category === 'farmerLevel') {
       // Skills don't have a flat `checked` field - progress here means
       // how many of the 10 levels (5 + 5) are checked, summed across skills.
       const totalLevels = items.length * 10
@@ -79,6 +93,42 @@ export async function getSummary() {
     }
   }
   return summary
+}
+
+// --- Shipped only (for now): groups of items, each group has its own
+// checklist. category is always 'shipped' currently, but this is written
+// generically in case another category adopts the same grouped shape later.
+
+export async function toggleGroupedItem(category, groupId, itemId) {
+  await delay()
+  const data = read()
+  const groups = data[category] ?? []
+  const group = groups.find((g) => g.id === groupId)
+  if (!group) throw new Error('Group not found')
+  const item = group.items.find((i) => i.id === itemId)
+  if (!item) throw new Error('Item not found')
+  item.checked = !item.checked
+  write(data)
+  return item
+}
+
+// --- Bundles only: nested one level deeper than groupedItem (Room > Bundle
+// > Item), so it gets its own function rather than forcing a 3-arg category
+// function to also carry a room id.
+
+export async function toggleBundleItem(roomId, bundleId, itemId) {
+  await delay()
+  const data = read()
+  const rooms = data.bundles ?? []
+  const room = rooms.find((r) => r.id === roomId)
+  if (!room) throw new Error('Room not found')
+  const bundle = room.bundles.find((b) => b.id === bundleId)
+  if (!bundle) throw new Error('Bundle not found')
+  const item = bundle.items.find((i) => i.id === itemId)
+  if (!item) throw new Error('Item not found')
+  item.checked = !item.checked
+  write(data)
+  return item
 }
 
 // --- Farmer Level only: skills don't fit the flat checked/unchecked shape,

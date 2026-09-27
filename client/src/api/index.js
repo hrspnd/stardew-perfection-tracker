@@ -27,6 +27,8 @@ export const {
   listCategory,
   toggleItem,
   getSummary,
+  toggleGroupedItem,
+  toggleBundleItem,
   toggleSkillLevel,
   setSkillProfession,
 } = implementation

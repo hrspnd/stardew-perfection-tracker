@@ -34,6 +34,24 @@ export async function getSummary() {
   return request('/api/summary')
 }
 
+// --- Shipped only ---
+
+export async function toggleGroupedItem(category, groupId, itemId) {
+  return request(
+    `/api/categories/${encodeURIComponent(category)}/groups/${encodeURIComponent(groupId)}/items/${encodeURIComponent(itemId)}/toggle`,
+    { method: 'PATCH' }
+  )
+}
+
+// --- Bundles only ---
+
+export async function toggleBundleItem(roomId, bundleId, itemId) {
+  return request(
+    `/api/bundles/${encodeURIComponent(roomId)}/${encodeURIComponent(bundleId)}/items/${encodeURIComponent(itemId)}/toggle`,
+    { method: 'PATCH' }
+  )
+}
+
 // --- Farmer Level only ---
 
 export async function toggleSkillLevel(skillId, tier, levelIndex) {

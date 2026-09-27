@@ -45,29 +45,36 @@ export default function SkillTracker({ skills, onToggleLevel, onProfessionChange
 
             <div className="skill-tracker__row-body">
               <div className="skill-tracker__tier">
-                <div className="skill-tracker__checkboxes">
-                  {skill.levels1to5.map((checked, index) => (
-                    <input
-                      key={`5-${index}`}
-                      type="checkbox"
-                      checked={checked}
-                      onChange={() => onToggleLevel(skill.id, 5, index)}
-                      title={`Level ${index + 1}`}
-                    />
-                  ))}
-                </div>
+                <div className="skill-tracker__tier-controls">
+                  <div className="skill-tracker__level-labels">
+                    {skill.levels1to5.map((_, index) => (
+                      <span key={`label-5-${index}`}>{index + 1}</span>
+                    ))}
+                  </div>
+                  <div className="skill-tracker__checkboxes">
+                    {skill.levels1to5.map((checked, index) => (
+                      <input
+                        key={`5-${index}`}
+                        type="checkbox"
+                        checked={checked}
+                        onChange={() => onToggleLevel(skill.id, 5, index)}
+                        title={`Level ${index + 1}`}
+                      />
+                    ))}
+                  </div>
 
-                <select
-                  value={skill.profession5 ?? ''}
-                  onChange={(e) => onProfessionChange(skill.id, 5, e.target.value || null)}
-                >
-                  <option value="">Choose profession...</option>
-                  {skill.profession5Options.map((option) => (
-                    <option key={option.name} value={option.name}>
-                      {option.name}
-                    </option>
-                  ))}
-                </select>
+                  <select
+                    value={skill.profession5 ?? ''}
+                    onChange={(e) => onProfessionChange(skill.id, 5, e.target.value || null)}
+                  >
+                    <option value="">Choose profession...</option>
+                    {skill.profession5Options.map((option) => (
+                      <option key={option.name} value={option.name}>
+                        {option.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
 
                 {profession5Description && (
                   <p className="skill-tracker__description">{profession5Description}</p>
@@ -75,32 +82,39 @@ export default function SkillTracker({ skills, onToggleLevel, onProfessionChange
               </div>
 
               <div className="skill-tracker__tier">
-                <div className="skill-tracker__checkboxes">
-                  {skill.levels6to10.map((checked, index) => (
-                    <input
-                      key={`10-${index}`}
-                      type="checkbox"
-                      checked={checked}
-                      onChange={() => onToggleLevel(skill.id, 10, index)}
-                      title={`Level ${index + 6}`}
-                    />
-                  ))}
-                </div>
+                <div className="skill-tracker__tier-controls">
+                  <div className="skill-tracker__level-labels">
+                    {skill.levels6to10.map((_, index) => (
+                      <span key={`label-10-${index}`}>{index + 6}</span>
+                    ))}
+                  </div>
+                  <div className="skill-tracker__checkboxes">
+                    {skill.levels6to10.map((checked, index) => (
+                      <input
+                        key={`10-${index}`}
+                        type="checkbox"
+                        checked={checked}
+                        onChange={() => onToggleLevel(skill.id, 10, index)}
+                        title={`Level ${index + 6}`}
+                      />
+                    ))}
+                  </div>
 
-                <select
-                  value={skill.profession10 ?? ''}
-                  onChange={(e) => onProfessionChange(skill.id, 10, e.target.value || null)}
-                  disabled={profession10Options.length === 0}
-                >
-                  <option value="">
-                    {skill.profession5 ? 'Choose profession...' : 'Pick a level 5 profession first'}
-                  </option>
-                  {profession10Options.map((option) => (
-                    <option key={option.name} value={option.name}>
-                      {option.name}
+                  <select
+                    value={skill.profession10 ?? ''}
+                    onChange={(e) => onProfessionChange(skill.id, 10, e.target.value || null)}
+                    disabled={profession10Options.length === 0}
+                  >
+                    <option value="">
+                      {skill.profession5 ? 'Choose profession...' : 'Pick a level 5 profession first'}
                     </option>
-                  ))}
-                </select>
+                    {profession10Options.map((option) => (
+                      <option key={option.name} value={option.name}>
+                        {option.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
 
                 {profession10Description && (
                   <p className="skill-tracker__description">{profession10Description}</p>

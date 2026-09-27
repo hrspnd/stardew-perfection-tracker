@@ -1,37 +1,70 @@
 import { useEffect, useState } from 'react'
-import { listCategory, toggleItem } from '../api'
-import ListTracker from '../components/ListTracker'
+import { listCategory, toggleBundleItem } from '../api'
+import GroupedChecklist from '../components/GroupedChecklist'
 
 // Bundles (route: "/bundles")
-// Uses ListTracker. Same pattern as ProduceShipped.jsx.
-
-const CATEGORY = 'bundles'
+// Data is Room > Bundle > Item. Renders one GroupedChecklist per Room,
+// where each "group" passed to GroupedChecklist is actually one Bundle
+// (name = bundle name, items = required items, reward shown at the bottom).
 
 export default function Bundles() {
-  const [items, setItems] = useState([])
+  const [rooms, setRooms] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
     let cancelled = false
-    listCategory(CATEGORY)
-      .then((data) => { if (!cancelled) setItems(data) })
+    listCategory('bundles')
+      .then((data) => { if (!cancelled) setRooms(data) })
       .catch((err) => { if (!cancelled) setError(err.message) })
       .finally(() => { if (!cancelled) setLoading(false) })
     return () => { cancelled = true }
   }, [])
 
-  async function handleToggle(itemId) {
-    setItems((current) =>
-      current.map((item) => (item.id === itemId ? { ...item, checked: !item.checked } : item))
+  async function handleToggleItem(roomId, bundleId, itemId) {
+    setRooms((current) =>
+      current.map((room) =>
+        room.id !== roomId
+          ? room
+          : {
+              ...room,
+              bundles: room.bundles.map((bundle) =>
+                bundle.id !== bundleId
+                  ? bundle
+                  : {
+                      ...bundle,
+                      items: bundle.items.map((item) =>
+                        item.id === itemId ? { ...item, checked: !item.checked } : item
+                      ),
+                    }
+              ),
+            }
+      )
     )
+
     try {
-      const updated = await toggleItem(CATEGORY, itemId)
-      setItems((current) => current.map((item) => (item.id === itemId ? updated : item)))
+      await toggleBundleItem(roomId, bundleId, itemId)
     } catch (err) {
       setError(err.message)
-      setItems((current) =>
-        current.map((item) => (item.id === itemId ? { ...item, checked: !item.checked } : item))
+      // Roll back on failure (re-toggle)
+      setRooms((current) =>
+        current.map((room) =>
+          room.id !== roomId
+            ? room
+            : {
+                ...room,
+                bundles: room.bundles.map((bundle) =>
+                  bundle.id !== bundleId
+                    ? bundle
+                    : {
+                        ...bundle,
+                        items: bundle.items.map((item) =>
+                          item.id === itemId ? { ...item, checked: !item.checked } : item
+                        ),
+                      }
+                ),
+              }
+        )
       )
     }
   }
@@ -40,11 +73,21 @@ export default function Bundles() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <ListTracker
-      title="Bundles"
-      items={items}
-      columnHeaders={['Items Inside']}
-      onToggle={handleToggle}
-    />
+    <div className="bundles-page">
+      {rooms.map((room) => (
+        <section key={room.id} className="bundles-page__room">
+          <h2>{room.name}</h2>
+          <GroupedChecklist
+            groups={room.bundles.map((bundle) => ({
+              id: bundle.id,
+              title: bundle.name,
+              items: bundle.items,
+              reward: bundle.reward,
+            }))}
+            onToggleItem={(bundleId, itemId) => handleToggleItem(room.id, bundleId, itemId)}
+          />
+        </section>
+      ))}
+    </div>
   )
 }
