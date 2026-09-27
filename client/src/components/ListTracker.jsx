@@ -15,13 +15,15 @@
  */
 
 export default function ListTracker({ title, items, columnHeaders = [], onToggle }) {
+  const rowStyle = { '--column-count': columnHeaders.length }
+
   return (
     <section className="list-tracker">
       <header className="list-tracker__header">
         <h2>{title}</h2>
       </header>
 
-      <div className="list-tracker__row list-tracker__row--headers">
+      <div className="list-tracker__row list-tracker__row--headers" style={rowStyle}>
         <span className="list-tracker__checkbox-spacer" />
         <span className="list-tracker__icon-spacer" />
         <span className="list-tracker__name-header">Name</span>
@@ -33,7 +35,7 @@ export default function ListTracker({ title, items, columnHeaders = [], onToggle
       </div>
 
       {items.map((item) => (
-        <div key={item.id} className="list-tracker__row">
+        <div key={item.id} className="list-tracker__row" style={rowStyle}>
           <input
             type="checkbox"
             checked={Boolean(item.checked)}
