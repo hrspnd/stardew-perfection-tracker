@@ -200,8 +200,24 @@
   gap: 1.5rem;
 }
 
+.grouped-checklist__group-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .grouped-checklist__group-header h3 {
-  margin: 0 0 0.5rem 0;
+  margin: 0;
+}
+
+.grouped-checklist__required-count {
+  font-size: 0.8rem;
+}
+
+.bundles-page__room-reward {
+  font-size: 0.85rem;
+  font-weight: normal;
 }
 
 .grouped-checklist__items {

@@ -76,13 +76,19 @@ export default function Bundles() {
     <div className="bundles-page">
       {rooms.map((room) => (
         <section key={room.id} className="bundles-page__room">
-          <h2>{room.name}</h2>
+          <h2>
+            {room.name}
+            {room.roomReward && (
+              <span className="bundles-page__room-reward"> - Room reward: {room.roomReward}</span>
+            )}
+          </h2>
           <GroupedChecklist
             groups={room.bundles.map((bundle) => ({
               id: bundle.id,
               title: bundle.name,
               items: bundle.items,
               reward: bundle.reward,
+              requiredCount: bundle.requiredCount,
             }))}
             onToggleItem={(bundleId, itemId) => handleToggleItem(room.id, bundleId, itemId)}
           />

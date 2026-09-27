@@ -4,262 +4,1699 @@
       "id": "spring-foraging",
       "title": "Spring Foraging",
       "items": [
-        { "id": "daffodil", "label": "Daffodil", "checked": false },
-        { "id": "dandelion", "label": "Dandelion", "checked": true },
-        { "id": "leek", "label": "Leek", "checked": false },
-        { "id": "wild-horseradish", "label": "Wild Horseradish", "checked": false }
+        {
+          "id": "daffodil",
+          "label": "Daffodil",
+          "checked": false
+        },
+        {
+          "id": "dandelion",
+          "label": "Dandelion",
+          "checked": true
+        },
+        {
+          "id": "leek",
+          "label": "Leek",
+          "checked": false
+        },
+        {
+          "id": "wild-horseradish",
+          "label": "Wild Horseradish",
+          "checked": false
+        }
       ]
     },
     {
       "id": "animal-products",
       "title": "Animal Products",
       "items": [
-        { "id": "white-egg", "label": "White Egg", "checked": true },
-        { "id": "milk", "label": "Milk", "checked": false },
-        { "id": "wool", "label": "Wool", "checked": false }
+        {
+          "id": "white-egg",
+          "label": "White Egg",
+          "checked": true
+        },
+        {
+          "id": "milk",
+          "label": "Milk",
+          "checked": false
+        },
+        {
+          "id": "wool",
+          "label": "Wool",
+          "checked": false
+        }
       ]
     },
     {
       "id": "fruit-trees",
       "title": "Fruit Trees",
       "items": [
-        { "id": "apricot", "label": "Apricot", "checked": false },
-        { "id": "cherry", "label": "Cherry", "checked": false },
-        { "id": "apple", "label": "Apple", "checked": false }
+        {
+          "id": "apricot",
+          "label": "Apricot",
+          "checked": false
+        },
+        {
+          "id": "cherry",
+          "label": "Cherry",
+          "checked": false
+        },
+        {
+          "id": "apple",
+          "label": "Apple",
+          "checked": false
+        }
       ]
     }
   ],
   "walnuts": [
-    { "id": "walnut-01", "name": "Walnut Hidden in Tree Stump", "checked": false, "columns": ["North Island", "Break with axe", "Not found"] },
-    { "id": "walnut-02", "name": "Walnut Buried on Beach", "checked": false, "columns": ["South Island", "Dig with shovel", "Not found"] },
-    { "id": "walnut-03", "name": "Walnut Behind Waterfall", "checked": true, "columns": ["North Island", "Walk behind waterfall", "Found"] }
+    {
+      "id": "walnut-01",
+      "name": "Walnut Hidden in Tree Stump",
+      "checked": false,
+      "columns": [
+        "North Island",
+        "Break with axe",
+        "Not found"
+      ]
+    },
+    {
+      "id": "walnut-02",
+      "name": "Walnut Buried on Beach",
+      "checked": false,
+      "columns": [
+        "South Island",
+        "Dig with shovel",
+        "Not found"
+      ]
+    },
+    {
+      "id": "walnut-03",
+      "name": "Walnut Behind Waterfall",
+      "checked": true,
+      "columns": [
+        "North Island",
+        "Walk behind waterfall",
+        "Found"
+      ]
+    }
   ],
   "fish": [
-    { "id": "sturgeon", "name": "Sturgeon", "checked": false, "columns": ["Summer/Winter", "Mountain Lake", "6am-7pm"] },
-    { "id": "catfish", "name": "Catfish", "checked": false, "columns": ["Spring/Fall", "River, rain only", "6am-12am"] },
-    { "id": "legend", "name": "Legend", "checked": false, "columns": ["Spring, rain only", "Mountain Lake", "6am-2am"] }
+    {
+      "id": "sturgeon",
+      "name": "Sturgeon",
+      "checked": false,
+      "columns": [
+        "Summer/Winter",
+        "Mountain Lake",
+        "6am-7pm"
+      ]
+    },
+    {
+      "id": "catfish",
+      "name": "Catfish",
+      "checked": false,
+      "columns": [
+        "Spring/Fall",
+        "River, rain only",
+        "6am-12am"
+      ]
+    },
+    {
+      "id": "legend",
+      "name": "Legend",
+      "checked": false,
+      "columns": [
+        "Spring, rain only",
+        "Mountain Lake",
+        "6am-2am"
+      ]
+    }
   ],
   "bundles": [
     {
       "id": "craftsRoom",
       "name": "Crafts Room",
+      "roomReward": "Quarry",
       "bundles": [
         {
           "id": "spring-foraging-bundle",
-          "name": "Spring Foraging Bundle",
-          "reward": "30 Spring Seeds",
+          "name": "Spring Foraging",
           "items": [
-            { "id": "wild-horseradish", "label": "Wild Horseradish", "checked": false },
-            { "id": "daffodil", "label": "Daffodil", "checked": false },
-            { "id": "leek", "label": "Leek", "checked": true },
-            { "id": "dandelion", "label": "Dandelion", "checked": false }
-          ]
+            {
+              "id": "wild-horseradish",
+              "label": "Wild Horseradish",
+              "checked": false
+            },
+            {
+              "id": "daffodil",
+              "label": "Daffodil",
+              "checked": false
+            },
+            {
+              "id": "leek",
+              "label": "Leek",
+              "checked": false
+            },
+            {
+              "id": "dandelion",
+              "label": "Dandelion",
+              "checked": false
+            }
+          ],
+          "reward": "30 Spring Seeds"
         },
         {
           "id": "summer-foraging-bundle",
-          "name": "Summer Foraging Bundle",
-          "reward": "30 Summer Seeds",
+          "name": "Summer Foraging",
           "items": [
-            { "id": "grape", "label": "Grape", "checked": false },
-            { "id": "spice-berry", "label": "Spice Berry", "checked": false },
-            { "id": "sweet-pea", "label": "Sweet Pea", "checked": false }
-          ]
+            {
+              "id": "grape",
+              "label": "Grape",
+              "checked": false
+            },
+            {
+              "id": "spice-berry",
+              "label": "Spice Berry",
+              "checked": false
+            },
+            {
+              "id": "sweet-pea",
+              "label": "Sweet Pea",
+              "checked": false
+            }
+          ],
+          "reward": "30 Summer Seeds"
+        },
+        {
+          "id": "fall-foraging-bundle",
+          "name": "Fall Foraging",
+          "items": [
+            {
+              "id": "common-mushroom",
+              "label": "Common Mushroom",
+              "checked": false
+            },
+            {
+              "id": "wild-plum",
+              "label": "Wild Plum",
+              "checked": false
+            },
+            {
+              "id": "hazelnut",
+              "label": "Hazelnut",
+              "checked": false
+            },
+            {
+              "id": "blackberry",
+              "label": "Blackberry",
+              "checked": false
+            }
+          ],
+          "reward": "30 Fall Seeds"
+        },
+        {
+          "id": "winter-foraging-bundle",
+          "name": "Winter Foraging",
+          "items": [
+            {
+              "id": "winter-root",
+              "label": "Winter Root",
+              "checked": false
+            },
+            {
+              "id": "crystal-fruit",
+              "label": "Crystal Fruit",
+              "checked": false
+            },
+            {
+              "id": "snow-yam",
+              "label": "Snow Yam",
+              "checked": false
+            },
+            {
+              "id": "crocus",
+              "label": "Crocus",
+              "checked": false
+            }
+          ],
+          "reward": "30 Winter Seeds"
+        },
+        {
+          "id": "construction-bundle",
+          "name": "Construction",
+          "items": [
+            {
+              "id": "wood-99",
+              "label": "Wood (99)",
+              "checked": false
+            },
+            {
+              "id": "wood-99-1",
+              "label": "Wood (99)",
+              "checked": false
+            },
+            {
+              "id": "stone-99",
+              "label": "Stone (99)",
+              "checked": false
+            },
+            {
+              "id": "hardwood-10",
+              "label": "Hardwood (10)",
+              "checked": false
+            }
+          ],
+          "reward": "Charcoal Kiln"
+        },
+        {
+          "id": "exotic-foraging-bundle",
+          "name": "Exotic Foraging",
+          "items": [
+            {
+              "id": "coconut",
+              "label": "Coconut",
+              "checked": false
+            },
+            {
+              "id": "cactus-fruit",
+              "label": "Cactus Fruit",
+              "checked": false
+            },
+            {
+              "id": "cave-carrot",
+              "label": "Cave Carrot",
+              "checked": false
+            },
+            {
+              "id": "red-mushroom",
+              "label": "Red Mushroom",
+              "checked": false
+            },
+            {
+              "id": "purple-mushroom",
+              "label": "Purple Mushroom",
+              "checked": false
+            },
+            {
+              "id": "maple-syrup",
+              "label": "Maple Syrup",
+              "checked": false
+            },
+            {
+              "id": "oak-resin",
+              "label": "Oak Resin",
+              "checked": false
+            },
+            {
+              "id": "pine-tar",
+              "label": "Pine Tar",
+              "checked": false
+            },
+            {
+              "id": "morel",
+              "label": "Morel",
+              "checked": false
+            }
+          ],
+          "reward": "5 Autumn's Bounty",
+          "requiredCount": 5
         }
       ]
     },
     {
       "id": "pantry",
       "name": "Pantry",
+      "roomReward": "Greenhouse",
       "bundles": [
         {
           "id": "spring-crops-bundle",
-          "name": "Spring Crops Bundle",
-          "reward": "Preserves Jar",
+          "name": "Spring Crops",
           "items": [
-            { "id": "parsnip", "label": "Parsnip", "checked": true },
-            { "id": "green-bean", "label": "Green Bean", "checked": false },
-            { "id": "cauliflower", "label": "Cauliflower", "checked": false },
-            { "id": "potato", "label": "Potato", "checked": false }
-          ]
+            {
+              "id": "parsnip",
+              "label": "Parsnip",
+              "checked": false
+            },
+            {
+              "id": "green-bean",
+              "label": "Green Bean",
+              "checked": false
+            },
+            {
+              "id": "cauliflower",
+              "label": "Cauliflower",
+              "checked": false
+            },
+            {
+              "id": "potato",
+              "label": "Potato",
+              "checked": false
+            }
+          ],
+          "reward": "20 Speed-Gro"
         },
         {
           "id": "summer-crops-bundle",
-          "name": "Summer Crops Bundle",
-          "reward": "TODO: verify reward",
+          "name": "Summer Crops",
           "items": [
-            { "id": "tomato", "label": "Tomato", "checked": false },
-            { "id": "hot-pepper", "label": "Hot Pepper", "checked": false },
-            { "id": "blueberry", "label": "Blueberry", "checked": false },
-            { "id": "melon", "label": "Melon", "checked": false }
-          ]
+            {
+              "id": "tomato",
+              "label": "Tomato",
+              "checked": false
+            },
+            {
+              "id": "hot-pepper",
+              "label": "Hot Pepper",
+              "checked": false
+            },
+            {
+              "id": "blueberry",
+              "label": "Blueberry",
+              "checked": false
+            },
+            {
+              "id": "melon",
+              "label": "Melon",
+              "checked": false
+            }
+          ],
+          "reward": "Quality Sprinkler"
+        },
+        {
+          "id": "fall-crops-bundle",
+          "name": "Fall Crops",
+          "items": [
+            {
+              "id": "corn",
+              "label": "Corn",
+              "checked": false
+            },
+            {
+              "id": "eggplant",
+              "label": "Eggplant",
+              "checked": false
+            },
+            {
+              "id": "pumpkin",
+              "label": "Pumpkin",
+              "checked": false
+            },
+            {
+              "id": "yam",
+              "label": "Yam",
+              "checked": false
+            }
+          ],
+          "reward": "Bee House"
+        },
+        {
+          "id": "quality-crops-bundle",
+          "name": "Quality Crops",
+          "items": [
+            {
+              "id": "gold-parsnips-5",
+              "label": "Gold Parsnips (5)",
+              "checked": false
+            },
+            {
+              "id": "gold-melon-5",
+              "label": "Gold Melon (5)",
+              "checked": false
+            },
+            {
+              "id": "gold-pumpkin-5",
+              "label": "Gold Pumpkin (5)",
+              "checked": false
+            },
+            {
+              "id": "gold-corn-5",
+              "label": "Gold Corn (5)",
+              "checked": false
+            }
+          ],
+          "reward": "Preserves Jar",
+          "requiredCount": 3
+        },
+        {
+          "id": "animal-bundle",
+          "name": "Animal",
+          "items": [
+            {
+              "id": "large-milk",
+              "label": "Large Milk",
+              "checked": false
+            },
+            {
+              "id": "large-brown-egg",
+              "label": "Large Brown Egg",
+              "checked": false
+            },
+            {
+              "id": "large-egg",
+              "label": "Large Egg",
+              "checked": false
+            },
+            {
+              "id": "large-goat-milk",
+              "label": "Large Goat Milk",
+              "checked": false
+            },
+            {
+              "id": "wool",
+              "label": "Wool",
+              "checked": false
+            },
+            {
+              "id": "duck-egg",
+              "label": "Duck Egg",
+              "checked": false
+            }
+          ],
+          "reward": "Cheese Press",
+          "requiredCount": 5
+        },
+        {
+          "id": "artisan-bundle",
+          "name": "Artisan",
+          "items": [
+            {
+              "id": "truffle-oil",
+              "label": "Truffle Oil",
+              "checked": false
+            },
+            {
+              "id": "cloth",
+              "label": "Cloth",
+              "checked": false
+            },
+            {
+              "id": "goat-cheese",
+              "label": "Goat Cheese",
+              "checked": false
+            },
+            {
+              "id": "cheese",
+              "label": "Cheese",
+              "checked": false
+            },
+            {
+              "id": "honey",
+              "label": "Honey",
+              "checked": false
+            },
+            {
+              "id": "jelly",
+              "label": "Jelly",
+              "checked": false
+            },
+            {
+              "id": "apple",
+              "label": "Apple",
+              "checked": false
+            },
+            {
+              "id": "apricot",
+              "label": "Apricot",
+              "checked": false
+            },
+            {
+              "id": "orange",
+              "label": "Orange",
+              "checked": false
+            },
+            {
+              "id": "peach",
+              "label": "Peach",
+              "checked": false
+            },
+            {
+              "id": "pomegranate",
+              "label": "Pomegranate",
+              "checked": false
+            },
+            {
+              "id": "cherry",
+              "label": "Cherry",
+              "checked": false
+            }
+          ],
+          "reward": "Keg",
+          "requiredCount": 6
+        }
+      ]
+    },
+    {
+      "id": "fishTank",
+      "name": "Fish Tank",
+      "roomReward": "Panning",
+      "bundles": [
+        {
+          "id": "river-fish-bundle",
+          "name": "River Fish",
+          "items": [
+            {
+              "id": "sunfish",
+              "label": "Sunfish",
+              "checked": false
+            },
+            {
+              "id": "catfish",
+              "label": "Catfish",
+              "checked": false
+            },
+            {
+              "id": "shad",
+              "label": "Shad",
+              "checked": false
+            },
+            {
+              "id": "tiger-trout",
+              "label": "Tiger Trout",
+              "checked": false
+            }
+          ],
+          "reward": "30 Deluxe Bait"
+        },
+        {
+          "id": "lake-fish-bundle",
+          "name": "Lake Fish",
+          "items": [
+            {
+              "id": "largemouth-bass",
+              "label": "Largemouth Bass",
+              "checked": false
+            },
+            {
+              "id": "carp",
+              "label": "Carp",
+              "checked": false
+            },
+            {
+              "id": "bullhead",
+              "label": "Bullhead",
+              "checked": false
+            },
+            {
+              "id": "sturgeon",
+              "label": "Sturgeon",
+              "checked": false
+            }
+          ],
+          "reward": "Dressed Spinner"
+        },
+        {
+          "id": "ocean-fish-bundle",
+          "name": "Ocean Fish",
+          "items": [
+            {
+              "id": "sardine",
+              "label": "Sardine",
+              "checked": false
+            },
+            {
+              "id": "tuna",
+              "label": "Tuna",
+              "checked": false
+            },
+            {
+              "id": "red-snapper",
+              "label": "Red Snapper",
+              "checked": false
+            },
+            {
+              "id": "tilapia",
+              "label": "Tilapia",
+              "checked": false
+            }
+          ],
+          "reward": "5 Warp Totem: Beach"
+        },
+        {
+          "id": "night-fishing-bundle",
+          "name": "Night Fishing",
+          "items": [
+            {
+              "id": "walleye",
+              "label": "Walleye",
+              "checked": false
+            },
+            {
+              "id": "bream",
+              "label": "Bream",
+              "checked": false
+            }
+          ],
+          "reward": "Eel"
+        },
+        {
+          "id": "crab-pot-bundle",
+          "name": "Crab Pot",
+          "items": [
+            {
+              "id": "lobster",
+              "label": "Lobster",
+              "checked": false
+            },
+            {
+              "id": "crayfish",
+              "label": "Crayfish",
+              "checked": false
+            },
+            {
+              "id": "crab",
+              "label": "Crab",
+              "checked": false
+            },
+            {
+              "id": "cockle",
+              "label": "Cockle",
+              "checked": false
+            },
+            {
+              "id": "mussel",
+              "label": "Mussel",
+              "checked": false
+            },
+            {
+              "id": "shrimp",
+              "label": "Shrimp",
+              "checked": false
+            },
+            {
+              "id": "snail",
+              "label": "Snail",
+              "checked": false
+            },
+            {
+              "id": "periwinkle",
+              "label": "Periwinkle",
+              "checked": false
+            },
+            {
+              "id": "oyster",
+              "label": "Oyster",
+              "checked": false
+            },
+            {
+              "id": "clam",
+              "label": "Clam",
+              "checked": false
+            }
+          ],
+          "reward": "3 Crab Pot",
+          "requiredCount": 5
+        },
+        {
+          "id": "specialty-fish-bundle",
+          "name": "Specialty Fish",
+          "items": [
+            {
+              "id": "pufferfish",
+              "label": "Pufferfish",
+              "checked": false
+            },
+            {
+              "id": "ghostfish",
+              "label": "Ghostfish",
+              "checked": false
+            },
+            {
+              "id": "sandfish",
+              "label": "Sandfish",
+              "checked": false
+            },
+            {
+              "id": "woodskip",
+              "label": "Woodskip",
+              "checked": false
+            }
+          ],
+          "reward": "5 Dish O' The Sea"
+        }
+      ]
+    },
+    {
+      "id": "vault",
+      "name": "Vault",
+      "roomReward": "Bus Repair",
+      "bundles": [
+        {
+          "id": "vault-2500",
+          "name": "2,500g",
+          "items": [
+            {
+              "id": "2500g",
+              "label": "2,500g",
+              "checked": false
+            }
+          ],
+          "reward": "3 Chocolate Cake"
+        },
+        {
+          "id": "vault-5000",
+          "name": "5,000g",
+          "items": [
+            {
+              "id": "5000g",
+              "label": "5,000g",
+              "checked": false
+            }
+          ],
+          "reward": "30 Quality Fertilizer"
+        },
+        {
+          "id": "vault-10000",
+          "name": "10,000g",
+          "items": [
+            {
+              "id": "10000g",
+              "label": "10,000g",
+              "checked": false
+            }
+          ],
+          "reward": "Lightning Rod"
+        },
+        {
+          "id": "vault-25000",
+          "name": "25,000g",
+          "items": [
+            {
+              "id": "25000g",
+              "label": "25,000g",
+              "checked": false
+            }
+          ],
+          "reward": "Crystalarium"
+        }
+      ]
+    },
+    {
+      "id": "bulletinBoard",
+      "name": "Bulletin Board",
+      "roomReward": "Friendship",
+      "bundles": [
+        {
+          "id": "chefs-bundle",
+          "name": "Chef's",
+          "items": [
+            {
+              "id": "maple-syrup",
+              "label": "Maple Syrup",
+              "checked": false
+            },
+            {
+              "id": "fiddlehead-fern",
+              "label": "Fiddlehead Fern",
+              "checked": false
+            },
+            {
+              "id": "truffle",
+              "label": "Truffle",
+              "checked": false
+            },
+            {
+              "id": "poppy",
+              "label": "Poppy",
+              "checked": false
+            },
+            {
+              "id": "maki-roll",
+              "label": "Maki Roll",
+              "checked": false
+            },
+            {
+              "id": "fried-egg",
+              "label": "Fried Egg",
+              "checked": false
+            }
+          ],
+          "reward": "3 Pink Cake"
+        },
+        {
+          "id": "dye-bundle",
+          "name": "Dye",
+          "items": [
+            {
+              "id": "red-mushroom",
+              "label": "Red Mushroom",
+              "checked": false
+            },
+            {
+              "id": "sea-urchin",
+              "label": "Sea Urchin",
+              "checked": false
+            },
+            {
+              "id": "sunflower",
+              "label": "Sunflower",
+              "checked": false
+            },
+            {
+              "id": "duck-feather",
+              "label": "Duck Feather",
+              "checked": false
+            },
+            {
+              "id": "aquamarine",
+              "label": "Aquamarine",
+              "checked": false
+            },
+            {
+              "id": "red-cabbage",
+              "label": "Red Cabbage",
+              "checked": false
+            }
+          ],
+          "reward": "Seed Maker"
+        },
+        {
+          "id": "field-research-bundle",
+          "name": "Field Research",
+          "items": [
+            {
+              "id": "purple-mushroom",
+              "label": "Purple Mushroom",
+              "checked": false
+            },
+            {
+              "id": "nautilus-shell",
+              "label": "Nautilus Shell",
+              "checked": false
+            },
+            {
+              "id": "chub",
+              "label": "Chub",
+              "checked": false
+            },
+            {
+              "id": "frozen-geode",
+              "label": "Frozen Geode",
+              "checked": false
+            }
+          ],
+          "reward": "Recycling Machine"
+        },
+        {
+          "id": "fodder-bundle",
+          "name": "Fodder",
+          "items": [
+            {
+              "id": "wheat-10",
+              "label": "Wheat (10)",
+              "checked": false
+            },
+            {
+              "id": "hay-10",
+              "label": "Hay (10)",
+              "checked": false
+            },
+            {
+              "id": "apple-3",
+              "label": "Apple (3)",
+              "checked": false
+            }
+          ],
+          "reward": "Heater"
+        },
+        {
+          "id": "enchanters-bundle",
+          "name": "Enchanter's",
+          "items": [
+            {
+              "id": "oak-resin",
+              "label": "Oak Resin",
+              "checked": false
+            },
+            {
+              "id": "wine",
+              "label": "Wine",
+              "checked": false
+            },
+            {
+              "id": "rabbits-foot",
+              "label": "Rabbit's Foot",
+              "checked": false
+            },
+            {
+              "id": "pomegranate",
+              "label": "Pomegranate",
+              "checked": false
+            }
+          ],
+          "reward": "5 Gold Bar"
+        }
+      ]
+    },
+    {
+      "id": "boilerRoom",
+      "name": "Boiler Room",
+      "roomReward": "Minecarts",
+      "bundles": [
+        {
+          "id": "blacksmiths-bundle",
+          "name": "Blacksmith's",
+          "items": [
+            {
+              "id": "copper-bar",
+              "label": "Copper Bar",
+              "checked": false
+            },
+            {
+              "id": "iron-bar",
+              "label": "Iron Bar",
+              "checked": false
+            },
+            {
+              "id": "gold-bar",
+              "label": "Gold Bar",
+              "checked": false
+            }
+          ],
+          "reward": "Furnace"
+        },
+        {
+          "id": "geologists-bundle",
+          "name": "Geologist's",
+          "items": [
+            {
+              "id": "quartz",
+              "label": "Quartz",
+              "checked": false
+            },
+            {
+              "id": "earth-crystal",
+              "label": "Earth Crystal",
+              "checked": false
+            },
+            {
+              "id": "frozen-tear",
+              "label": "Frozen Tear",
+              "checked": false
+            },
+            {
+              "id": "fire-quartz",
+              "label": "Fire Quartz",
+              "checked": false
+            }
+          ],
+          "reward": "5 Omni Geode"
+        },
+        {
+          "id": "adventurers-bundle",
+          "name": "Adventurer's",
+          "items": [
+            {
+              "id": "slime-99",
+              "label": "Slime (99)",
+              "checked": false
+            },
+            {
+              "id": "bat-wing-10",
+              "label": "Bat Wing (10)",
+              "checked": false
+            },
+            {
+              "id": "solar-essence",
+              "label": "Solar Essence",
+              "checked": false
+            },
+            {
+              "id": "void-essence",
+              "label": "Void Essence",
+              "checked": false
+            }
+          ],
+          "reward": "Small Magnet Ring",
+          "requiredCount": 2
+        }
+      ]
+    },
+    {
+      "id": "abandonedJojaMart",
+      "name": "Abandoned Joja Mart",
+      "roomReward": "Movie Theater",
+      "bundles": [
+        {
+          "id": "missing-bundle",
+          "name": "The Missing Bundle",
+          "items": [
+            {
+              "id": "silver-or-better-wine",
+              "label": "Silver (or Better) Wine",
+              "checked": false
+            },
+            {
+              "id": "dinosaur-mayo",
+              "label": "Dinosaur Mayo",
+              "checked": false
+            },
+            {
+              "id": "prismatic-shard",
+              "label": "Prismatic Shard",
+              "checked": false
+            },
+            {
+              "id": "gold-ancient-fruit-5",
+              "label": "Gold Ancient Fruit (5)",
+              "checked": false
+            },
+            {
+              "id": "gold-or-iridium-void-salmon",
+              "label": "Gold or Iridium Void Salmon",
+              "checked": false
+            },
+            {
+              "id": "caviar",
+              "label": "Caviar",
+              "checked": false
+            }
+          ],
+          "reward": "Movie Theater",
+          "requiredCount": 5
         }
       ]
     }
   ],
   "cooking": [
-    { "id": "fried-egg", "name": "Fried Egg", "checked": true, "columns": ["Starter recipe", "1 Egg"] },
-    { "id": "pancakes", "name": "Pancakes", "checked": false, "columns": ["Gus, 3 hearts", "1 Wheat Flour, 1 Egg"] },
-    { "id": "tortilla", "name": "Tortilla", "checked": false, "columns": ["TV Cooking Channel", "1 Corn"] }
+    {
+      "id": "fried-egg",
+      "name": "Fried Egg",
+      "checked": true,
+      "columns": [
+        "Starter recipe",
+        "1 Egg"
+      ]
+    },
+    {
+      "id": "pancakes",
+      "name": "Pancakes",
+      "checked": false,
+      "columns": [
+        "Gus, 3 hearts",
+        "1 Wheat Flour, 1 Egg"
+      ]
+    },
+    {
+      "id": "tortilla",
+      "name": "Tortilla",
+      "checked": false,
+      "columns": [
+        "TV Cooking Channel",
+        "1 Corn"
+      ]
+    }
   ],
   "crafting": [
-    { "id": "scarecrow", "name": "Scarecrow", "checked": true, "columns": ["Farming level 1", "50 Wood, 1 Coal, 20 Fiber"] },
-    { "id": "sprinkler", "name": "Sprinkler", "checked": true, "columns": ["Farming level 2", "1 Copper Bar, 1 Iron Bar"] },
-    { "id": "cheese-press", "name": "Cheese Press", "checked": false, "columns": ["Farming level 6", "45 Wood, 10 Stone, 10 Copper Bar"] }
+    {
+      "id": "scarecrow",
+      "name": "Scarecrow",
+      "checked": true,
+      "columns": [
+        "Farming level 1",
+        "50 Wood, 1 Coal, 20 Fiber"
+      ]
+    },
+    {
+      "id": "sprinkler",
+      "name": "Sprinkler",
+      "checked": true,
+      "columns": [
+        "Farming level 2",
+        "1 Copper Bar, 1 Iron Bar"
+      ]
+    },
+    {
+      "id": "cheese-press",
+      "name": "Cheese Press",
+      "checked": false,
+      "columns": [
+        "Farming level 6",
+        "45 Wood, 10 Stone, 10 Copper Bar"
+      ]
+    }
   ],
   "obelisks": [
-    { "id": "earth-obelisk", "name": "Earth Obelisk", "checked": false },
-    { "id": "water-obelisk", "name": "Water Obelisk", "checked": false },
-    { "id": "desert-obelisk", "name": "Desert Obelisk", "checked": false }
+    {
+      "id": "earth-obelisk",
+      "name": "Earth Obelisk",
+      "checked": false
+    },
+    {
+      "id": "water-obelisk",
+      "name": "Water Obelisk",
+      "checked": false
+    },
+    {
+      "id": "desert-obelisk",
+      "name": "Desert Obelisk",
+      "checked": false
+    }
   ],
   "goldenClock": [
-    { "id": "golden-clock", "name": "Golden Clock", "checked": false }
+    {
+      "id": "golden-clock",
+      "name": "Golden Clock",
+      "checked": false
+    }
   ],
   "stardrops": [
-    { "id": "stardrop-01", "name": "The Mines Level 100", "checked": false },
-    { "id": "stardrop-02", "name": "Old Master Cannoli", "checked": false },
-    { "id": "stardrop-03", "name": "Fair Star Drop", "checked": true }
+    {
+      "id": "stardrop-01",
+      "name": "The Mines Level 100",
+      "checked": false
+    },
+    {
+      "id": "stardrop-02",
+      "name": "Old Master Cannoli",
+      "checked": false
+    },
+    {
+      "id": "stardrop-03",
+      "name": "Fair Star Drop",
+      "checked": true
+    }
   ],
   "monsterSlayer": [
-    { "id": "slimes", "name": "Slimes", "checked": true, "columns": ["Quantity: 1000", "Reward: Slime Charmer Ring", "Prevents damage from slimes"] },
-    { "id": "void-spirits", "name": "Void Spirits", "checked": false, "columns": ["Quantity: 150", "Reward: Savage Ring", "Gain a short speed boost whenever you slay a monster"] },
-    { "id": "bats", "name": "Bats", "checked": false, "columns": ["Quantity: 200", "Reward: Vampire Ring", "Gain a little health every time you slay a monster"] },
-    { "id": "skeletons", "name": "Skeletons", "checked": false, "columns": ["Quantity: 50", "Reward: Skeleton Mask", "The red eyes are glowing mysteriously"] },
-    { "id": "cave-insects", "name": "Cave Insects", "checked": false, "columns": ["Quantity: 80", "Reward: Insect Head", "Not very pleasant to wield"] },
-    { "id": "duggies", "name": "Duggies", "checked": false, "columns": ["Quantity: 30", "Reward: Hard Hat", "Keep your dome in one piece"] },
-    { "id": "dust-sprites", "name": "Dust Sprites", "checked": false, "columns": ["Quantity: 500", "Reward: Burglar's Ring", "Monsters have a greater chance of dropping loot"] },
-    { "id": "rock-crabs", "name": "Rock Crabs", "checked": false, "columns": ["Quantity: 60", "Reward: Crabshell Ring", "The top of the ring is made from enchanted crab shell"] }
+    {
+      "id": "slimes",
+      "name": "Slimes",
+      "checked": true,
+      "columns": [
+        "Quantity: 1000",
+        "Reward: Slime Charmer Ring",
+        "Prevents damage from slimes"
+      ]
+    },
+    {
+      "id": "void-spirits",
+      "name": "Void Spirits",
+      "checked": false,
+      "columns": [
+        "Quantity: 150",
+        "Reward: Savage Ring",
+        "Gain a short speed boost whenever you slay a monster"
+      ]
+    },
+    {
+      "id": "bats",
+      "name": "Bats",
+      "checked": false,
+      "columns": [
+        "Quantity: 200",
+        "Reward: Vampire Ring",
+        "Gain a little health every time you slay a monster"
+      ]
+    },
+    {
+      "id": "skeletons",
+      "name": "Skeletons",
+      "checked": false,
+      "columns": [
+        "Quantity: 50",
+        "Reward: Skeleton Mask",
+        "The red eyes are glowing mysteriously"
+      ]
+    },
+    {
+      "id": "cave-insects",
+      "name": "Cave Insects",
+      "checked": false,
+      "columns": [
+        "Quantity: 80",
+        "Reward: Insect Head",
+        "Not very pleasant to wield"
+      ]
+    },
+    {
+      "id": "duggies",
+      "name": "Duggies",
+      "checked": false,
+      "columns": [
+        "Quantity: 30",
+        "Reward: Hard Hat",
+        "Keep your dome in one piece"
+      ]
+    },
+    {
+      "id": "dust-sprites",
+      "name": "Dust Sprites",
+      "checked": false,
+      "columns": [
+        "Quantity: 500",
+        "Reward: Burglar's Ring",
+        "Monsters have a greater chance of dropping loot"
+      ]
+    },
+    {
+      "id": "rock-crabs",
+      "name": "Rock Crabs",
+      "checked": false,
+      "columns": [
+        "Quantity: 60",
+        "Reward: Crabshell Ring",
+        "The top of the ring is made from enchanted crab shell"
+      ]
+    }
   ],
   "museum": [
-    { "id": "amphibian-fossil", "name": "Amphibian Fossil", "checked": false, "columns": ["Artifact", "Artifact spots (Forest, Mountain), fishing treasure chests, bone nodes"] },
-    { "id": "anchor", "name": "Anchor", "checked": false, "columns": ["Artifact", "Artifact spots (Beach), fishing treasure chests, artifact troves"] },
-    { "id": "ancient-doll", "name": "Ancient Doll", "checked": false, "columns": ["Artifact", "Artifact spots (Bus Stop, Forest, Mountain, Town), fishing treasure chests, artifact troves"] },
-    { "id": "ancient-drum", "name": "Ancient Drum", "checked": false, "columns": ["Artifact", "Artifact spots (Bus Stop, Forest, Town), Frozen/Omni geodes, artifact troves"] },
-    { "id": "ancient-seed", "name": "Ancient Seed", "checked": true, "columns": ["Artifact", "Artifact spots (Forest, Mountain), fishing treasure chests, dropped by bugs/flies/grubs"] },
-    { "id": "ancient-sword", "name": "Ancient Sword", "checked": false, "columns": ["Artifact", "Artifact spots (Forest, Mountain), fishing treasure chests, artifact troves"] },
-    { "id": "arrowhead", "name": "Arrowhead", "checked": false, "columns": ["Artifact", "Artifact spots (Mountain, Forest, Bus Stop), artifact troves"] },
-    { "id": "bone-flute", "name": "Bone Flute", "checked": false, "columns": ["Artifact", "Artifact spots (Forest, Mountain, Town), fishing treasure chests, artifact troves"] },
-    { "id": "emerald", "name": "Emerald", "checked": false, "columns": ["Mineral", "The Mines and Skull Cavern, from geodes, or panning"] },
-    { "id": "diamond", "name": "Diamond", "checked": false, "columns": ["Mineral", "The Mines and Skull Cavern, geodes, or panning"] }
+    {
+      "id": "amphibian-fossil",
+      "name": "Amphibian Fossil",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Artifact spots (Forest, Mountain), fishing treasure chests, bone nodes"
+      ]
+    },
+    {
+      "id": "anchor",
+      "name": "Anchor",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Artifact spots (Beach), fishing treasure chests, artifact troves"
+      ]
+    },
+    {
+      "id": "ancient-doll",
+      "name": "Ancient Doll",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Artifact spots (Bus Stop, Forest, Mountain, Town), fishing treasure chests, artifact troves"
+      ]
+    },
+    {
+      "id": "ancient-drum",
+      "name": "Ancient Drum",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Artifact spots (Bus Stop, Forest, Town), Frozen/Omni geodes, artifact troves"
+      ]
+    },
+    {
+      "id": "ancient-seed",
+      "name": "Ancient Seed",
+      "checked": true,
+      "columns": [
+        "Artifact",
+        "Artifact spots (Forest, Mountain), fishing treasure chests, dropped by bugs/flies/grubs"
+      ]
+    },
+    {
+      "id": "ancient-sword",
+      "name": "Ancient Sword",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Artifact spots (Forest, Mountain), fishing treasure chests, artifact troves"
+      ]
+    },
+    {
+      "id": "arrowhead",
+      "name": "Arrowhead",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Artifact spots (Mountain, Forest, Bus Stop), artifact troves"
+      ]
+    },
+    {
+      "id": "bone-flute",
+      "name": "Bone Flute",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Artifact spots (Forest, Mountain, Town), fishing treasure chests, artifact troves"
+      ]
+    },
+    {
+      "id": "emerald",
+      "name": "Emerald",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "The Mines and Skull Cavern, from geodes, or panning"
+      ]
+    },
+    {
+      "id": "diamond",
+      "name": "Diamond",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "The Mines and Skull Cavern, geodes, or panning"
+      ]
+    }
   ],
   "greatFriends": [
-    { "id": "abigail", "name": "Abigail", "checked": false, "columns": ["Birthday: Fall 13", "Loves: Amethyst, Chocolate Cake, Pufferfish, Pumpkin, Spicy Eel", "Likes: most gems, quartz", "Loved Movies: comedy, spooky", "Loved Concessions: any"] },
-    { "id": "sebastian", "name": "Sebastian", "checked": true, "columns": ["Birthday: Winter 10", "Loves: Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg", "Likes: most gems, quartz", "Loved Movies: horror, thriller", "Loved Concessions: any"] },
-    { "id": "penny", "name": "Penny", "checked": false, "columns": ["Birthday: Fall 2", "Loves: Diamond, Emerald, Melon, Poppy, Red Plate, Roots Platter, Sandfish, Tom Kha Soup", "Likes: fruit, most gems", "Loved Movies: family", "Loved Concessions: fruit snacks"] },
-    { "id": "emily", "name": "Emily", "checked": false, "columns": ["Birthday: Spring 27", "Loves: Amethyst, Aquamarine, Cloth, Emerald, Jade, Ruby, Survival Burger, Topaz, Wool", "Likes: Daffodil, Quartz", "Loved Movies: not verified yet", "Loved Concessions: not verified yet"] },
-    { "id": "haley", "name": "Haley", "checked": false, "columns": ["Birthday: Spring 14", "Loves: Coconut, Fruit Salad, Pink Cake, Sunflower", "Likes: Daffodil", "Loved Movies: not verified yet", "Loved Concessions: not verified yet"] },
-    { "id": "leah", "name": "Leah", "checked": false, "columns": ["Birthday: Winter 23", "Loves: Goat Cheese, Poppyseed Muffin, Salad, Stir Fry, Truffle, Vegetable Medley, Wine", "Likes: most forageables, fruit, wood", "Loved Movies: not verified yet", "Loved Concessions: not verified yet"] },
-    { "id": "maru", "name": "Maru", "checked": false, "columns": ["Birthday: Summer 10", "Loves: Battery Pack, Cauliflower, Cheese Cauliflower, Diamond, Gold Bar, Iridium Bar, Miner's Treat, Pepper Poppers, Radioactive Bar, Rhubarb Pie, Strawberry", "Likes: Copper Bar, Iron Bar, Oak Resin, Pine Tar, Quartz", "Loved Movies: not verified yet", "Loved Concessions: not verified yet"] }
+    {
+      "id": "abigail",
+      "name": "Abigail",
+      "checked": false,
+      "columns": [
+        "Birthday: Fall 13",
+        "Loves: Amethyst, Chocolate Cake, Pufferfish, Pumpkin, Spicy Eel",
+        "Likes: most gems, quartz",
+        "Loved Movies: comedy, spooky",
+        "Loved Concessions: any"
+      ]
+    },
+    {
+      "id": "sebastian",
+      "name": "Sebastian",
+      "checked": true,
+      "columns": [
+        "Birthday: Winter 10",
+        "Loves: Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg",
+        "Likes: most gems, quartz",
+        "Loved Movies: horror, thriller",
+        "Loved Concessions: any"
+      ]
+    },
+    {
+      "id": "penny",
+      "name": "Penny",
+      "checked": false,
+      "columns": [
+        "Birthday: Fall 2",
+        "Loves: Diamond, Emerald, Melon, Poppy, Red Plate, Roots Platter, Sandfish, Tom Kha Soup",
+        "Likes: fruit, most gems",
+        "Loved Movies: family",
+        "Loved Concessions: fruit snacks"
+      ]
+    },
+    {
+      "id": "emily",
+      "name": "Emily",
+      "checked": false,
+      "columns": [
+        "Birthday: Spring 27",
+        "Loves: Amethyst, Aquamarine, Cloth, Emerald, Jade, Ruby, Survival Burger, Topaz, Wool",
+        "Likes: Daffodil, Quartz",
+        "Loved Movies: not verified yet",
+        "Loved Concessions: not verified yet"
+      ]
+    },
+    {
+      "id": "haley",
+      "name": "Haley",
+      "checked": false,
+      "columns": [
+        "Birthday: Spring 14",
+        "Loves: Coconut, Fruit Salad, Pink Cake, Sunflower",
+        "Likes: Daffodil",
+        "Loved Movies: not verified yet",
+        "Loved Concessions: not verified yet"
+      ]
+    },
+    {
+      "id": "leah",
+      "name": "Leah",
+      "checked": false,
+      "columns": [
+        "Birthday: Winter 23",
+        "Loves: Goat Cheese, Poppyseed Muffin, Salad, Stir Fry, Truffle, Vegetable Medley, Wine",
+        "Likes: most forageables, fruit, wood",
+        "Loved Movies: not verified yet",
+        "Loved Concessions: not verified yet"
+      ]
+    },
+    {
+      "id": "maru",
+      "name": "Maru",
+      "checked": false,
+      "columns": [
+        "Birthday: Summer 10",
+        "Loves: Battery Pack, Cauliflower, Cheese Cauliflower, Diamond, Gold Bar, Iridium Bar, Miner's Treat, Pepper Poppers, Radioactive Bar, Rhubarb Pie, Strawberry",
+        "Likes: Copper Bar, Iron Bar, Oak Resin, Pine Tar, Quartz",
+        "Loved Movies: not verified yet",
+        "Loved Concessions: not verified yet"
+      ]
+    }
   ],
   "farmerLevel": [
     {
       "id": "farming",
       "name": "Farming",
-      "levels1to5": [true, true, true, false, false],
+      "levels1to5": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
       "profession5": null,
       "profession5Options": [
-        { "name": "Rancher", "description": "Animal products (Eggs, Truffles, Milk, etc.) sell for 20% more." },
-        { "name": "Tiller", "description": "Crops (Blueberries, Carrots, Ancient Fruit, etc.) sell for 10% more." }
+        {
+          "name": "Rancher",
+          "description": "Animal products (Eggs, Truffles, Milk, etc.) sell for 20% more."
+        },
+        {
+          "name": "Tiller",
+          "description": "Crops (Blueberries, Carrots, Ancient Fruit, etc.) sell for 10% more."
+        }
       ],
-      "levels6to10": [false, false, false, false, false],
+      "levels6to10": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
       "profession10": null,
       "profession10OptionsByChoice": {
         "Rancher": [
-          { "name": "Coopmaster", "description": "Befriend coop animals faster; egg incubation time is halved." },
-          { "name": "Shepherd", "description": "Befriend barn animals faster; sheep produce wool more often." }
+          {
+            "name": "Coopmaster",
+            "description": "Befriend coop animals faster; egg incubation time is halved."
+          },
+          {
+            "name": "Shepherd",
+            "description": "Befriend barn animals faster; sheep produce wool more often."
+          }
         ],
         "Tiller": [
-          { "name": "Artisan", "description": "Artisan goods (Wine, Jelly, Cheese, etc.) sell for 40% more." },
-          { "name": "Agriculturist", "description": "Crops grow at least 10% faster." }
+          {
+            "name": "Artisan",
+            "description": "Artisan goods (Wine, Jelly, Cheese, etc.) sell for 40% more."
+          },
+          {
+            "name": "Agriculturist",
+            "description": "Crops grow at least 10% faster."
+          }
         ]
       }
     },
     {
       "id": "mining",
       "name": "Mining",
-      "levels1to5": [true, true, false, false, false],
+      "levels1to5": [
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
       "profession5": null,
       "profession5Options": [
-        { "name": "Miner", "description": "Ore veins give one extra ore." },
-        { "name": "Geologist", "description": "Gems have a chance to appear in pairs." }
+        {
+          "name": "Miner",
+          "description": "Ore veins give one extra ore."
+        },
+        {
+          "name": "Geologist",
+          "description": "Gems have a chance to appear in pairs."
+        }
       ],
-      "levels6to10": [false, false, false, false, false],
+      "levels6to10": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
       "profession10": null,
       "profession10OptionsByChoice": {
         "Miner": [
-          { "name": "Blacksmith", "description": "Metal bars sell for 50% more." },
-          { "name": "Prospector", "description": "Doubles the chance of finding coal." }
+          {
+            "name": "Blacksmith",
+            "description": "Metal bars sell for 50% more."
+          },
+          {
+            "name": "Prospector",
+            "description": "Doubles the chance of finding coal."
+          }
         ],
         "Geologist": [
-          { "name": "Excavator", "description": "Doubles the chance of finding geodes." },
-          { "name": "Gemologist", "description": "Gems sell for 30% more." }
+          {
+            "name": "Excavator",
+            "description": "Doubles the chance of finding geodes."
+          },
+          {
+            "name": "Gemologist",
+            "description": "Gems sell for 30% more."
+          }
         ]
       }
     },
     {
       "id": "foraging",
       "name": "Foraging",
-      "levels1to5": [true, false, false, false, false],
+      "levels1to5": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
       "profession5": null,
       "profession5Options": [
-        { "name": "Forester", "description": "Trees have a 25% higher chance to give extra wood." },
-        { "name": "Gatherer", "description": "20% chance to double the amount of a foraged item." }
+        {
+          "name": "Forester",
+          "description": "Trees have a 25% higher chance to give extra wood."
+        },
+        {
+          "name": "Gatherer",
+          "description": "20% chance to double the amount of a foraged item."
+        }
       ],
-      "levels6to10": [false, false, false, false, false],
+      "levels6to10": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
       "profession10": null,
       "profession10OptionsByChoice": {
         "Forester": [
-          { "name": "Lumberjack", "description": "Normal trees have a chance to drop Hardwood." },
-          { "name": "Tapper", "description": "Syrup products (Maple Syrup, Oak Resin, Pine Tar) sell for 25% more." }
+          {
+            "name": "Lumberjack",
+            "description": "Normal trees have a chance to drop Hardwood."
+          },
+          {
+            "name": "Tapper",
+            "description": "Syrup products (Maple Syrup, Oak Resin, Pine Tar) sell for 25% more."
+          }
         ],
         "Gatherer": [
-          { "name": "Botanist", "description": "Foraged items are always of iridium quality." },
-          { "name": "Tracker", "description": "Shows an on-screen marker pointing to nearby forageable items." }
+          {
+            "name": "Botanist",
+            "description": "Foraged items are always of iridium quality."
+          },
+          {
+            "name": "Tracker",
+            "description": "Shows an on-screen marker pointing to nearby forageable items."
+          }
         ]
       }
     },
     {
       "id": "fishing",
       "name": "Fishing",
-      "levels1to5": [false, false, false, false, false],
+      "levels1to5": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
       "profession5": null,
       "profession5Options": [
-        { "name": "Fisher", "description": "Fish sell for 25% more." },
-        { "name": "Trapper", "description": "Crab pots need fewer resources to craft." }
+        {
+          "name": "Fisher",
+          "description": "Fish sell for 25% more."
+        },
+        {
+          "name": "Trapper",
+          "description": "Crab pots need fewer resources to craft."
+        }
       ],
-      "levels6to10": [false, false, false, false, false],
+      "levels6to10": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
       "profession10": null,
       "profession10OptionsByChoice": {
         "Fisher": [
-          { "name": "Angler", "description": "Fish sell for 50% more (replaces the Fisher bonus rather than stacking)." },
-          { "name": "Pirate", "description": "Doubles the chance of finding treasure while fishing." }
+          {
+            "name": "Angler",
+            "description": "Fish sell for 50% more (replaces the Fisher bonus rather than stacking)."
+          },
+          {
+            "name": "Pirate",
+            "description": "Doubles the chance of finding treasure while fishing."
+          }
         ],
         "Trapper": [
-          { "name": "Mariner", "description": "Crab pots never produce junk items." },
-          { "name": "Luremaster", "description": "Crab pots work without needing bait." }
+          {
+            "name": "Mariner",
+            "description": "Crab pots never produce junk items."
+          },
+          {
+            "name": "Luremaster",
+            "description": "Crab pots work without needing bait."
+          }
         ]
       }
     },
     {
       "id": "combat",
       "name": "Combat",
-      "levels1to5": [false, false, false, false, false],
+      "levels1to5": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
       "profession5": null,
       "profession5Options": [
-        { "name": "Fighter", "description": "+10% damage, +15 max HP." },
-        { "name": "Scout", "description": "+50% critical hit chance." }
+        {
+          "name": "Fighter",
+          "description": "+10% damage, +15 max HP."
+        },
+        {
+          "name": "Scout",
+          "description": "+50% critical hit chance."
+        }
       ],
-      "levels6to10": [false, false, false, false, false],
+      "levels6to10": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
       "profession10": null,
       "profession10OptionsByChoice": {
         "Fighter": [
-          { "name": "Brute", "description": "+15% damage, stacking with Fighter for +25% total." },
-          { "name": "Defender", "description": "+25 max HP." }
+          {
+            "name": "Brute",
+            "description": "+15% damage, stacking with Fighter for +25% total."
+          },
+          {
+            "name": "Defender",
+            "description": "+25 max HP."
+          }
         ],
         "Scout": [
-          { "name": "Acrobat", "description": "Halves the cooldown on special moves." },
-          { "name": "Desperado", "description": "Doubles critical strike damage." }
+          {
+            "name": "Acrobat",
+            "description": "Halves the cooldown on special moves."
+          },
+          {
+            "name": "Desperado",
+            "description": "Doubles critical strike damage."
+          }
         ]
       }
     }
   ]
-}
+} 

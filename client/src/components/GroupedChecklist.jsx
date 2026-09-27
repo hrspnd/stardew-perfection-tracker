@@ -14,6 +14,7 @@
  *     title: string,
  *     items: Array<{ id, label, icon?, checked }>,
  *     reward?: string,
+ *     requiredCount?: number,  // e.g. "choose any 5 of 9" bundles
  *   }>
  *   onToggleItem: (groupId, itemId) => void
  */
@@ -25,6 +26,11 @@ export default function GroupedChecklist({ groups, onToggleItem }) {
         <section key={group.id} className="grouped-checklist__group">
           <header className="grouped-checklist__group-header">
             <h3>{group.title}</h3>
+            {group.requiredCount && (
+              <span className="grouped-checklist__required-count">
+                (need any {group.requiredCount} of {group.items.length})
+              </span>
+            )}
           </header>
 
           <ul className="grouped-checklist__items">
