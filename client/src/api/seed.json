@@ -20,8 +20,448 @@
           "checked": false
         },
         {
+          "id": "salmonberry",
+          "label": "Salmonberry",
+          "checked": false
+        },
+        {
+          "id": "spring-onion",
+          "label": "Spring Onion",
+          "checked": false
+        },
+        {
           "id": "wild-horseradish",
           "label": "Wild Horseradish",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "spring-crops",
+      "title": "Spring Crops",
+      "items": [
+        {
+          "id": "blue-jazz",
+          "label": "Blue Jazz",
+          "checked": false
+        },
+        {
+          "id": "carrot",
+          "label": "Carrot",
+          "checked": false
+        },
+        {
+          "id": "cauliflower",
+          "label": "Cauliflower",
+          "checked": false
+        },
+        {
+          "id": "coffee-bean",
+          "label": "Coffee Bean",
+          "checked": false
+        },
+        {
+          "id": "garlic",
+          "label": "Garlic",
+          "checked": false
+        },
+        {
+          "id": "green-bean",
+          "label": "Green Bean",
+          "checked": false
+        },
+        {
+          "id": "kale",
+          "label": "Kale",
+          "checked": false
+        },
+        {
+          "id": "parsnip",
+          "label": "Parsnip",
+          "checked": false
+        },
+        {
+          "id": "potato",
+          "label": "Potato",
+          "checked": false
+        },
+        {
+          "id": "rhubarb",
+          "label": "Rhubarb",
+          "checked": false
+        },
+        {
+          "id": "strawberry",
+          "label": "Strawberry",
+          "checked": false
+        },
+        {
+          "id": "tulip",
+          "label": "Tulip",
+          "checked": false
+        },
+        {
+          "id": "unmilled-rice",
+          "label": "Unmilled Rice",
+          "checked": false
+        },
+        {
+          "id": "ancient-fruit",
+          "label": "Ancient Fruit",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "summer-foraging",
+      "title": "Summer Foraging",
+      "items": [
+        {
+          "id": "grape",
+          "label": "Grape",
+          "checked": false
+        },
+        {
+          "id": "spice-berry",
+          "label": "Spice Berry",
+          "checked": false
+        },
+        {
+          "id": "sweet-pea",
+          "label": "Sweet Pea",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "summer-crops",
+      "title": "Summer Crops",
+      "items": [
+        {
+          "id": "blueberry",
+          "label": "Blueberry",
+          "checked": false
+        },
+        {
+          "id": "corn",
+          "label": "Corn",
+          "checked": false
+        },
+        {
+          "id": "hops",
+          "label": "Hops",
+          "checked": false
+        },
+        {
+          "id": "hot-pepper",
+          "label": "Hot Pepper",
+          "checked": false
+        },
+        {
+          "id": "melon",
+          "label": "Melon",
+          "checked": false
+        },
+        {
+          "id": "poppy",
+          "label": "Poppy",
+          "checked": false
+        },
+        {
+          "id": "radish",
+          "label": "Radish",
+          "checked": false
+        },
+        {
+          "id": "red-cabbage",
+          "label": "Red Cabbage",
+          "checked": false
+        },
+        {
+          "id": "starfruit",
+          "label": "Starfruit",
+          "checked": false
+        },
+        {
+          "id": "summer-spangle",
+          "label": "Summer Spangle",
+          "checked": false
+        },
+        {
+          "id": "sunflower",
+          "label": "Sunflower",
+          "checked": false
+        },
+        {
+          "id": "tomato",
+          "label": "Tomato",
+          "checked": false
+        },
+        {
+          "id": "wheat",
+          "label": "Wheat",
+          "checked": false
+        },
+        {
+          "id": "summer-squash",
+          "label": "Summer Squash",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "fall-foraging",
+      "title": "Fall Foraging",
+      "items": [
+        {
+          "id": "blackberry",
+          "label": "Blackberry",
+          "checked": false
+        },
+        {
+          "id": "chanterelle",
+          "label": "Chanterelle",
+          "checked": false
+        },
+        {
+          "id": "common-mushroom",
+          "label": "Common Mushroom",
+          "checked": false
+        },
+        {
+          "id": "hazelnut",
+          "label": "Hazelnut",
+          "checked": false
+        },
+        {
+          "id": "wild-plum",
+          "label": "Wild Plum",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "fall-crops",
+      "title": "Fall Crops",
+      "items": [
+        {
+          "id": "amaranth",
+          "label": "Amaranth",
+          "checked": false
+        },
+        {
+          "id": "artichoke",
+          "label": "Artichoke",
+          "checked": false
+        },
+        {
+          "id": "beet",
+          "label": "Beet",
+          "checked": false
+        },
+        {
+          "id": "bok-choy",
+          "label": "Bok Choy",
+          "checked": false
+        },
+        {
+          "id": "broccoli",
+          "label": "Broccoli",
+          "checked": false
+        },
+        {
+          "id": "cranberries",
+          "label": "Cranberries",
+          "checked": false
+        },
+        {
+          "id": "eggplant",
+          "label": "Eggplant",
+          "checked": false
+        },
+        {
+          "id": "fairy-rose",
+          "label": "Fairy Rose",
+          "checked": false
+        },
+        {
+          "id": "pumpkin",
+          "label": "Pumpkin",
+          "checked": false
+        },
+        {
+          "id": "sweet-gem-berry",
+          "label": "Sweet Gem Berry",
+          "checked": false
+        },
+        {
+          "id": "yam",
+          "label": "Yam",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "winter-foraging",
+      "title": "Winter Foraging",
+      "items": [
+        {
+          "id": "crocus",
+          "label": "Crocus",
+          "checked": false
+        },
+        {
+          "id": "crystal-fruit",
+          "label": "Crystal Fruit",
+          "checked": false
+        },
+        {
+          "id": "holly",
+          "label": "Holly",
+          "checked": false
+        },
+        {
+          "id": "nautilus-shell",
+          "label": "Nautilus Shell",
+          "checked": false
+        },
+        {
+          "id": "snow-yam",
+          "label": "Snow Yam",
+          "checked": false
+        },
+        {
+          "id": "winter-root",
+          "label": "Winter Root",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "winter-crops",
+      "title": "Winter Crops",
+      "items": [
+        {
+          "id": "powdermelon",
+          "label": "Powdermelon",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "beach-foraging",
+      "title": "Beach Foraging",
+      "items": [
+        {
+          "id": "coral",
+          "label": "Coral",
+          "checked": false
+        },
+        {
+          "id": "rainbow-shell",
+          "label": "Rainbow Shell",
+          "checked": false
+        },
+        {
+          "id": "sea-urchin",
+          "label": "Sea Urchin",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "desert-year-round",
+      "title": "Desert / Year-Round",
+      "items": [
+        {
+          "id": "cactus-fruit",
+          "label": "Cactus Fruit",
+          "checked": false
+        },
+        {
+          "id": "coconut",
+          "label": "Coconut",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "title": "Other",
+      "items": [
+        {
+          "id": "battery-pack",
+          "label": "Battery Pack",
+          "checked": false
+        },
+        {
+          "id": "clay",
+          "label": "Clay",
+          "checked": false
+        },
+        {
+          "id": "fiber",
+          "label": "Fiber",
+          "checked": false
+        },
+        {
+          "id": "hardwood",
+          "label": "Hardwood",
+          "checked": false
+        },
+        {
+          "id": "maple-syrup",
+          "label": "Maple Syrup",
+          "checked": false
+        },
+        {
+          "id": "moss",
+          "label": "Moss",
+          "checked": false
+        },
+        {
+          "id": "mystic-syrup",
+          "label": "Mystic Syrup",
+          "checked": false
+        },
+        {
+          "id": "oak-resin",
+          "label": "Oak Resin",
+          "checked": false
+        },
+        {
+          "id": "pine-tar",
+          "label": "Pine Tar",
+          "checked": false
+        },
+        {
+          "id": "roe",
+          "label": "Roe",
+          "checked": false
+        },
+        {
+          "id": "sap",
+          "label": "Sap",
+          "checked": false
+        },
+        {
+          "id": "squid-ink",
+          "label": "Squid Ink",
+          "checked": false
+        },
+        {
+          "id": "stone",
+          "label": "Stone",
+          "checked": false
+        },
+        {
+          "id": "tea-leaves",
+          "label": "Tea Leaves",
+          "checked": false
+        },
+        {
+          "id": "wood",
+          "label": "Wood",
           "checked": false
         }
       ]
@@ -36,13 +476,215 @@
           "checked": true
         },
         {
+          "id": "large-white-egg",
+          "label": "Large White Egg",
+          "checked": false
+        },
+        {
+          "id": "brown-egg",
+          "label": "Brown Egg",
+          "checked": false
+        },
+        {
+          "id": "large-brown-egg",
+          "label": "Large Brown Egg",
+          "checked": false
+        },
+        {
+          "id": "duck-egg",
+          "label": "Duck Egg",
+          "checked": false
+        },
+        {
+          "id": "duck-feather",
+          "label": "Duck Feather",
+          "checked": false
+        },
+        {
           "id": "milk",
           "label": "Milk",
           "checked": false
         },
         {
+          "id": "large-milk",
+          "label": "Large Milk",
+          "checked": false
+        },
+        {
+          "id": "goat-milk",
+          "label": "Goat Milk",
+          "checked": false
+        },
+        {
+          "id": "large-goat-milk",
+          "label": "Large Goat Milk",
+          "checked": false
+        },
+        {
+          "id": "ostrich-egg",
+          "label": "Ostrich Egg",
+          "checked": false
+        },
+        {
+          "id": "rabbits-foot",
+          "label": "Rabbit's Foot",
+          "checked": false
+        },
+        {
+          "id": "truffle",
+          "label": "Truffle",
+          "checked": false
+        },
+        {
+          "id": "void-egg",
+          "label": "Void Egg",
+          "checked": false
+        },
+        {
           "id": "wool",
           "label": "Wool",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "artisan-goods",
+      "title": "Artisan Goods",
+      "items": [
+        {
+          "id": "aged-roe",
+          "label": "Aged Roe",
+          "checked": false
+        },
+        {
+          "id": "beer",
+          "label": "Beer",
+          "checked": false
+        },
+        {
+          "id": "caviar",
+          "label": "Caviar",
+          "checked": false
+        },
+        {
+          "id": "cheese",
+          "label": "Cheese",
+          "checked": false
+        },
+        {
+          "id": "cloth",
+          "label": "Cloth",
+          "checked": false
+        },
+        {
+          "id": "dinosaur-mayonnaise",
+          "label": "Dinosaur Mayonnaise",
+          "checked": false
+        },
+        {
+          "id": "dried-fruit",
+          "label": "Dried Fruit",
+          "checked": false
+        },
+        {
+          "id": "dried-mushrooms",
+          "label": "Dried Mushrooms",
+          "checked": false
+        },
+        {
+          "id": "duck-mayonnaise",
+          "label": "Duck Mayonnaise",
+          "checked": false
+        },
+        {
+          "id": "goat-cheese",
+          "label": "Goat Cheese",
+          "checked": false
+        },
+        {
+          "id": "green-tea",
+          "label": "Green Tea",
+          "checked": false
+        },
+        {
+          "id": "honey",
+          "label": "Honey",
+          "checked": false
+        },
+        {
+          "id": "jelly",
+          "label": "Jelly",
+          "checked": false
+        },
+        {
+          "id": "juice",
+          "label": "Juice",
+          "checked": false
+        },
+        {
+          "id": "mayonnaise",
+          "label": "Mayonnaise",
+          "checked": false
+        },
+        {
+          "id": "mead",
+          "label": "Mead",
+          "checked": false
+        },
+        {
+          "id": "pale-ale",
+          "label": "Pale Ale",
+          "checked": false
+        },
+        {
+          "id": "pickles",
+          "label": "Pickles",
+          "checked": false
+        },
+        {
+          "id": "raisins",
+          "label": "Raisins",
+          "checked": false
+        },
+        {
+          "id": "smoked-fish",
+          "label": "Smoked Fish",
+          "checked": false
+        },
+        {
+          "id": "truffle-oil",
+          "label": "Truffle Oil",
+          "checked": false
+        },
+        {
+          "id": "void-mayonnaise",
+          "label": "Void Mayonnaise",
+          "checked": false
+        },
+        {
+          "id": "wine",
+          "label": "Wine",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "secret-woods",
+      "title": "Secret Woods",
+      "items": [
+        {
+          "id": "fiddlehead-fern",
+          "label": "Fiddlehead Fern",
+          "checked": false
+        },
+        {
+          "id": "morel",
+          "label": "Morel",
+          "checked": false
+        },
+        {
+          "id": "red-mushroom",
+          "label": "Red Mushroom",
           "checked": false
         }
       ]
@@ -62,8 +704,170 @@
           "checked": false
         },
         {
+          "id": "orange",
+          "label": "Orange",
+          "checked": false
+        },
+        {
+          "id": "peach",
+          "label": "Peach",
+          "checked": false
+        },
+        {
           "id": "apple",
           "label": "Apple",
+          "checked": false
+        },
+        {
+          "id": "pomegranate",
+          "label": "Pomegranate",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "ginger-island",
+      "title": "Ginger Island",
+      "items": [
+        {
+          "id": "banana",
+          "label": "Banana",
+          "checked": false
+        },
+        {
+          "id": "ginger",
+          "label": "Ginger",
+          "checked": false
+        },
+        {
+          "id": "magma-cap",
+          "label": "Magma Cap",
+          "checked": false
+        },
+        {
+          "id": "mango",
+          "label": "Mango",
+          "checked": false
+        },
+        {
+          "id": "pineapple",
+          "label": "Pineapple",
+          "checked": false
+        },
+        {
+          "id": "taro-root",
+          "label": "Taro Root",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "mines-smelting",
+      "title": "Mines & Smelting",
+      "items": [
+        {
+          "id": "bat-wing",
+          "label": "Bat Wing",
+          "checked": false
+        },
+        {
+          "id": "bone-fragment",
+          "label": "Bone Fragment",
+          "checked": false
+        },
+        {
+          "id": "bug-meat",
+          "label": "Bug Meat",
+          "checked": false
+        },
+        {
+          "id": "cave-carrot",
+          "label": "Cave Carrot",
+          "checked": false
+        },
+        {
+          "id": "cinder-shard",
+          "label": "Cinder Shard",
+          "checked": false
+        },
+        {
+          "id": "coal",
+          "label": "Coal",
+          "checked": false
+        },
+        {
+          "id": "copper-bar",
+          "label": "Copper Bar",
+          "checked": false
+        },
+        {
+          "id": "copper-ore",
+          "label": "Copper Ore",
+          "checked": false
+        },
+        {
+          "id": "gold-bar",
+          "label": "Gold Bar",
+          "checked": false
+        },
+        {
+          "id": "gold-ore",
+          "label": "Gold Ore",
+          "checked": false
+        },
+        {
+          "id": "iridium-bar",
+          "label": "Iridium Bar",
+          "checked": false
+        },
+        {
+          "id": "iridium-ore",
+          "label": "Iridium Ore",
+          "checked": false
+        },
+        {
+          "id": "iron-bar",
+          "label": "Iron Bar",
+          "checked": false
+        },
+        {
+          "id": "iron-ore",
+          "label": "Iron Ore",
+          "checked": false
+        },
+        {
+          "id": "purple-mushroom",
+          "label": "Purple Mushroom",
+          "checked": false
+        },
+        {
+          "id": "radioactive-bar",
+          "label": "Radioactive Bar",
+          "checked": false
+        },
+        {
+          "id": "radioactive-ore",
+          "label": "Radioactive Ore",
+          "checked": false
+        },
+        {
+          "id": "refined-quartz",
+          "label": "Refined Quartz",
+          "checked": false
+        },
+        {
+          "id": "slime",
+          "label": "Slime",
+          "checked": false
+        },
+        {
+          "id": "solar-essence",
+          "label": "Solar Essence",
+          "checked": false
+        },
+        {
+          "id": "void-essence",
+          "label": "Void Essence",
           "checked": false
         }
       ]
@@ -1084,8 +1888,152 @@
       "name": "Fried Egg",
       "checked": true,
       "columns": [
-        "Starter recipe",
-        "1 Egg"
+        "Upgrade Farmhouse",
+        "Egg"
+      ]
+    },
+    {
+      "id": "omelet",
+      "name": "Omelet",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Spring 28, Year 1",
+        "Egg, Milk"
+      ]
+    },
+    {
+      "id": "salad",
+      "name": "Salad",
+      "checked": false,
+      "columns": [
+        "Emily - 3 Hearts",
+        "Leek, Dandelion, Vinegar"
+      ]
+    },
+    {
+      "id": "cheese-cauliflower",
+      "name": "Cheese Cauliflower",
+      "checked": false,
+      "columns": [
+        "Pam - 3 Hearts",
+        "Cauliflower, Cheese"
+      ]
+    },
+    {
+      "id": "baked-fish",
+      "name": "Baked Fish",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Summer 7, Year 1",
+        "Sunfish, Bream, Wheat Flour"
+      ]
+    },
+    {
+      "id": "parsnip-soup",
+      "name": "Parsnip Soup",
+      "checked": false,
+      "columns": [
+        "Caroline - 3 Hearts",
+        "Parsnip, Milk, Vinegar"
+      ]
+    },
+    {
+      "id": "vegetable-medley",
+      "name": "Vegetable Medley",
+      "checked": false,
+      "columns": [
+        "Caroline - 7 Hearts",
+        "Tomato, Beet"
+      ]
+    },
+    {
+      "id": "complete-breakfast",
+      "name": "Complete Breakfast",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Spring 21, Year 2",
+        "Fried Egg, Milk, Hashbrowns, Pancakes"
+      ]
+    },
+    {
+      "id": "fried-calamari",
+      "name": "Fried Calamari",
+      "checked": false,
+      "columns": [
+        "Jodi - 3 Hearts",
+        "Squid, Wheat Flour, Oil"
+      ]
+    },
+    {
+      "id": "strange-bun",
+      "name": "Strange Bun",
+      "checked": false,
+      "columns": [
+        "Shane - 7 Hearts",
+        "Wheat Flour, Periwinkle, Void Mayo"
+      ]
+    },
+    {
+      "id": "lucky-lunch",
+      "name": "Lucky Lunch",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Spring 28, Year 2",
+        "Sea Cucumber, Tortilla, Blue Jazz"
+      ]
+    },
+    {
+      "id": "fried-mushroom",
+      "name": "Fried Mushroom",
+      "checked": false,
+      "columns": [
+        "Demetrius - 3 Hearts",
+        "Common Mushroom, Morel, Oil"
+      ]
+    },
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Spring 7, Year 2",
+        "Wheat Flour, Tomato, Cheese"
+      ]
+    },
+    {
+      "id": "bean-hotpot",
+      "name": "Bean Hotpot",
+      "checked": false,
+      "columns": [
+        "Clint - 7 Hearts",
+        "Green Bean (2)"
+      ]
+    },
+    {
+      "id": "glazed-yams",
+      "name": "Glazed Yams",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Fall 21, Year 1",
+        "Yam, Sugar"
+      ]
+    },
+    {
+      "id": "carp-surprise",
+      "name": "Carp Surprise",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Summer 7, Year 2",
+        "Carp (4)"
+      ]
+    },
+    {
+      "id": "hashbrowns",
+      "name": "Hashbrowns",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Spring 14, Year 2",
+        "Potato, Oil"
       ]
     },
     {
@@ -1093,8 +2041,152 @@
       "name": "Pancakes",
       "checked": false,
       "columns": [
-        "Gus, 3 hearts",
-        "1 Wheat Flour, 1 Egg"
+        "Queen of Sauce, Summer 14, Year 1",
+        "Wheat Flour, Egg"
+      ]
+    },
+    {
+      "id": "salmon-dinner",
+      "name": "Salmon Dinner",
+      "checked": false,
+      "columns": [
+        "Gus - 3 Hearts",
+        "Salmon, Amaranth, Kale"
+      ]
+    },
+    {
+      "id": "fish-taco",
+      "name": "Fish Taco",
+      "checked": false,
+      "columns": [
+        "Linus - 7 Hearts",
+        "Tuna, Tortilla, Red Cabbage, Mayo"
+      ]
+    },
+    {
+      "id": "crispy-bass",
+      "name": "Crispy Bass",
+      "checked": false,
+      "columns": [
+        "Kent - 3 Hearts",
+        "Largemouth Bass, Wheat Flour, Oil"
+      ]
+    },
+    {
+      "id": "pepper-poppers",
+      "name": "Pepper Poppers",
+      "checked": false,
+      "columns": [
+        "Shane - 3 Hearts",
+        "Hot Pepper, Cheese"
+      ]
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Summer 28, Year 1",
+        "Wheat Flour"
+      ]
+    },
+    {
+      "id": "tom-kha-soup",
+      "name": "Tom Kha Soup",
+      "checked": false,
+      "columns": [
+        "Sandy - 7 Hearts",
+        "Coconut, Shrimp, Common Mushroom"
+      ]
+    },
+    {
+      "id": "trout-soup",
+      "name": "Trout Soup",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Fall 14, Year 1",
+        "Rainbow Trout, Green Algae"
+      ]
+    },
+    {
+      "id": "chocolate-cake",
+      "name": "Chocolate Cake",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Winter 14, Year 1",
+        "Wheat Flour, Sugar, Egg"
+      ]
+    },
+    {
+      "id": "pink-cake",
+      "name": "Pink Cake",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Summer 21, Year 2",
+        "Melon, Wheat Flour, Sugar, Egg"
+      ]
+    },
+    {
+      "id": "rhubarb-pie",
+      "name": "Rhubarb Pie",
+      "checked": false,
+      "columns": [
+        "Marnie - 7 Hearts",
+        "Rhubarb, Wheat Flour, Sugar"
+      ]
+    },
+    {
+      "id": "cookie",
+      "name": "Cookie",
+      "checked": false,
+      "columns": [
+        "Evelyn - 4-Heart Event",
+        "Wheat Flour, Sugar, Egg"
+      ]
+    },
+    {
+      "id": "spaghetti",
+      "name": "Spaghetti",
+      "checked": false,
+      "columns": [
+        "Lewis - 3 Hearts",
+        "Wheat Flour, Tomato"
+      ]
+    },
+    {
+      "id": "fried-eel",
+      "name": "Fried Eel",
+      "checked": false,
+      "columns": [
+        "George - 3 Hearts",
+        "Eel, Oil"
+      ]
+    },
+    {
+      "id": "spicy-eel",
+      "name": "Spicy Eel",
+      "checked": false,
+      "columns": [
+        "George - 7 Hearts",
+        "Eel, Hot Pepper"
+      ]
+    },
+    {
+      "id": "sashimi",
+      "name": "Sashimi",
+      "checked": false,
+      "columns": [
+        "Linus - 3 Hearts",
+        "Any Fish"
+      ]
+    },
+    {
+      "id": "maki-roll",
+      "name": "Maki Roll",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Summer 21, Year 1",
+        "Any Fish, Seaweed, Rice"
       ]
     },
     {
@@ -1102,8 +2194,422 @@
       "name": "Tortilla",
       "checked": false,
       "columns": [
-        "TV Cooking Channel",
-        "1 Corn"
+        "Queen of Sauce, Fall 7, Year 1",
+        "Corn"
+      ]
+    },
+    {
+      "id": "red-plate",
+      "name": "Red Plate",
+      "checked": false,
+      "columns": [
+        "Emily - 7 Hearts",
+        "Red Cabbage, Radish"
+      ]
+    },
+    {
+      "id": "eggplant-parmesan",
+      "name": "Eggplant Parmesan",
+      "checked": false,
+      "columns": [
+        "Lewis - 7 Hearts",
+        "Eggplant, Tomato"
+      ]
+    },
+    {
+      "id": "rice-pudding",
+      "name": "Rice Pudding",
+      "checked": false,
+      "columns": [
+        "Evelyn - 7 Hearts",
+        "Milk, Sugar, Rice"
+      ]
+    },
+    {
+      "id": "ice-cream",
+      "name": "Ice Cream",
+      "checked": false,
+      "columns": [
+        "Jodi - 7 Hearts",
+        "Milk, Sugar"
+      ]
+    },
+    {
+      "id": "blueberry-tart",
+      "name": "Blueberry Tart",
+      "checked": false,
+      "columns": [
+        "Pierre - 3 Hearts",
+        "Blueberry, Wheat Flour, Sugar, Egg"
+      ]
+    },
+    {
+      "id": "autumns-bounty",
+      "name": "Autumn's Bounty",
+      "checked": false,
+      "columns": [
+        "Demetrius - 7 Hearts",
+        "Yam, Pumpkin"
+      ]
+    },
+    {
+      "id": "pumpkin-soup",
+      "name": "Pumpkin Soup",
+      "checked": false,
+      "columns": [
+        "Robin - 7 Hearts",
+        "Pumpkin, Milk"
+      ]
+    },
+    {
+      "id": "super-meal",
+      "name": "Super Meal",
+      "checked": false,
+      "columns": [
+        "Kent - 7 Hearts",
+        "Bok Choy, Cranberries, Artichoke"
+      ]
+    },
+    {
+      "id": "cranberry-sauce",
+      "name": "Cranberry Sauce",
+      "checked": false,
+      "columns": [
+        "Gus - 7 Hearts",
+        "Cranberries, Sugar"
+      ]
+    },
+    {
+      "id": "stuffing",
+      "name": "Stuffing",
+      "checked": false,
+      "columns": [
+        "Pam - 7 Hearts",
+        "Bread, Cranberries, Hazelnut"
+      ]
+    },
+    {
+      "id": "farmers-lunch",
+      "name": "Farmer's Lunch",
+      "checked": false,
+      "columns": [
+        "Farming Level 3",
+        "Omelet, Parsnip"
+      ]
+    },
+    {
+      "id": "survival-burger",
+      "name": "Survival Burger",
+      "checked": false,
+      "columns": [
+        "Foraging Level 8",
+        "Bread, Cave Carrot, Eggplant"
+      ]
+    },
+    {
+      "id": "dish-o-the-sea",
+      "name": "Dish O' The Sea",
+      "checked": false,
+      "columns": [
+        "Fishing Level 3",
+        "Sardine (2), Hashbrowns"
+      ]
+    },
+    {
+      "id": "miners-treat",
+      "name": "Miner's Treat",
+      "checked": false,
+      "columns": [
+        "Mining Level 3",
+        "Cave Carrot (2), Sugar, Milk"
+      ]
+    },
+    {
+      "id": "roots-platter",
+      "name": "Roots Platter",
+      "checked": false,
+      "columns": [
+        "Combat Level 3",
+        "Cave Carrot, Winter Root"
+      ]
+    },
+    {
+      "id": "triple-shot-espresso",
+      "name": "Triple Shot Espresso",
+      "checked": false,
+      "columns": [
+        "Stardrop Saloon for 5,000g",
+        "Coffee (3)"
+      ]
+    },
+    {
+      "id": "seafoam-pudding",
+      "name": "Seafoam Pudding",
+      "checked": false,
+      "columns": [
+        "Fishing Level 9",
+        "Flounder, Midnight Carp, Squid Ink"
+      ]
+    },
+    {
+      "id": "algae-soup",
+      "name": "Algae Soup",
+      "checked": false,
+      "columns": [
+        "Clint - 3 Hearts",
+        "Green Algae (4)"
+      ]
+    },
+    {
+      "id": "pale-broth",
+      "name": "Pale Broth",
+      "checked": false,
+      "columns": [
+        "Marnie - 3 Hearts",
+        "White Algae (2)"
+      ]
+    },
+    {
+      "id": "plum-pudding",
+      "name": "Plum Pudding",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Winter 7, Year 1",
+        "Wild Plum (2), Wheat Flour, Sugar"
+      ]
+    },
+    {
+      "id": "artichoke-dip",
+      "name": "Artichoke Dip",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Fall 28, Year 1",
+        "Artichoke, Milk"
+      ]
+    },
+    {
+      "id": "stir-fry",
+      "name": "Stir Fry",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Spring 7, Year 1",
+        "Cave Carrot, Common Mushroom, Kale, Oil"
+      ]
+    },
+    {
+      "id": "roasted-hazelnuts",
+      "name": "Roasted Hazelnuts",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Summer 28, Year 2",
+        "Hazelnut (3)"
+      ]
+    },
+    {
+      "id": "pumpkin-pie",
+      "name": "Pumpkin Pie",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Winter 21, Year 1",
+        "Pumpkin, Wheat Flour, Milk, Sugar"
+      ]
+    },
+    {
+      "id": "radish-salad",
+      "name": "Radish Salad",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Spring 21, Year 1",
+        "Oil, Vinegar, Radish"
+      ]
+    },
+    {
+      "id": "fruit-salad",
+      "name": "Fruit Salad",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Fall 7, Year 2",
+        "Blueberry, Melon, Apricot"
+      ]
+    },
+    {
+      "id": "blackberry-cobbler",
+      "name": "Blackberry Cobbler",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Fall 14, Year 2",
+        "Blackberry (2), Sugar, Wheat Flour"
+      ]
+    },
+    {
+      "id": "cranberry-candy",
+      "name": "Cranberry Candy",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Winter 28, Year 1",
+        "Cranberry, Apple, Sugar"
+      ]
+    },
+    {
+      "id": "bruschetta",
+      "name": "Bruschetta",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Winter 21, Year 2",
+        "Bread, Oil, Tomato"
+      ]
+    },
+    {
+      "id": "coleslaw",
+      "name": "Coleslaw",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Spring 14, Year 1",
+        "Red Cabbage, Vinegar, Mayo"
+      ]
+    },
+    {
+      "id": "fiddlehead-risotto",
+      "name": "Fiddlehead Risotto",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Fall 28, Year 2",
+        "Oil, Fiddlehead Fern, Garlic"
+      ]
+    },
+    {
+      "id": "poppyseed-muffin",
+      "name": "Poppyseed Muffin",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Winter 7, Year 2",
+        "Poppy, Wheat Flour, Sugar"
+      ]
+    },
+    {
+      "id": "chowder",
+      "name": "Chowder",
+      "checked": false,
+      "columns": [
+        "Willy - 3 Hearts",
+        "Clam, Milk"
+      ]
+    },
+    {
+      "id": "fish-stew",
+      "name": "Fish Stew",
+      "checked": false,
+      "columns": [
+        "Willy - 7 Hearts",
+        "Crayfish, Mussel, Periwinkle, Tomato"
+      ]
+    },
+    {
+      "id": "escargot",
+      "name": "Escargot",
+      "checked": false,
+      "columns": [
+        "Willy - 5 Hearts",
+        "Snail, Garlic"
+      ]
+    },
+    {
+      "id": "lobster-bisque",
+      "name": "Lobster Bisque",
+      "checked": false,
+      "columns": [
+        "Willy - 9 Hearts",
+        "Lobster, Milk"
+      ]
+    },
+    {
+      "id": "maple-bar",
+      "name": "Maple Bar",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Summer 14, Year 2",
+        "Maple Syrup, Sugar, Wheat Flour"
+      ]
+    },
+    {
+      "id": "crab-cakes",
+      "name": "Crab Cakes",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Fall 21, Year 2",
+        "Crab, Wheat Flour, Egg, Oil"
+      ]
+    },
+    {
+      "id": "shrimp-cocktail",
+      "name": "Shrimp Cocktail",
+      "checked": false,
+      "columns": [
+        "Queen of Sauce, Winter 28, Year 2",
+        "Tomato, Shrimp, Wild Horseradish"
+      ]
+    },
+    {
+      "id": "ginger-ale",
+      "name": "Ginger Ale",
+      "checked": false,
+      "columns": [
+        "Dwarf Shop in Volcano for 1,000g",
+        "Ginger (3), Sugar"
+      ]
+    },
+    {
+      "id": "banana-pudding",
+      "name": "Banana Pudding",
+      "checked": false,
+      "columns": [
+        "Island Trader for 30 Bone Fragments",
+        "Banana, Milk, Sugar"
+      ]
+    },
+    {
+      "id": "mango-sticky-rice",
+      "name": "Mango Sticky Rice",
+      "checked": false,
+      "columns": [
+        "Leo - 7 Hearts",
+        "Mango, Coconut, Rice"
+      ]
+    },
+    {
+      "id": "poi",
+      "name": "Poi",
+      "checked": false,
+      "columns": [
+        "Leo - 3 Hearts",
+        "Taro Root (4)"
+      ]
+    },
+    {
+      "id": "tropical-curry",
+      "name": "Tropical Curry",
+      "checked": false,
+      "columns": [
+        "Ginger Island Resort for 2,000g",
+        "Coconut, Pineapple, Hot Pepper"
+      ]
+    },
+    {
+      "id": "squid-ink-ravioli",
+      "name": "Squid Ink Ravioli",
+      "checked": false,
+      "columns": [
+        "Combat Level 9",
+        "Squid Ink, Wheat Flour, Tomato"
+      ]
+    },
+    {
+      "id": "moss-soup",
+      "name": "Moss Soup",
+      "checked": false,
+      "columns": [
+        "Foraging Level 3",
+        "Moss (20)"
       ]
     }
   ],
@@ -1256,6 +2762,46 @@
         "Quantity: 60",
         "Reward: Crabshell Ring",
         "The top of the ring is made from enchanted crab shell"
+      ]
+    },
+    {
+      "id": "mummies",
+      "name": "Mummies",
+      "checked": false,
+      "columns": [
+        "Quantity: 100",
+        "Reward: Arcane Hat",
+        "Hat"
+      ]
+    },
+    {
+      "id": "pepper-rex",
+      "name": "Pepper Rex",
+      "checked": false,
+      "columns": [
+        "Quantity: 50",
+        "Reward: Knight's Helmet",
+        "Hat"
+      ]
+    },
+    {
+      "id": "serpents",
+      "name": "Serpents",
+      "checked": false,
+      "columns": [
+        "Quantity: 250",
+        "Reward: Napalm Ring",
+        "When you defeat an enemy, they explode"
+      ]
+    },
+    {
+      "id": "magma-sprites",
+      "name": "Magma Sprites",
+      "checked": false,
+      "columns": [
+        "Quantity: 150",
+        "Reward: Marlon's Phone Number",
+        "Utilize the Item Recovery System from home"
       ]
     }
   ],
@@ -1699,4 +3245,4 @@
       }
     }
   ]
-} 
+}
