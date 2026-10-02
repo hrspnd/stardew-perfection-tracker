@@ -66,7 +66,7 @@ export async function getSummary() {
     if (NON_TRACKABLE_CATEGORIES.includes(category)) {
       continue
     }
-    if (category === 'shipped') {
+    if (category === 'shipped' || category === 'walnuts') {
       // Grouped shape: array of { items: [...] }
       const allItems = items.flatMap((group) => group.items)
       summary[category] = {
