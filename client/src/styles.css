@@ -281,3 +281,165 @@
   padding: 0.75rem 1rem;
   text-decoration: none;
 }
+
+/* ---------- Dashboard ----------
+   Replace the old "Dashboard" section at the bottom of styles.css with this.
+   Colors are CSS variables so you can retune them in one place.
+   Set --font-body / --font-display to your loaded fonts. */
+
+.dashboard {
+  --cream: #fdf6e3;
+  --cream-hover: #ffecb8;
+  --ink: #4a2a14;
+  --gold: #e3a43a;
+  --green: #4f8a35;
+  --track: #ddd6c6;
+  --panel: rgba(70, 90, 110, 0.85);
+  --font-display: inherit;
+  --font-body: inherit;
+
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+.dashboard__title {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+}
+
+.dashboard__panel {
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background: var(--panel);
+}
+
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+/* Total Perfection: big card, spans two rows in the left column */
+.dashboard__total-perfection {
+  grid-row: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem 2.5rem;
+  border-radius: 1.5rem;
+  background: var(--cream);
+}
+
+.dashboard__total-perfection h3 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+}
+
+.dashboard__total-perfection p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* Category cards */
+.dashboard-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 2rem 1.25rem 1.75rem;
+  border-radius: 1.5rem;
+  background: var(--cream);
+  color: inherit;
+  text-decoration: none;
+}
+
+.dashboard-summary-card:hover,
+.dashboard-summary-card:focus-visible {
+  background: var(--cream-hover);
+}
+
+.dashboard-summary-card:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.dashboard-summary-card__icon {
+  width: 5.5rem;
+  height: 5.5rem;
+  flex-shrink: 0;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.dashboard-summary-card__icon--placeholder {
+  border-radius: 0.5rem;
+  background: var(--track);
+}
+
+.dashboard-summary-card__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-summary-card__title {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.dashboard-summary-card__description {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Progress ring */
+.progress-ring {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.progress-ring__track {
+  stroke: var(--track);
+}
+
+.progress-ring__fill {
+  stroke: var(--green);
+  transition: stroke-dashoffset 0.4s ease;
+}
+
+.progress-ring--gold .progress-ring__fill {
+  stroke: var(--gold);
+}
+
+.progress-ring__label {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+
+.progress-ring--lg .progress-ring__label {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .dashboard__grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard__total-perfection {
+    grid-row: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-ring__fill {
+    transition: none;
+  }
+}
