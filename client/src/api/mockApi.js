@@ -54,11 +54,18 @@ export async function toggleItem(category, itemId) {
   return items[index]
 }
 
+// Keys in seed.json that hold reference/metadata, not a trackable checklist -
+// getSummary skips these since they have no total/completed to count.
+const NON_TRACKABLE_CATEGORIES = ['greatFriendsUniversal', 'museumRewards']
+
 export async function getSummary() {
   await delay()
   const data = read()
   const summary = {}
   for (const [category, items] of Object.entries(data)) {
+    if (NON_TRACKABLE_CATEGORIES.includes(category)) {
+      continue
+    }
     if (category === 'shipped') {
       // Grouped shape: array of { items: [...] }
       const allItems = items.flatMap((group) => group.items)

@@ -5745,34 +5745,68 @@
       "checked": false,
       "columns": [
         "Birthday: Fall 13",
-        "Loves: Amethyst, Chocolate Cake, Pufferfish, Pumpkin, Spicy Eel",
-        "Likes: most gems, quartz",
-        "Loved Movies: comedy, spooky",
-        "Loved Concessions: any"
+        "Loves: Amethyst, Banana Pudding, Blackberry Cobbler, Chocolate Cake, Monster Compendium, Pufferfish, Pumpkin, Spicy Eel",
+        "Likes: Ancient Sword, Basilisk Paw, Bone Flute, Combat Quarterly, Quartz"
       ]
     },
     {
-      "id": "sebastian",
-      "name": "Sebastian",
-      "checked": true,
-      "columns": [
-        "Birthday: Winter 10",
-        "Loves: Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg",
-        "Likes: most gems, quartz",
-        "Loved Movies: horror, thriller",
-        "Loved Concessions: any"
-      ]
-    },
-    {
-      "id": "penny",
-      "name": "Penny",
+      "id": "alex",
+      "name": "Alex",
       "checked": false,
       "columns": [
-        "Birthday: Fall 2",
-        "Loves: Diamond, Emerald, Melon, Poppy, Red Plate, Roots Platter, Sandfish, Tom Kha Soup",
-        "Likes: fruit, most gems",
-        "Loved Movies: family",
-        "Loved Concessions: fruit snacks"
+        "Birthday: Summer 13",
+        "Loves: Complete Breakfast, Jack Be Nimble Jack Be Thick, Salmon Dinner",
+        "Likes: All Eggs except Void Eggs, Dinosaur Egg, Field Snack, Parrot Egg"
+      ]
+    },
+    {
+      "id": "caroline",
+      "name": "Caroline",
+      "checked": false,
+      "columns": [
+        "Birthday: Winter 7",
+        "Loves: Fish Taco, Green Tea, Summer Spangle, Tropical Curry",
+        "Likes: Daffodil, Tea Leaves"
+      ]
+    },
+    {
+      "id": "clint",
+      "name": "Clint",
+      "checked": false,
+      "columns": [
+        "Birthday: Winter 16",
+        "Loves: All Gems except Diamonds, Artichoke Dip, Fiddlehead Risotto, Gold Bar, Iridium Bar, Omni Geode",
+        "Likes: Copper Bar, Iron Bar, Mining Monthly"
+      ]
+    },
+    {
+      "id": "demetrius",
+      "name": "Demetrius",
+      "checked": false,
+      "columns": [
+        "Birthday: Summer 19",
+        "Loves: Bean Hotpot, Ice Cream, Rice Pudding, Strawberry",
+        "Likes: All Eggs except Void Egg, All Fruit except Strawberry, Dinosaur Egg, Purple Mushroom"
+      ]
+    },
+    {
+      "id": "dwarf",
+      "name": "Dwarf",
+      "checked": false,
+      "columns": [
+        "Birthday: Summer 22",
+        "Loves: All Gems except Diamond, Lava Eel, Lemon Stone, Omni Geode",
+        "Likes: All Artifacts, Cave Carrot, Quartz"
+      ]
+    },
+    {
+      "id": "elliott",
+      "name": "Elliott",
+      "checked": false,
+      "columns": [
+        "Birthday: Fall 5",
+        "Loves: Crab Cakes, Duck Feather, Lobster, Pomegranate, Squid Ink, Tom Kha Soup",
+        "Likes: All Books, All Fruit except Salmonberry & Pomegranate, Octopus, Squid"
       ]
     },
     {
@@ -5781,10 +5815,37 @@
       "checked": false,
       "columns": [
         "Birthday: Spring 27",
-        "Loves: Amethyst, Aquamarine, Cloth, Emerald, Jade, Ruby, Survival Burger, Topaz, Wool",
-        "Likes: Daffodil, Quartz",
-        "Loved Movies: not verified yet",
-        "Loved Concessions: not verified yet"
+        "Loves: All Gems except Diamond, Cloth, Survival Burger, Wool",
+        "Likes: Daffodil, Quartz"
+      ]
+    },
+    {
+      "id": "evelyn",
+      "name": "Evelyn",
+      "checked": false,
+      "columns": [
+        "Birthday: Winter 20",
+        "Loves: Beet, Chocolate Cake, Diamond, Fairy Rose, Raisins, Stuffing, Tulip",
+        "Likes: All Milk, Broken Glasses, Daffodil"
+      ]
+    },
+    {
+      "id": "george",
+      "name": "George",
+      "checked": false,
+      "columns": [
+        "Birthday: Fall 24",
+        "Loves: Fried Mushroom, Leek"
+      ]
+    },
+    {
+      "id": "gus",
+      "name": "Gus",
+      "checked": false,
+      "columns": [
+        "Birthday: Summer 8",
+        "Loves: Diamond, Escargot, Fish Taco, Orange, Tropical Curry",
+        "Likes: Daffodil"
       ]
     },
     {
@@ -5794,9 +5855,57 @@
       "columns": [
         "Birthday: Spring 14",
         "Loves: Coconut, Fruit Salad, Pink Cake, Sunflower",
-        "Likes: Daffodil",
-        "Loved Movies: not verified yet",
-        "Loved Concessions: not verified yet"
+        "Likes: Daffodil"
+      ]
+    },
+    {
+      "id": "harvey",
+      "name": "Harvey",
+      "checked": false,
+      "columns": [
+        "Birthday: Winter 14",
+        "Loves: Coffee, Pickles, Super Meal, Truffle Oil, Wine",
+        "Likes: All Forage, Duck Egg, Duck Feather, Goat Milk, Quartz"
+      ]
+    },
+    {
+      "id": "jas",
+      "name": "Jas",
+      "checked": false,
+      "columns": [
+        "Birthday: Summer 4",
+        "Loves: Fairy Box, Fairy Rose, Pink Cake, Plum Pudding",
+        "Likes: Coconut, Daffodil"
+      ]
+    },
+    {
+      "id": "jodi",
+      "name": "Jodi",
+      "checked": false,
+      "columns": [
+        "Birthday: Fall 11",
+        "Loves: Chocolate Cake, Crispy Bass, Diamond, Eggplant Parmesan, Fried Eel, Pancakes, Rhubarb Pie, Vegetable Medley",
+        "Likes: All Eggs except Void Eggs, All Fruit except Spice Berry, All Milk"
+      ]
+    },
+    {
+      "id": "kent",
+      "name": "Kent",
+      "checked": false,
+      "columns": [
+        "Birthday: Spring 4",
+        "Loves: Fiddlehead Risotto, Roasted Hazelnuts",
+        "Likes: Daffodil, Dwarvish Safety Manual"
+      ]
+    },
+    {
+      "id": "krobus",
+      "name": "Krobus",
+      "checked": false,
+      "columns": [
+        "Birthday: Winter 1",
+        "Loves: Diamond, Iridium Bar, Monster Compendium, Monster Musk, Pumpkin, Void Egg, Void Mayonnaise, Wild Horseradish",
+        "Likes: Gold Bar, Quartz, Seafoam Pudding, Strange Bun"
       ]
     },
     {
@@ -5806,9 +5915,47 @@
       "columns": [
         "Birthday: Winter 23",
         "Loves: Goat Cheese, Poppyseed Muffin, Salad, Stir Fry, Truffle, Vegetable Medley, Wine",
-        "Likes: most forageables, fruit, wood",
-        "Loved Movies: not verified yet",
-        "Loved Concessions: not verified yet"
+        "Likes: All Eggs except Void Egg, All Forage, All Fruit, All Milk, Driftwood"
+      ]
+    },
+    {
+      "id": "leo",
+      "name": "Leo",
+      "checked": false,
+      "columns": [
+        "Birthday: Summer 26",
+        "Loves: Duck Feather, Mango, Ostrich Egg, Parrot Egg, Poi",
+        "Likes: Dragon Tooth, Mango Sticky Rice, Nautilus Shell, Quartz, Sea Urchin, Spice Berry"
+      ]
+    },
+    {
+      "id": "lewis",
+      "name": "Lewis",
+      "checked": false,
+      "columns": [
+        "Birthday: Spring 7",
+        "Loves: Autumn's Bounty, Glazed Yams, Green Tea, Hot Pepper, Vegetable Medley",
+        "Likes: Blueberry, Cactus Fruit, Coconut"
+      ]
+    },
+    {
+      "id": "linus",
+      "name": "Linus",
+      "checked": false,
+      "columns": [
+        "Birthday: Winter 3",
+        "Loves: Blueberry Tart, Cactus Fruit, Coconut, Dish O' The Sea, The Alleyway Buffet, Yam",
+        "Likes: All Eggs except Void Egg, All Forage, All Fruit except Coconut & Cactus Fruit, All Milk"
+      ]
+    },
+    {
+      "id": "marnie",
+      "name": "Marnie",
+      "checked": false,
+      "columns": [
+        "Birthday: Fall 18",
+        "Loves: Diamond, Farmer's Lunch, Pink Cake, Pumpkin Pie",
+        "Likes: All Eggs except Void Eggs, All Milk, Quartz, Stardew Valley Almanac"
       ]
     },
     {
@@ -5818,9 +5965,117 @@
       "columns": [
         "Birthday: Summer 10",
         "Loves: Battery Pack, Cauliflower, Cheese Cauliflower, Diamond, Gold Bar, Iridium Bar, Miner's Treat, Pepper Poppers, Radioactive Bar, Rhubarb Pie, Strawberry",
-        "Likes: Copper Bar, Iron Bar, Oak Resin, Pine Tar, Quartz",
-        "Loved Movies: not verified yet",
-        "Loved Concessions: not verified yet"
+        "Likes: Chanterelle, Copper Bar, Iron Bar, Oak Resin, Pine Tar, Quartz, Radioactive Ore"
+      ]
+    },
+    {
+      "id": "pam",
+      "name": "Pam",
+      "checked": false,
+      "columns": [
+        "Birthday: Spring 18",
+        "Loves: Beer, Cactus Fruit, Glazed Yams, Mead, Pale Ale, Parsnip, Parsnip Soup, Pina Colada",
+        "Likes: All Fruit except Cactus Fruit, All Milk, Daffodil"
+      ]
+    },
+    {
+      "id": "penny",
+      "name": "Penny",
+      "checked": false,
+      "columns": [
+        "Birthday: Fall 2",
+        "Loves: Diamond, Emerald, Melon, Poppy, Poppyseed Muffin, Red Plate, Roots Platter, Sandfish, Tom Kha Soup",
+        "Likes: All Artifacts, All Milk, Dandelion, Leek"
+      ]
+    },
+    {
+      "id": "pierre",
+      "name": "Pierre",
+      "checked": false,
+      "columns": [
+        "Birthday: Spring 26",
+        "Loves: Fried Calamari, Price Catalogue",
+        "Likes: All Eggs except Void Eggs, All Milk, Daffodil, Dandelion"
+      ]
+    },
+    {
+      "id": "robin",
+      "name": "Robin",
+      "checked": false,
+      "columns": [
+        "Birthday: Fall 21",
+        "Loves: Goat Cheese, Peach, Spaghetti, Woody's Secret",
+        "Likes: All Milk, All Fruit except Peach, Hardwood, Quartz, Woodcutter's Weekly"
+      ]
+    },
+    {
+      "id": "sam",
+      "name": "Sam",
+      "checked": false,
+      "columns": [
+        "Birthday: Summer 17",
+        "Loves: Cactus Fruit, Maple Bar, Pizza, Tigerseye",
+        "Likes: All Eggs except Void Eggs, Joja Cola"
+      ]
+    },
+    {
+      "id": "sandy",
+      "name": "Sandy",
+      "checked": false,
+      "columns": [
+        "Birthday: Fall 15",
+        "Loves: Crocus, Daffodil, Mango Sticky Rice, Sweet Pea",
+        "Likes: All Fruit, Goat Milk, Large Goat Milk, Quartz, Wool"
+      ]
+    },
+    {
+      "id": "sebastian",
+      "name": "Sebastian",
+      "checked": false,
+      "columns": [
+        "Birthday: Winter 10",
+        "Loves: Frog Egg, Frozen Tear, Obsidian, Pumpkin Soup, Sashimi, Void Egg",
+        "Likes: Combat Quarterly, Flounder, Monster Compendium, Quartz"
+      ]
+    },
+    {
+      "id": "shane",
+      "name": "Shane",
+      "checked": false,
+      "columns": [
+        "Birthday: Spring 20",
+        "Loves: Beer, Hot Pepper, Pepper Poppers, Pizza",
+        "Likes: All Eggs except Void Eggs, All Fruit except Hot Pepper"
+      ]
+    },
+    {
+      "id": "vincent",
+      "name": "Vincent",
+      "checked": false,
+      "columns": [
+        "Birthday: Spring 10",
+        "Loves: Cranberry Candy, Ginger Ale, Grape, Pink Cake, Snail",
+        "Likes: Coconut, Daffodil, Frog Egg"
+      ]
+    },
+    {
+      "id": "willy",
+      "name": "Willy",
+      "checked": false,
+      "columns": [
+        "Birthday: Summer 24",
+        "Loves: Catfish, Diamond, Gold Bar, Iridium Bar, Jewels of the Sea, Mead, Octopus, Pumpkin, Sea Cucumber, Sturgeon, The Art O' Crabbing",
+        "Likes: Any Cooking with Fish, Bait and Bobber, Quartz, Lingcod, Tiger Trout"
+      ]
+    },
+    {
+      "id": "wizard",
+      "name": "Wizard",
+      "checked": false,
+      "columns": [
+        "Birthday: Winter 17",
+        "Loves: Book of Mysteries, Purple Mushroom, Solar Essence, Super Cucumber, Void Essence",
+        "Likes: All Geode Minerals, All Trinkets, Quartz"
       ]
     }
   ],
@@ -6207,5 +6462,25 @@
       "milestone": "Prehistoric Tibia & Skeletal Tail",
       "reward": "Sloth Skeleton R"
     }
-  ]
+  ],
+  "greatFriendsUniversal": {
+    "loves": [
+      "Golden Pumpkin",
+      "Magic Rock Candy",
+      "Pearl",
+      "Rabbit's Foot (Penny hates this one)",
+      "Prismatic Shard (Haley hates this one)",
+      "Stardrop Tea (doesn't count toward the daily/weekly gift limit)"
+    ],
+    "likes": [
+      "All Artisan Goods - except Oil (universally disliked) and Void Mayo (universally hated)",
+      "All Cooking - except Fried Egg and Bread (neutral), Strange Bun and Seafoam Pudding (universally hated); Gus hates Coleslaw",
+      "All Flowers - except Poppy, which is universally hated except by Penny, who loves it",
+      "All Foraged Minerals - except Quartz, which varies by villager",
+      "All Fruit Tree Fruits - Banana and Mango vary by villager; Leah dislikes these",
+      "All Gems - Prismatic Shard is universally loved except by Haley, who hates it; Leah dislikes gems",
+      "All Vegetables - except Hops, Tea Leaves, and Wheat (neutral), Unmilled Rice (disliked); Jodi dislikes Garlic",
+      "Treasure Chest - Linus dislikes it and won't accept it if given back to you"
+    ]
+  }
 }
