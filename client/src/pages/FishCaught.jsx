@@ -1,8 +1,3 @@
-/**
- * FishCaught (route: "/fish")
- * Uses ListTracker. Data: all catchable fish, season/location/caught status.
- */
-
 import { useEffect, useState } from 'react'
 import { listCategory, toggleItem } from '../api'
 import ListTracker from '../components/ListTracker'
@@ -48,7 +43,7 @@ export default function FishCaught() {
     <ListTracker
       title="Fish Caught"
       items={items}
-      columnHeaders={['Season', 'Location', 'Time']}
+      columnHeaders={['Season', 'Location', 'Time', 'Weather']}
       onToggle={handleToggle}
     />
   )

@@ -12,7 +12,7 @@
         {
           "id": "dandelion",
           "label": "Dandelion",
-          "checked": true
+          "checked": false
         },
         {
           "id": "leek",
@@ -349,8 +349,8 @@
       ]
     },
     {
-      "id": "beach-foraging",
-      "title": "Beach Foraging",
+      "id": "beach",
+      "title": "Beach",
       "items": [
         {
           "id": "coral",
@@ -370,8 +370,8 @@
       ]
     },
     {
-      "id": "desert-year-round",
-      "title": "Desert / Year-Round",
+      "id": "desert",
+      "title": "Desert (Year-Round)",
       "items": [
         {
           "id": "cactus-fruit",
@@ -473,7 +473,7 @@
         {
           "id": "white-egg",
           "label": "White Egg",
-          "checked": true
+          "checked": false
         },
         {
           "id": "large-white-egg",
@@ -526,7 +526,7 @@
           "checked": false
         },
         {
-          "id": "rabbits-foot",
+          "id": "rabbit-s-foot",
           "label": "Rabbit's Foot",
           "checked": false
         },
@@ -548,8 +548,8 @@
       ]
     },
     {
-      "id": "artisan-goods",
-      "title": "Artisan Goods",
+      "id": "artisan",
+      "title": "Artisan",
       "items": [
         {
           "id": "aged-roe",
@@ -726,8 +726,8 @@
       ]
     },
     {
-      "id": "ginger-island",
-      "title": "Ginger Island",
+      "id": "island",
+      "title": "Island",
       "items": [
         {
           "id": "banana",
@@ -762,8 +762,8 @@
       ]
     },
     {
-      "id": "mines-smelting",
-      "title": "Mines & Smelting",
+      "id": "mines-and-smelting",
+      "title": "Mines and Smelting",
       "items": [
         {
           "id": "bat-wing",
@@ -907,13 +907,36 @@
   ],
   "fish": [
     {
-      "id": "sturgeon",
-      "name": "Sturgeon",
+      "id": "anchovy",
+      "name": "Anchovy",
       "checked": false,
       "columns": [
-        "Summer/Winter",
-        "Mountain Lake",
-        "6am-7pm"
+        "Spring, Fall",
+        "Ocean",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "smallmouth-bass",
+      "name": "Smallmouth Bass",
+      "checked": false,
+      "columns": [
+        "Spring, Fall",
+        "Town River / Forest Pond",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "eel",
+      "name": "Eel",
+      "checked": false,
+      "columns": [
+        "Spring, Fall",
+        "Ocean",
+        "4pm-2am",
+        "Rainy"
       ]
     },
     {
@@ -921,9 +944,692 @@
       "name": "Catfish",
       "checked": false,
       "columns": [
-        "Spring/Fall",
-        "River, rain only",
-        "6am-12am"
+        "Spring, Summer, Fall",
+        "River / Woods / Pond / Swamp",
+        "6am-12am",
+        "Rainy"
+      ]
+    },
+    {
+      "id": "sardine",
+      "name": "Sardine",
+      "checked": false,
+      "columns": [
+        "Spring, Fall, Winter",
+        "Ocean",
+        "6am-7pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "sunfish",
+      "name": "Sunfish",
+      "checked": false,
+      "columns": [
+        "Spring, Summer",
+        "Town River / Forest River",
+        "6am-7pm",
+        "Sunny"
+      ]
+    },
+    {
+      "id": "flounder",
+      "name": "Flounder",
+      "checked": false,
+      "columns": [
+        "Spring, Summer",
+        "Ocean / Island Ocean",
+        "6am-8pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "shad",
+      "name": "Shad",
+      "checked": false,
+      "columns": [
+        "Spring, Summer, Fall",
+        "Town River / Forest River",
+        "9am-2am",
+        "Rainy"
+      ]
+    },
+    {
+      "id": "halibut",
+      "name": "Halibut",
+      "checked": false,
+      "columns": [
+        "Spring, Summer, Winter",
+        "Ocean",
+        "6am-11am / 7pm-2am",
+        "Any"
+      ]
+    },
+    {
+      "id": "herring",
+      "name": "Herring",
+      "checked": false,
+      "columns": [
+        "Spring, Winter",
+        "Ocean",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "pufferfish",
+      "name": "Pufferfish",
+      "checked": false,
+      "columns": [
+        "Summer",
+        "Ocean",
+        "12pm-4pm",
+        "Sunny"
+      ]
+    },
+    {
+      "id": "rainbow-trout",
+      "name": "Rainbow Trout",
+      "checked": false,
+      "columns": [
+        "Summer",
+        "River / Mountain Lake",
+        "6am-7pm",
+        "Sunny"
+      ]
+    },
+    {
+      "id": "octopus",
+      "name": "Octopus",
+      "checked": false,
+      "columns": [
+        "Summer",
+        "Ocean",
+        "6am-1pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "dorado",
+      "name": "Dorado",
+      "checked": false,
+      "columns": [
+        "Summer",
+        "Forest River",
+        "6am-7pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "super-cucumber",
+      "name": "Super Cucumber",
+      "checked": false,
+      "columns": [
+        "Summer, Fall",
+        "Ocean / Island Ocean",
+        "6pm-2am",
+        "Any"
+      ]
+    },
+    {
+      "id": "tilapia",
+      "name": "Tilapia",
+      "checked": false,
+      "columns": [
+        "Summer, Fall",
+        "Ocean / Island River",
+        "6am-2pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "red-snapper",
+      "name": "Red Snapper",
+      "checked": false,
+      "columns": [
+        "Summer, Fall, Winter",
+        "Ocean",
+        "6am-7pm",
+        "Rainy"
+      ]
+    },
+    {
+      "id": "tuna",
+      "name": "Tuna",
+      "checked": false,
+      "columns": [
+        "Summer, Winter",
+        "Ocean",
+        "6am-7pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "pike",
+      "name": "Pike",
+      "checked": false,
+      "columns": [
+        "Summer, Winter",
+        "River / Forest Pond",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "red-mullet",
+      "name": "Red Mullet",
+      "checked": false,
+      "columns": [
+        "Summer, Winter",
+        "Ocean",
+        "6am-7pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "sturgeon",
+      "name": "Sturgeon",
+      "checked": false,
+      "columns": [
+        "Summer, Winter",
+        "Mountain Lake",
+        "6am-7pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "salmon",
+      "name": "Salmon",
+      "checked": false,
+      "columns": [
+        "Fall",
+        "Forest River / Town River",
+        "6am-7pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "sea-cucumber",
+      "name": "Sea Cucumber",
+      "checked": false,
+      "columns": [
+        "Fall, Winter",
+        "Ocean",
+        "6am-7pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "midnight-carp",
+      "name": "Midnight Carp",
+      "checked": false,
+      "columns": [
+        "Fall, Winter",
+        "Lake / Pond / Island Pond",
+        "10pm-2am",
+        "Any"
+      ]
+    },
+    {
+      "id": "tiger-trout",
+      "name": "Tiger Trout",
+      "checked": false,
+      "columns": [
+        "Fall, Winter",
+        "Forest River / Town River",
+        "6am-7pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "albacore",
+      "name": "Albacore",
+      "checked": false,
+      "columns": [
+        "Fall, Winter",
+        "Ocean",
+        "6am-11am / 6pm-2am",
+        "Any"
+      ]
+    },
+    {
+      "id": "walleye",
+      "name": "Walleye",
+      "checked": false,
+      "columns": [
+        "Fall, Winter",
+        "River / Forest Pond / Lake",
+        "12pm-2am",
+        "Rainy"
+      ]
+    },
+    {
+      "id": "perch",
+      "name": "Perch",
+      "checked": false,
+      "columns": [
+        "Winter",
+        "River / Forest Pond / Lake",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "squid",
+      "name": "Squid",
+      "checked": false,
+      "columns": [
+        "Winter",
+        "Ocean",
+        "6pm-2am",
+        "Any"
+      ]
+    },
+    {
+      "id": "lingcod",
+      "name": "Lingcod",
+      "checked": false,
+      "columns": [
+        "Winter",
+        "River / Mountain Lake",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "green-algae",
+      "name": "Green Algae",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Freshwater / Green Slimes",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "white-algae",
+      "name": "White Algae",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Mines / Sewer / Bug Lair / Witch's Swamp",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "seaweed",
+      "name": "Seaweed",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Ocean / Forage",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "bream",
+      "name": "Bream",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Forest River / Town River",
+        "6pm-2am",
+        "Any"
+      ]
+    },
+    {
+      "id": "largemouth-bass",
+      "name": "Largemouth Bass",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Mountain Lake",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "carp",
+      "name": "Carp",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Lake / Woods / Pond / Sewer",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "ghostfish",
+      "name": "Ghostfish",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Mines Floors 20 and 60",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "stonefish",
+      "name": "Stonefish",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Mines Floor 20",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "ice-pip",
+      "name": "Ice Pip",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Mines Floor 60",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "lava-eel",
+      "name": "Lava Eel",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Mines Floor 100 / Volcano Caldera",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "sandfish",
+      "name": "Sandfish",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Desert",
+        "6am-8pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "scorpion-carp",
+      "name": "Scorpion Carp",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Desert",
+        "6am-8pm",
+        "Any"
+      ]
+    },
+    {
+      "id": "bullhead",
+      "name": "Bullhead",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Mountain Lake",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "chub",
+      "name": "Chub",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Forest River",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "woodskip",
+      "name": "Woodskip",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Secret Woods",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "void-salmon",
+      "name": "Void Salmon",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Witch's Swamp",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "slimejack",
+      "name": "Slimejack",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Mutant Bug Lair",
+        "6pm-2am",
+        "Any"
+      ]
+    },
+    {
+      "id": "lionfish",
+      "name": "Lionfish",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Ginger Island Ocean",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "blue-discus",
+      "name": "Blue Discus",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Ginger Island Pond and River",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "stingray",
+      "name": "Stingray",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Ginger Island Pirate Cove",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "river-jelly",
+      "name": "River Jelly",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Any Freshwater location",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "cave-jelly",
+      "name": "Cave Jelly",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Floors 20, 60, and 100 in the Mines",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "sea-jelly",
+      "name": "Sea Jelly",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Ocean",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "goby",
+      "name": "Goby",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "Cindersap Forest Waterfalls",
+        "Anytime",
+        "Any"
+      ]
+    },
+    {
+      "id": "clam",
+      "name": "Clam",
+      "checked": false,
+      "columns": [
+        "Year-round (Crab Pot)",
+        "Ocean",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "lobster",
+      "name": "Lobster",
+      "checked": false,
+      "columns": [
+        "Year-round (Crab Pot)",
+        "Ocean",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "crayfish",
+      "name": "Crayfish",
+      "checked": false,
+      "columns": [
+        "Year-round (Crab Pot)",
+        "Freshwater",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "crab",
+      "name": "Crab",
+      "checked": false,
+      "columns": [
+        "Year-round (Crab Pot)",
+        "Ocean",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "cockle",
+      "name": "Cockle",
+      "checked": false,
+      "columns": [
+        "Year-round (Crab Pot)",
+        "Ocean",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "mussel",
+      "name": "Mussel",
+      "checked": false,
+      "columns": [
+        "Year-round (Crab Pot)",
+        "Ocean",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp",
+      "checked": false,
+      "columns": [
+        "Year-round (Crab Pot)",
+        "Ocean",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "snail",
+      "name": "Snail",
+      "checked": false,
+      "columns": [
+        "Year-round (Crab Pot)",
+        "Freshwater",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "periwinkle",
+      "name": "Periwinkle",
+      "checked": false,
+      "columns": [
+        "Year-round (Crab Pot)",
+        "Freshwater",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "oyster",
+      "name": "Oyster",
+      "checked": false,
+      "columns": [
+        "Year-round (Crab Pot)",
+        "Ocean",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "crimsonfish",
+      "name": "Crimsonfish",
+      "checked": false,
+      "columns": [
+        "Summer",
+        "Ocean",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "angler",
+      "name": "Angler",
+      "checked": false,
+      "columns": [
+        "Fall",
+        "Town River",
+        "Any",
+        "Any"
       ]
     },
     {
@@ -931,9 +1637,65 @@
       "name": "Legend",
       "checked": false,
       "columns": [
-        "Spring, rain only",
+        "Spring",
         "Mountain Lake",
-        "6am-2am"
+        "Any",
+        "Rainy"
+      ]
+    },
+    {
+      "id": "glacierfish",
+      "name": "Glacierfish",
+      "checked": false,
+      "columns": [
+        "Winter",
+        "Cindersap Forest",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "mutant-carp",
+      "name": "Mutant Carp",
+      "checked": false,
+      "columns": [
+        "Year-round",
+        "The Sewers",
+        "Any",
+        "Any"
+      ]
+    },
+    {
+      "id": "midnight-squid",
+      "name": "Midnight Squid",
+      "checked": false,
+      "columns": [
+        "Winter (Night Market)",
+        "Night Market Submarine",
+        "5pm-2am",
+        "Any"
+      ]
+    },
+    {
+      "id": "spook-fish",
+      "name": "Spook Fish",
+      "checked": false,
+      "columns": [
+        "Winter (Night Market)",
+        "Night Market Submarine",
+        "5pm-2am",
+        "Any"
+      ]
+    },
+    {
+      "id": "blobfish",
+      "name": "Blobfish",
+      "checked": false,
+      "columns": [
+        "Winter (Night Market)",
+        "Night Market Submarine",
+        "5pm-2am",
+        "Any"
       ]
     }
   ],
@@ -1886,7 +2648,7 @@
     {
       "id": "fried-egg",
       "name": "Fried Egg",
-      "checked": true,
+      "checked": false,
       "columns": [
         "Upgrade Farmhouse",
         "Egg"
@@ -2244,7 +3006,7 @@
       ]
     },
     {
-      "id": "autumns-bounty",
+      "id": "autumn-s-bounty",
       "name": "Autumn's Bounty",
       "checked": false,
       "columns": [
@@ -2289,7 +3051,7 @@
       ]
     },
     {
-      "id": "farmers-lunch",
+      "id": "farmer-s-lunch",
       "name": "Farmer's Lunch",
       "checked": false,
       "columns": [
@@ -2316,7 +3078,7 @@
       ]
     },
     {
-      "id": "miners-treat",
+      "id": "miner-s-treat",
       "name": "Miner's Treat",
       "checked": false,
       "columns": [
@@ -2615,21 +3377,246 @@
   ],
   "crafting": [
     {
-      "id": "scarecrow",
-      "name": "Scarecrow",
-      "checked": true,
+      "id": "wood-fence",
+      "name": "Wood Fence",
+      "checked": false,
       "columns": [
-        "Farming level 1",
-        "50 Wood, 1 Coal, 20 Fiber"
+        "Starter",
+        "Wood (2)"
       ]
     },
     {
-      "id": "sprinkler",
-      "name": "Sprinkler",
-      "checked": true,
+      "id": "stone-fence",
+      "name": "Stone Fence",
+      "checked": false,
       "columns": [
-        "Farming level 2",
-        "1 Copper Bar, 1 Iron Bar"
+        "Farming Lv 2",
+        "Stone (2)"
+      ]
+    },
+    {
+      "id": "iron-fence",
+      "name": "Iron Fence",
+      "checked": false,
+      "columns": [
+        "Farming Lv 4",
+        "Iron Bar"
+      ]
+    },
+    {
+      "id": "hardwood-fence",
+      "name": "Hardwood Fence",
+      "checked": false,
+      "columns": [
+        "Farming Lv 6",
+        "Hardwood"
+      ]
+    },
+    {
+      "id": "grass-starter",
+      "name": "Grass Starter",
+      "checked": false,
+      "columns": [
+        "General Store for 1,000g",
+        "Fiber (10)"
+      ]
+    },
+    {
+      "id": "blue-grass-starter",
+      "name": "Blue Grass Starter",
+      "checked": false,
+      "columns": [
+        "Qi's Walnut Room for 40 Qi Gems",
+        "Fiber (25), Moss (10), Mystic Syrup"
+      ]
+    },
+    {
+      "id": "gate",
+      "name": "Gate",
+      "checked": false,
+      "columns": [
+        "Starter",
+        "Wood (10)"
+      ]
+    },
+    {
+      "id": "chest",
+      "name": "Chest",
+      "checked": false,
+      "columns": [
+        "Starter",
+        "Wood (50)"
+      ]
+    },
+    {
+      "id": "big-chest",
+      "name": "Big Chest",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 5,000g",
+        "Wood (120), Copper Bar (2)"
+      ]
+    },
+    {
+      "id": "stone-chest",
+      "name": "Stone Chest",
+      "checked": false,
+      "columns": [
+        "Robin, after completing \"Robin's Resource Rush\"",
+        "Stone (50)"
+      ]
+    },
+    {
+      "id": "big-stone-chest",
+      "name": "Big Stone Chest",
+      "checked": false,
+      "columns": [
+        "Dwarf's Shop for 5,000g",
+        "Stone (250)"
+      ]
+    },
+    {
+      "id": "torch",
+      "name": "Torch",
+      "checked": false,
+      "columns": [
+        "Starter",
+        "Wood, Sap (2)"
+      ]
+    },
+    {
+      "id": "dehydrator",
+      "name": "Dehydrator",
+      "checked": false,
+      "columns": [
+        "Pierre's Shop for 10,000g",
+        "Wood (30), Clay (2), Fire Quartz"
+      ]
+    },
+    {
+      "id": "scarecrow",
+      "name": "Scarecrow",
+      "checked": false,
+      "columns": [
+        "Farming Lv 1",
+        "Wood (50), Coal, Fiber (20)"
+      ]
+    },
+    {
+      "id": "deluxe-scarecrow",
+      "name": "Deluxe Scarecrow",
+      "checked": false,
+      "columns": [
+        "Collect all Rarecrows",
+        "Wood (50), Fiber (40), Iridium Ore"
+      ]
+    },
+    {
+      "id": "bee-house",
+      "name": "Bee House",
+      "checked": false,
+      "columns": [
+        "Farming Lv 3",
+        "Wood (40), Coal (8), Iron Bar, Maple Syrup"
+      ]
+    },
+    {
+      "id": "keg",
+      "name": "Keg",
+      "checked": false,
+      "columns": [
+        "Farming Lv 8",
+        "Wood (30), Copper Bar, Iron Bar, Oak Resin"
+      ]
+    },
+    {
+      "id": "cask",
+      "name": "Cask",
+      "checked": false,
+      "columns": [
+        "Farmhouse cellar upgrade",
+        "Wood (20), Hardwood"
+      ]
+    },
+    {
+      "id": "furnace",
+      "name": "Furnace",
+      "checked": false,
+      "columns": [
+        "Clint, after collecting a Copper Ore",
+        "Copper Ore (20), Stone (25)"
+      ]
+    },
+    {
+      "id": "heavy-furnace",
+      "name": "Heavy Furnace",
+      "checked": false,
+      "columns": [
+        "Mining Mastery",
+        "Furnace (2), Iron Bar (3), Stone (50)"
+      ]
+    },
+    {
+      "id": "anvil",
+      "name": "Anvil",
+      "checked": false,
+      "columns": [
+        "Combat Mastery",
+        "Iron Bar (50)"
+      ]
+    },
+    {
+      "id": "mini-forge",
+      "name": "Mini-Forge",
+      "checked": false,
+      "columns": [
+        "Combat Mastery",
+        "Dragon Tooth (5), Iron Bar (10), Gold Bar (10), Iridium Bar (5)"
+      ]
+    },
+    {
+      "id": "garden-pot",
+      "name": "Garden Pot",
+      "checked": false,
+      "columns": [
+        "Evelyn, after unlocking Greenhouse",
+        "Clay, Stone (10), Refined Quartz"
+      ]
+    },
+    {
+      "id": "wood-sign",
+      "name": "Wood Sign",
+      "checked": false,
+      "columns": [
+        "Starter",
+        "Wood (25)"
+      ]
+    },
+    {
+      "id": "stone-sign",
+      "name": "Stone Sign",
+      "checked": false,
+      "columns": [
+        "Starter",
+        "Stone (25)"
+      ]
+    },
+    {
+      "id": "dark-sign",
+      "name": "Dark Sign",
+      "checked": false,
+      "columns": [
+        "Krobus - 3 Hearts",
+        "Bat Wing (5), Bone Fragment (5)"
+      ]
+    },
+    {
+      "id": "text-sign",
+      "name": "Text Sign",
+      "checked": false,
+      "columns": [
+        "Starter",
+        "Wood (25)"
       ]
     },
     {
@@ -2637,8 +3624,1097 @@
       "name": "Cheese Press",
       "checked": false,
       "columns": [
-        "Farming level 6",
-        "45 Wood, 10 Stone, 10 Copper Bar"
+        "Farming Lv 6",
+        "Wood (45), Stone (45), Hardwood (10), Copper Bar"
+      ]
+    },
+    {
+      "id": "mayonnaise-machine",
+      "name": "Mayonnaise Machine",
+      "checked": false,
+      "columns": [
+        "Farming Lv 2",
+        "Wood (15), Stone (15), Earth Crystal, Copper Bar"
+      ]
+    },
+    {
+      "id": "seed-maker",
+      "name": "Seed Maker",
+      "checked": false,
+      "columns": [
+        "Farming Lv 9",
+        "Wood (25), Coal (10), Gold Bar"
+      ]
+    },
+    {
+      "id": "loom",
+      "name": "Loom",
+      "checked": false,
+      "columns": [
+        "Farming Lv 7",
+        "Wood (60), Fiber (30), Pine Tar"
+      ]
+    },
+    {
+      "id": "oil-maker",
+      "name": "Oil Maker",
+      "checked": false,
+      "columns": [
+        "Farming Lv 8",
+        "Slime (50), Hardwood (20), Gold Bar"
+      ]
+    },
+    {
+      "id": "recycling-machine",
+      "name": "Recycling Machine",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 4",
+        "Wood (25), Stone (25), Iron Bar"
+      ]
+    },
+    {
+      "id": "worm-bin",
+      "name": "Worm Bin",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 4",
+        "Hardwood (15), Gold Bar, Iron Bar, Fiber (50)"
+      ]
+    },
+    {
+      "id": "deluxe-worm-bin",
+      "name": "Deluxe Worm Bin",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 8",
+        "Worm Bin, Moss (30)"
+      ]
+    },
+    {
+      "id": "bait-maker",
+      "name": "Bait Maker",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 6",
+        "Iron Bar (3), Coral (3), Sea Urchin"
+      ]
+    },
+    {
+      "id": "fish-smoker",
+      "name": "Fish Smoker",
+      "checked": false,
+      "columns": [
+        "Willy's Shop for 10,000g",
+        "Hardwood (10), Sea Jelly, River Jelly, Cave Jelly"
+      ]
+    },
+    {
+      "id": "preserves-jar",
+      "name": "Preserves Jar",
+      "checked": false,
+      "columns": [
+        "Farming Lv 4",
+        "Wood (50), Stone (40), Coal (8)"
+      ]
+    },
+    {
+      "id": "charcoal-kiln",
+      "name": "Charcoal Kiln",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 2",
+        "Wood (20), Copper Bar (2)"
+      ]
+    },
+    {
+      "id": "tapper",
+      "name": "Tapper",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 4",
+        "Wood (40), Copper Bar (2)"
+      ]
+    },
+    {
+      "id": "mushroom-log",
+      "name": "Mushroom Log",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 4",
+        "Hardwood (10), Moss (10)"
+      ]
+    },
+    {
+      "id": "lightning-rod",
+      "name": "Lightning Rod",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 6",
+        "Iron Bar, Refined Quartz, Bat Wing (5)"
+      ]
+    },
+    {
+      "id": "slime-incubator",
+      "name": "Slime Incubator",
+      "checked": false,
+      "columns": [
+        "Combat Lv 8",
+        "Iridium Bar (2), Slime (100)"
+      ]
+    },
+    {
+      "id": "slime-egg-press",
+      "name": "Slime Egg-Press",
+      "checked": false,
+      "columns": [
+        "Combat Lv 6",
+        "Coal (25), Fire Quartz, Battery Pack"
+      ]
+    },
+    {
+      "id": "crystalarium",
+      "name": "Crystalarium",
+      "checked": false,
+      "columns": [
+        "Mining Lv 9",
+        "Stone (99), Gold Bar (5), Iridium Bar (5), Battery Pack"
+      ]
+    },
+    {
+      "id": "mini-jukebox",
+      "name": "Mini-Jukebox",
+      "checked": false,
+      "columns": [
+        "Gus' 5-Heart event",
+        "Iron Bar (2), Battery Pack"
+      ]
+    },
+    {
+      "id": "sprinkler",
+      "name": "Sprinkler",
+      "checked": false,
+      "columns": [
+        "Farming Lv 2",
+        "Copper Bar, Iron Bar"
+      ]
+    },
+    {
+      "id": "quality-sprinkler",
+      "name": "Quality Sprinkler",
+      "checked": false,
+      "columns": [
+        "Farming Lv 6",
+        "Iron Bar, Gold Bar, Refined Quartz"
+      ]
+    },
+    {
+      "id": "iridium-sprinkler",
+      "name": "Iridium Sprinkler",
+      "checked": false,
+      "columns": [
+        "Farming Lv 9",
+        "Gold Bar, Iridium Bar, Battery Pack"
+      ]
+    },
+    {
+      "id": "flute-block",
+      "name": "Flute Block",
+      "checked": false,
+      "columns": [
+        "Robin, after her 6-Heart event",
+        "Wood (10), Copper Ore (2), Fiber (20)"
+      ]
+    },
+    {
+      "id": "drum-block",
+      "name": "Drum Block",
+      "checked": false,
+      "columns": [
+        "Robin, after her 6-Heart event",
+        "Stone (10), Copper Ore (2), Fiber (20)"
+      ]
+    },
+    {
+      "id": "staircase",
+      "name": "Staircase",
+      "checked": false,
+      "columns": [
+        "Mining Lv 2",
+        "Stone (99)"
+      ]
+    },
+    {
+      "id": "mystic-tree-seed",
+      "name": "Mystic Tree Seed",
+      "checked": false,
+      "columns": [
+        "Foraging Mastery",
+        "Acorn (5), Maple Seed (5), Pine Cone (5), Mahogany Seed (5)"
+      ]
+    },
+    {
+      "id": "basic-fertilizer",
+      "name": "Basic Fertilizer",
+      "checked": false,
+      "columns": [
+        "Farming Lv 1",
+        "Sap (2)"
+      ]
+    },
+    {
+      "id": "tree-fertilizer",
+      "name": "Tree Fertilizer",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 7",
+        "Fiber (5), Stone (5)"
+      ]
+    },
+    {
+      "id": "quality-fertilizer",
+      "name": "Quality Fertilizer",
+      "checked": false,
+      "columns": [
+        "Farming Lv 9",
+        "Sap (2), Any Fish"
+      ]
+    },
+    {
+      "id": "basic-retaining-soil",
+      "name": "Basic Retaining Soil",
+      "checked": false,
+      "columns": [
+        "Farming Lv 4",
+        "Stone (2)"
+      ]
+    },
+    {
+      "id": "quality-retaining-soil",
+      "name": "Quality Retaining Soil",
+      "checked": false,
+      "columns": [
+        "Farming Lv 7",
+        "Stone (3), Clay"
+      ]
+    },
+    {
+      "id": "speed-gro",
+      "name": "Speed-Gro",
+      "checked": false,
+      "columns": [
+        "Farming Lv 3",
+        "Pine Tar, Moss (5)"
+      ]
+    },
+    {
+      "id": "deluxe-speed-gro",
+      "name": "Deluxe Speed-Gro",
+      "checked": false,
+      "columns": [
+        "Farming Lv 8",
+        "Oak Resin, Bone Fragments (5)"
+      ]
+    },
+    {
+      "id": "hyper-speed-gro",
+      "name": "Hyper Speed-Gro",
+      "checked": false,
+      "columns": [
+        "Qi's Walnut Room for 30 Gems",
+        "Radioactive Ore, Bone Fragment (3), Solar Essence"
+      ]
+    },
+    {
+      "id": "deluxe-fertilizer",
+      "name": "Deluxe Fertilizer",
+      "checked": false,
+      "columns": [
+        "Qi's Walnut Room for 20 Gems",
+        "Iridium Bar, Sap (40)"
+      ]
+    },
+    {
+      "id": "deluxe-retaining-soil",
+      "name": "Deluxe Retaining Soil",
+      "checked": false,
+      "columns": [
+        "Island Trader for 50 Cinder Shards",
+        "Stone (5), Fiber (3), Clay"
+      ]
+    },
+    {
+      "id": "cherry-bomb",
+      "name": "Cherry Bomb",
+      "checked": false,
+      "columns": [
+        "Mining Lv 1",
+        "Copper Ore (4), Coal"
+      ]
+    },
+    {
+      "id": "bomb",
+      "name": "Bomb",
+      "checked": false,
+      "columns": [
+        "Mining Lv 6",
+        "Iron Ore (4), Coal"
+      ]
+    },
+    {
+      "id": "mega-bomb",
+      "name": "Mega Bomb",
+      "checked": false,
+      "columns": [
+        "Mining Lv 8",
+        "Gold Ore (4), Solar Essence, Void Essence"
+      ]
+    },
+    {
+      "id": "explosive-ammo",
+      "name": "Explosive Ammo",
+      "checked": false,
+      "columns": [
+        "Combat Lv 8",
+        "Iron Bar, Coal (2)"
+      ]
+    },
+    {
+      "id": "iron-bar",
+      "name": "Iron Bar",
+      "checked": false,
+      "columns": [
+        "Mining Lv 4",
+        "Copper Bar (3)"
+      ]
+    },
+    {
+      "id": "gold-bar",
+      "name": "Gold Bar",
+      "checked": false,
+      "columns": [
+        "Mining Lv 7",
+        "Iron Bar (2)"
+      ]
+    },
+    {
+      "id": "ancient-seeds-crop",
+      "name": "Ancient Seeds (Crop)",
+      "checked": false,
+      "columns": [
+        "Donate Ancient Seed Artifact to Museum",
+        "Ancient Seed (Artifact)"
+      ]
+    },
+    {
+      "id": "wild-seeds-spring",
+      "name": "Wild Seeds - Spring",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 1",
+        "Wild Horseradish, Daffodil, Leek, Dandelion"
+      ]
+    },
+    {
+      "id": "wild-seeds-summer",
+      "name": "Wild Seeds - Summer",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 4",
+        "Spice Berry, Grape, Sweet Pea"
+      ]
+    },
+    {
+      "id": "wild-seeds-fall",
+      "name": "Wild Seeds - Fall",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 6",
+        "Common Mushroom, Wild Plum, Hazelnut, Blackberry"
+      ]
+    },
+    {
+      "id": "wild-seeds-winter",
+      "name": "Wild Seeds - Winter",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 7",
+        "Winter Root, Crystal Fruit, Snow Yam, Crocus"
+      ]
+    },
+    {
+      "id": "fiber-seeds",
+      "name": "Fiber Seeds",
+      "checked": false,
+      "columns": [
+        "Linus, after completing \"Community Cleanup\"",
+        "Mixed Seeds, Sap (5), Clay"
+      ]
+    },
+    {
+      "id": "tea-sapling",
+      "name": "Tea Sapling",
+      "checked": false,
+      "columns": [
+        "Caroline, after her 2-Heart event",
+        "Any Wild Seeds (2), Fiber (5), Wood (5)"
+      ]
+    },
+    {
+      "id": "warp-totem-farm",
+      "name": "Warp Totem: Farm",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 8",
+        "Hardwood, Honey, Fiber (20)"
+      ]
+    },
+    {
+      "id": "warp-totem-mountains",
+      "name": "Warp Totem: Mountains",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 7",
+        "Hardwood, Iron Bar, Stone (25)"
+      ]
+    },
+    {
+      "id": "warp-totem-beach",
+      "name": "Warp Totem: Beach",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 6",
+        "Hardwood, Coral (2), Fiber (10)"
+      ]
+    },
+    {
+      "id": "warp-totem-desert",
+      "name": "Warp Totem: Desert",
+      "checked": false,
+      "columns": [
+        "Desert Trader for 10 Iridium Bars",
+        "Hardwood (2), Coconut, Iridium Ore (4)"
+      ]
+    },
+    {
+      "id": "warp-totem-island",
+      "name": "Warp Totem: Island",
+      "checked": false,
+      "columns": [
+        "Volcano Dwarf's Shop for 10,000g",
+        "Hardwood (5), Dragon Tooth, Ginger"
+      ]
+    },
+    {
+      "id": "rain-totem",
+      "name": "Rain Totem",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 9",
+        "Hardwood, Truffle Oil, Pine Tar (5)"
+      ]
+    },
+    {
+      "id": "treasure-totem",
+      "name": "Treasure Totem",
+      "checked": false,
+      "columns": [
+        "Foraging Mastery",
+        "Hardwood (5), Mystic Syrup, Moss (10)"
+      ]
+    },
+    {
+      "id": "cookout-kit",
+      "name": "Cookout Kit",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 3",
+        "Wood (15), Fiber (10), Coal (3)"
+      ]
+    },
+    {
+      "id": "tent-kit",
+      "name": "Tent Kit",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 8",
+        "Hardwood (10), Fiber (25), Cloth"
+      ]
+    },
+    {
+      "id": "field-snack",
+      "name": "Field Snack",
+      "checked": false,
+      "columns": [
+        "Foraging Lv 1",
+        "Acorn, Maple Seed, Pine Cone"
+      ]
+    },
+    {
+      "id": "jack-o-lantern",
+      "name": "Jack-O-Lantern",
+      "checked": false,
+      "columns": [
+        "Pierre at the Spirit's Eve Festival for 2,000g",
+        "Pumpkin, Torch"
+      ]
+    },
+    {
+      "id": "statue-of-blessings",
+      "name": "Statue of Blessings",
+      "checked": false,
+      "columns": [
+        "Farming Mastery",
+        "Sap (999), Fiber (999), Stone (999), Moss (333)"
+      ]
+    },
+    {
+      "id": "statue-of-the-dwarf-king",
+      "name": "Statue of the Dwarf King",
+      "checked": false,
+      "columns": [
+        "Mining Mastery",
+        "Iridium Bar (20)"
+      ]
+    },
+    {
+      "id": "wood-floor",
+      "name": "Wood Floor",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 100g",
+        "Wood"
+      ]
+    },
+    {
+      "id": "straw-floor",
+      "name": "Straw Floor",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 200g",
+        "Wood, Fiber"
+      ]
+    },
+    {
+      "id": "weathered-floor",
+      "name": "Weathered Floor",
+      "checked": false,
+      "columns": [
+        "Dwarf's Shop for 500g",
+        "Wood"
+      ]
+    },
+    {
+      "id": "rustic-plank-floor",
+      "name": "Rustic Plank Floor",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 200g",
+        "Wood"
+      ]
+    },
+    {
+      "id": "crystal-floor",
+      "name": "Crystal Floor",
+      "checked": false,
+      "columns": [
+        "Krobus' Shop for 500g",
+        "Refined Quartz"
+      ]
+    },
+    {
+      "id": "stone-floor",
+      "name": "Stone Floor",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 100g",
+        "Stone"
+      ]
+    },
+    {
+      "id": "stone-walkway-floor",
+      "name": "Stone Walkway Floor",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 200g",
+        "Stone"
+      ]
+    },
+    {
+      "id": "brick-floor",
+      "name": "Brick Floor",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 500g",
+        "Clay (2), Stone (5)"
+      ]
+    },
+    {
+      "id": "wood-path",
+      "name": "Wood Path",
+      "checked": false,
+      "columns": [
+        "Starter",
+        "Wood"
+      ]
+    },
+    {
+      "id": "gravel-path",
+      "name": "Gravel Path",
+      "checked": false,
+      "columns": [
+        "Starter",
+        "Stone"
+      ]
+    },
+    {
+      "id": "cobblestone-path",
+      "name": "Cobblestone Path",
+      "checked": false,
+      "columns": [
+        "Starter",
+        "Stone"
+      ]
+    },
+    {
+      "id": "stepping-stone-path",
+      "name": "Stepping Stone Path",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 100g",
+        "Stone"
+      ]
+    },
+    {
+      "id": "crystal-path",
+      "name": "Crystal Path",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 200g",
+        "Refined Quartz"
+      ]
+    },
+    {
+      "id": "bait",
+      "name": "Bait",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 2",
+        "Bug Meat"
+      ]
+    },
+    {
+      "id": "deluxe-bait",
+      "name": "Deluxe Bait",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 4",
+        "Bait (5), Moss (2)"
+      ]
+    },
+    {
+      "id": "wild-bait",
+      "name": "Wild Bait",
+      "checked": false,
+      "columns": [
+        "Linus' 4-Heart event",
+        "Fiber (10), Bug Meat (5), Slime (5)"
+      ]
+    },
+    {
+      "id": "challenge-bait",
+      "name": "Challenge Bait",
+      "checked": false,
+      "columns": [
+        "Fishing Mastery",
+        "Bone Fragment (5), Moss (2)"
+      ]
+    },
+    {
+      "id": "magnet",
+      "name": "Magnet",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 9",
+        "Iron Bar"
+      ]
+    },
+    {
+      "id": "spinner",
+      "name": "Spinner",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 6",
+        "Iron Bar (2)"
+      ]
+    },
+    {
+      "id": "dressed-spinner",
+      "name": "Dressed Spinner",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 8",
+        "Iron Bar (2), Cloth"
+      ]
+    },
+    {
+      "id": "trap-bobber",
+      "name": "Trap Bobber",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 6",
+        "Copper Bar, Sap (10)"
+      ]
+    },
+    {
+      "id": "sonar-bobber",
+      "name": "Sonar Bobber",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 6",
+        "Iron Bar, Refined Quartz (2)"
+      ]
+    },
+    {
+      "id": "cork-bobber",
+      "name": "Cork Bobber",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 7",
+        "Wood (10), Hardwood (5), Slime (10)"
+      ]
+    },
+    {
+      "id": "treasure-hunter",
+      "name": "Treasure Hunter",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 7",
+        "Gold Bar (2)"
+      ]
+    },
+    {
+      "id": "barbed-hook",
+      "name": "Barbed Hook",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 8",
+        "Copper Bar, Iron Bar, Gold Bar"
+      ]
+    },
+    {
+      "id": "oil-of-garlic",
+      "name": "Oil of Garlic",
+      "checked": false,
+      "columns": [
+        "Combat Lv 6",
+        "Garlic (10), Oil"
+      ]
+    },
+    {
+      "id": "life-elixir",
+      "name": "Life Elixir",
+      "checked": false,
+      "columns": [
+        "Combat Lv 2",
+        "Red Mushroom, Purple Mushroom, Morel, Chanterelle"
+      ]
+    },
+    {
+      "id": "crab-pot",
+      "name": "Crab Pot",
+      "checked": false,
+      "columns": [
+        "Fishing Lv 3",
+        "Wood (40), Iron Bar (3)"
+      ]
+    },
+    {
+      "id": "iridium-band",
+      "name": "Iridium Band",
+      "checked": false,
+      "columns": [
+        "Combat Lv 9",
+        "Iridium Bar (5), Solar Essence (50), Void Essence (50)"
+      ]
+    },
+    {
+      "id": "ring-of-yoba",
+      "name": "Ring of Yoba",
+      "checked": false,
+      "columns": [
+        "Combat Lv 7",
+        "Gold Bar (5), Iron Bar (5), Diamond"
+      ]
+    },
+    {
+      "id": "sturdy-ring",
+      "name": "Sturdy Ring",
+      "checked": false,
+      "columns": [
+        "Combat Lv 1",
+        "Copper Bar (2), Bug Meat (25), Slime (25)"
+      ]
+    },
+    {
+      "id": "warrior-ring",
+      "name": "Warrior Ring",
+      "checked": false,
+      "columns": [
+        "Combat Lv 4",
+        "Iron Bar (10), Coal (25), Frozen Tear (10)"
+      ]
+    },
+    {
+      "id": "tub-o-flowers",
+      "name": "Tub o' Flowers",
+      "checked": false,
+      "columns": [
+        "Pierre at the Flower Dance for 2,000g",
+        "Wood (15), Tulip Bulb, Jazz Seeds, Poppy Seeds, Spangle Seeds"
+      ]
+    },
+    {
+      "id": "wooden-brazier",
+      "name": "Wooden Brazier",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 250g",
+        "Wood (10), Coal, Fiber (5)"
+      ]
+    },
+    {
+      "id": "wicked-statue",
+      "name": "Wicked Statue",
+      "checked": false,
+      "columns": [
+        "Krobus' Shop for 1,000g",
+        "Stone (25), Coal (5)"
+      ]
+    },
+    {
+      "id": "stone-brazier",
+      "name": "Stone Brazier",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 400g",
+        "Stone (10), Coal, Fiber (5)"
+      ]
+    },
+    {
+      "id": "gold-brazier",
+      "name": "Gold Brazier",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 1,000g",
+        "Gold Bar, Coal, Fiber (5)"
+      ]
+    },
+    {
+      "id": "campfire",
+      "name": "Campfire",
+      "checked": false,
+      "columns": [
+        "Starter",
+        "Stone (10), Wood (10), Fiber (10)"
+      ]
+    },
+    {
+      "id": "stump-brazier",
+      "name": "Stump Brazier",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 800g",
+        "Hardwood (5), Coal"
+      ]
+    },
+    {
+      "id": "carved-brazier",
+      "name": "Carved Brazier",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 2,000g",
+        "Hardwood (10), Coal"
+      ]
+    },
+    {
+      "id": "skull-brazier",
+      "name": "Skull Brazier",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 3,000g",
+        "Bone Fragment (10)"
+      ]
+    },
+    {
+      "id": "barrel-brazier",
+      "name": "Barrel Brazier",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 800g",
+        "Wood (50), Solar Essence, Coal"
+      ]
+    },
+    {
+      "id": "marble-brazier",
+      "name": "Marble Brazier",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 5,000g",
+        "Marble, Aquamarine, Stone (100)"
+      ]
+    },
+    {
+      "id": "wood-lamp-post",
+      "name": "Wood Lamp-post",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 500g",
+        "Wood (50), Battery Pack"
+      ]
+    },
+    {
+      "id": "iron-lamp-post",
+      "name": "Iron Lamp-post",
+      "checked": false,
+      "columns": [
+        "Carpenter's Shop for 1,000g",
+        "Iron Bar, Battery Pack"
+      ]
+    },
+    {
+      "id": "fairy-dust",
+      "name": "Fairy Dust",
+      "checked": false,
+      "columns": [
+        "Birdie, after completing \"The Pirate's Wife\"",
+        "Diamond, Fairy Rose"
+      ]
+    },
+    {
+      "id": "bug-steak",
+      "name": "Bug Steak",
+      "checked": false,
+      "columns": [
+        "Combat Lv 1",
+        "Bug Meat (10)"
+      ]
+    },
+    {
+      "id": "quality-bobber",
+      "name": "Quality Bobber",
+      "checked": false,
+      "columns": [
+        "Willy, after completing \"Juicy Bugs Wanted\"",
+        "Copper Bar, Sap (20), Solar Essence (5)"
+      ]
+    },
+    {
+      "id": "monster-musk",
+      "name": "Monster Musk",
+      "checked": false,
+      "columns": [
+        "Wizard, after completing \"Prismatic Jelly\"",
+        "Bat Wing (30), Slime (30)"
+      ]
+    },
+    {
+      "id": "thorns-ring",
+      "name": "Thorns Ring",
+      "checked": false,
+      "columns": [
+        "Combat Lv 7",
+        "Bone Fragment (50), Stone (50), Gold Bar"
+      ]
+    },
+    {
+      "id": "glowstone-ring",
+      "name": "Glowstone Ring",
+      "checked": false,
+      "columns": [
+        "Mining Lv 4",
+        "Solar Essence (5), Iron Bar (5)"
+      ]
+    },
+    {
+      "id": "mini-obelisk",
+      "name": "Mini-Obelisk",
+      "checked": false,
+      "columns": [
+        "Wizard, after completing \"A Curious Substance\"",
+        "Hardwood (30), Solar Essence (20), Gold Bar (3)"
+      ]
+    },
+    {
+      "id": "farm-computer",
+      "name": "Farm Computer",
+      "checked": false,
+      "columns": [
+        "Demetrius, after completing \"Aquatic Overpopulation\" or \"Biome Balance\"",
+        "Dwarf Gadget, Battery Pack, Refined Quartz (10)"
+      ]
+    },
+    {
+      "id": "ostrich-incubator",
+      "name": "Ostrich Incubator",
+      "checked": false,
+      "columns": [
+        "Complete the Island Field Office Collection",
+        "Bone Fragment (50), Hardwood (50), Cinder Shard (20)"
+      ]
+    },
+    {
+      "id": "geode-crusher",
+      "name": "Geode Crusher",
+      "checked": false,
+      "columns": [
+        "Clint, after completing \"Cave Patrol\"",
+        "Gold Bar (2), Stone (50), Diamond"
+      ]
+    },
+    {
+      "id": "heavy-tapper",
+      "name": "Heavy Tapper",
+      "checked": false,
+      "columns": [
+        "Qi's Walnut Room for 20 Qi Gems",
+        "Hardwood (30), Radioactive Bar"
+      ]
+    },
+    {
+      "id": "hopper",
+      "name": "Hopper",
+      "checked": false,
+      "columns": [
+        "Qi's Walnut Room for 50 Gems",
+        "Hardwood (10), Iridium Bar, Radioactive Bar"
+      ]
+    },
+    {
+      "id": "solar-panel",
+      "name": "Solar Panel",
+      "checked": false,
+      "columns": [
+        "Caroline, after completing \"Island Ingredients\"",
+        "Refined Quartz (10), Iron Bar (5), Gold Bar (5)"
+      ]
+    },
+    {
+      "id": "bone-mill",
+      "name": "Bone Mill",
+      "checked": false,
+      "columns": [
+        "Gunther, after completing \"Fragments of the Past\"",
+        "Bone Fragment (10), Clay (3), Stone (20)"
+      ]
+    },
+    {
+      "id": "magic-bait",
+      "name": "Magic Bait",
+      "checked": false,
+      "columns": [
+        "Qi's Walnut Room for 20 Qi Gems",
+        "Radioactive Ore, Bug Meat (3)"
       ]
     }
   ],
@@ -2687,11 +4763,11 @@
     {
       "id": "slimes",
       "name": "Slimes",
-      "checked": true,
+      "checked": false,
       "columns": [
         "Quantity: 1000",
         "Reward: Slime Charmer Ring",
-        "Prevents damage from slimes"
+        "Prevents damage from Slimes"
       ]
     },
     {
@@ -2701,7 +4777,7 @@
       "columns": [
         "Quantity: 150",
         "Reward: Savage Ring",
-        "Gain a short speed boost whenever you slay a monster"
+        "Short speed boost whenever you slay a monster"
       ]
     },
     {
@@ -2711,7 +4787,7 @@
       "columns": [
         "Quantity: 200",
         "Reward: Vampire Ring",
-        "Gain a little health every time you slay a monster"
+        "Gain health every time you slay a monster"
       ]
     },
     {
@@ -2721,7 +4797,7 @@
       "columns": [
         "Quantity: 50",
         "Reward: Skeleton Mask",
-        "The red eyes are glowing mysteriously"
+        "Hat"
       ]
     },
     {
@@ -2731,7 +4807,7 @@
       "columns": [
         "Quantity: 80",
         "Reward: Insect Head",
-        "Not very pleasant to wield"
+        "Sword: 10-20 Dmg, Speed +2, Crit. Chance +2"
       ]
     },
     {
@@ -2741,7 +4817,7 @@
       "columns": [
         "Quantity: 30",
         "Reward: Hard Hat",
-        "Keep your dome in one piece"
+        "Hat"
       ]
     },
     {
@@ -2761,7 +4837,7 @@
       "columns": [
         "Quantity: 60",
         "Reward: Crabshell Ring",
-        "The top of the ring is made from enchanted crab shell"
+        "Defense +5"
       ]
     },
     {
@@ -2807,75 +4883,408 @@
   ],
   "museum": [
     {
-      "id": "amphibian-fossil",
-      "name": "Amphibian Fossil",
+      "id": "quartz",
+      "name": "Quartz",
       "checked": false,
       "columns": [
-        "Artifact",
-        "Artifact spots (Forest, Mountain), fishing treasure chests, bone nodes"
+        "Mineral",
+        "Mines / Stone Golem"
       ]
     },
     {
-      "id": "anchor",
-      "name": "Anchor",
+      "id": "earth-crystal",
+      "name": "Earth Crystal",
       "checked": false,
       "columns": [
-        "Artifact",
-        "Artifact spots (Beach), fishing treasure chests, artifact troves"
+        "Mineral",
+        "Mines 1-40 / Duggy Drop / Geode / Fishing Chest"
       ]
     },
     {
-      "id": "ancient-doll",
-      "name": "Ancient Doll",
+      "id": "frozen-tear",
+      "name": "Frozen Tear",
       "checked": false,
       "columns": [
-        "Artifact",
-        "Artifact spots (Bus Stop, Forest, Mountain, Town), fishing treasure chests, artifact troves"
+        "Mineral",
+        "Mines 41-80 / Fishing Chest / Frozen Geode / Dust Sprite"
       ]
     },
     {
-      "id": "ancient-drum",
-      "name": "Ancient Drum",
+      "id": "fire-quartz",
+      "name": "Fire Quartz",
       "checked": false,
       "columns": [
-        "Artifact",
-        "Artifact spots (Bus Stop, Forest, Town), Frozen/Omni geodes, artifact troves"
+        "Mineral",
+        "Mines 81-120 / Fishing Chest / Magma Geode"
       ]
     },
     {
-      "id": "ancient-seed",
-      "name": "Ancient Seed",
-      "checked": true,
+      "id": "tigerseye",
+      "name": "Tigerseye",
+      "checked": false,
       "columns": [
-        "Artifact",
-        "Artifact spots (Forest, Mountain), fishing treasure chests, dropped by bugs/flies/grubs"
+        "Mineral",
+        "Magma Geode"
       ]
     },
     {
-      "id": "ancient-sword",
-      "name": "Ancient Sword",
+      "id": "opal",
+      "name": "Opal",
       "checked": false,
       "columns": [
-        "Artifact",
-        "Artifact spots (Forest, Mountain), fishing treasure chests, artifact troves"
+        "Mineral",
+        "Frozen Geode"
       ]
     },
     {
-      "id": "arrowhead",
-      "name": "Arrowhead",
+      "id": "fire-opal",
+      "name": "Fire Opal",
       "checked": false,
       "columns": [
-        "Artifact",
-        "Artifact spots (Mountain, Forest, Bus Stop), artifact troves"
+        "Mineral",
+        "Magma Geode"
       ]
     },
     {
-      "id": "bone-flute",
-      "name": "Bone Flute",
+      "id": "alamite",
+      "name": "Alamite",
       "checked": false,
       "columns": [
-        "Artifact",
-        "Artifact spots (Forest, Mountain, Town), fishing treasure chests, artifact troves"
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "bixite",
+      "name": "Bixite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Magma Geode"
+      ]
+    },
+    {
+      "id": "baryte",
+      "name": "Baryte",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Magma Geode"
+      ]
+    },
+    {
+      "id": "aerinite",
+      "name": "Aerinite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "calcite",
+      "name": "Calcite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "dolomite",
+      "name": "Dolomite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Magma Geode"
+      ]
+    },
+    {
+      "id": "esperite",
+      "name": "Esperite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "fluorapatite",
+      "name": "Fluorapatite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "geminite",
+      "name": "Geminite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "helvite",
+      "name": "Helvite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Magma Geode"
+      ]
+    },
+    {
+      "id": "jamborite",
+      "name": "Jamborite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "jagoite",
+      "name": "Jagoite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "kyanite",
+      "name": "Kyanite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "lunarite",
+      "name": "Lunarite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "malachite",
+      "name": "Malachite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "neptunite",
+      "name": "Neptunite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Magma Geode"
+      ]
+    },
+    {
+      "id": "lemon-stone",
+      "name": "Lemon Stone",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Magma Geode"
+      ]
+    },
+    {
+      "id": "nekoite",
+      "name": "Nekoite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "orpiment",
+      "name": "Orpiment",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "petrified-slime",
+      "name": "Petrified Slime",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode / Slime Ball"
+      ]
+    },
+    {
+      "id": "thunder-egg",
+      "name": "Thunder Egg",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "pyrite",
+      "name": "Pyrite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "ocean-stone",
+      "name": "Ocean Stone",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "ghost-crystal",
+      "name": "Ghost Crystal",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Magma Geode"
+      ]
+    },
+    {
+      "id": "celestine",
+      "name": "Celestine",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "marble",
+      "name": "Marble",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "sandstone",
+      "name": "Sandstone",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "granite",
+      "name": "Granite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "basalt",
+      "name": "Basalt",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Magma Geode"
+      ]
+    },
+    {
+      "id": "limestone",
+      "name": "Limestone",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "soapstone",
+      "name": "Soapstone",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "hematite",
+      "name": "Hematite",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "mudstone",
+      "name": "Mudstone",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Magma Geode"
+      ]
+    },
+    {
+      "id": "slate",
+      "name": "Slate",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Geode"
+      ]
+    },
+    {
+      "id": "fairy-stone",
+      "name": "Fairy Stone",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Frozen Geode"
+      ]
+    },
+    {
+      "id": "star-shards",
+      "name": "Star Shards",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Magma Geode"
       ]
     },
     {
@@ -2884,7 +5293,52 @@
       "checked": false,
       "columns": [
         "Mineral",
-        "The Mines and Skull Cavern, from geodes, or panning"
+        "Emerald Node / Gem Node / Fishing Chest"
+      ]
+    },
+    {
+      "id": "aquamarine",
+      "name": "Aquamarine",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Aquamarine Node / Gem Node / Fishing Chest"
+      ]
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Ruby Node / Gem Node / Fishing Chest"
+      ]
+    },
+    {
+      "id": "amethyst",
+      "name": "Amethyst",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Amethyst Node / Gem Node / Green Slimes / Fishing Chest"
+      ]
+    },
+    {
+      "id": "topaz",
+      "name": "Topaz",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Topaz Node / Gem Node / Fishing Chest"
+      ]
+    },
+    {
+      "id": "jade",
+      "name": "Jade",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Jade Node / Gem Node / Blue Slimes / Fishing Chest"
       ]
     },
     {
@@ -2893,7 +5347,394 @@
       "checked": false,
       "columns": [
         "Mineral",
-        "The Mines and Skull Cavern, geodes, or panning"
+        "Diamond Node / Gem Node / Monster Drop / Fishing Chest"
+      ]
+    },
+    {
+      "id": "prismatic-shard",
+      "name": "Prismatic Shard",
+      "checked": false,
+      "columns": [
+        "Mineral",
+        "Iridium Node / Mystic Stone / Monster Drop / Fishing Chest"
+      ]
+    },
+    {
+      "id": "dwarf-scroll-i",
+      "name": "Dwarf Scroll I",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Dig in Mines / Monster Drop"
+      ]
+    },
+    {
+      "id": "dwarf-scroll-ii",
+      "name": "Dwarf Scroll II",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Dig in Mines 1-40 / Monster Drop"
+      ]
+    },
+    {
+      "id": "dwarf-scroll-iii",
+      "name": "Dwarf Scroll III",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Monster Drop"
+      ]
+    },
+    {
+      "id": "dwarf-scroll-iv",
+      "name": "Dwarf Scroll IV",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Dig in Mines 80+ / Monster Drop"
+      ]
+    },
+    {
+      "id": "chipped-amphora",
+      "name": "Chipped Amphora",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Town / Artifact Trove"
+      ]
+    },
+    {
+      "id": "arrowhead",
+      "name": "Arrowhead",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Mountain / Forest / Bus Stop / Artifact Trove"
+      ]
+    },
+    {
+      "id": "ancient-doll",
+      "name": "Ancient Doll",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Mountain / Forest / Bus Stop / Town / Artifact Trove"
+      ]
+    },
+    {
+      "id": "elvish-jewelry",
+      "name": "Elvish Jewelry",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Forest / Fishing Chest / Artifact Trove"
+      ]
+    },
+    {
+      "id": "chewing-stick",
+      "name": "Chewing Stick",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Mountain / Forest / Bus Stop / Town / Duggy Drop / Artifact Trove"
+      ]
+    },
+    {
+      "id": "ornamental-fan",
+      "name": "Ornamental Fan",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Beach / Forest / Town / Fishing Chest / Artifact Trove"
+      ]
+    },
+    {
+      "id": "dinosaur-egg",
+      "name": "Dinosaur Egg",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Mountain / Fishing Chest / Pepper Rex Drop"
+      ]
+    },
+    {
+      "id": "rare-disc",
+      "name": "Rare Disc",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Fishing Chest / Bat Drop / Void Spirit Drop / Artifact Trove"
+      ]
+    },
+    {
+      "id": "ancient-sword",
+      "name": "Ancient Sword",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Forest / Mountain / Fishing Chest / Artifact Trove"
+      ]
+    },
+    {
+      "id": "rusty-spoon",
+      "name": "Rusty Spoon",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Town / Fishing Chest / Dig in Mines / Artifact Trove"
+      ]
+    },
+    {
+      "id": "rusty-spur",
+      "name": "Rusty Spur",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Farm / Fishing Chest / Dig in Mines / Artifact Trove"
+      ]
+    },
+    {
+      "id": "rusty-cog",
+      "name": "Rusty Cog",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Mountain / Fishing Chest / Dig in Mines / Artifact Trove"
+      ]
+    },
+    {
+      "id": "chicken-statue-artifact",
+      "name": "Chicken Statue (Artifact)",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Farm / Fishing Chest / Artifact Trove"
+      ]
+    },
+    {
+      "id": "ancient-seed-artifact",
+      "name": "Ancient Seed (Artifact)",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Forest / Mountain / Fishing Chest / Bug Drop / Artifact Trove"
+      ]
+    },
+    {
+      "id": "prehistoric-tool",
+      "name": "Prehistoric Tool",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Bus Stop / Forest / Mountain / Fishing Chest / Artifact Trove"
+      ]
+    },
+    {
+      "id": "dried-starfish",
+      "name": "Dried Starfish",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Beach / Fishing Chest / Artifact Trove"
+      ]
+    },
+    {
+      "id": "anchor",
+      "name": "Anchor",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Beach / Fishing Chest / Artifact Trove"
+      ]
+    },
+    {
+      "id": "glass-shards",
+      "name": "Glass Shards",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Beach / Fishing Chest / Artifact Trove"
+      ]
+    },
+    {
+      "id": "bone-flute",
+      "name": "Bone Flute",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Forest / Mountain / Town / Fishing Chest / Artifact Trove"
+      ]
+    },
+    {
+      "id": "prehistoric-handaxe",
+      "name": "Prehistoric Handaxe",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Bus Stop / Forest / Mountain / Artifact Trove"
+      ]
+    },
+    {
+      "id": "dwarvish-helm",
+      "name": "Dwarvish Helm",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Dig in Mines 1-40 / Geode / Omni Geode / Artifact Trove"
+      ]
+    },
+    {
+      "id": "dwarf-gadget",
+      "name": "Dwarf Gadget",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Dig in Mines 41-80 / Magma Geode / Omni Geode / Artifact Trove"
+      ]
+    },
+    {
+      "id": "ancient-drum",
+      "name": "Ancient Drum",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Bus Stop / Forest / Town / Frozen Geode / Omni Geode / Artifact Trove"
+      ]
+    },
+    {
+      "id": "golden-mask",
+      "name": "Golden Mask",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Desert / Artifact Trove"
+      ]
+    },
+    {
+      "id": "golden-relic",
+      "name": "Golden Relic",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Desert / Artifact Trove"
+      ]
+    },
+    {
+      "id": "strange-doll-green",
+      "name": "Strange Doll (green)",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Any Artifact Spot / Fishing Chest / Secret Note #17"
+      ]
+    },
+    {
+      "id": "strange-doll-yellow",
+      "name": "Strange Doll (yellow)",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Any Artifact Spot / Fishing Chest / Secret Note #18"
+      ]
+    },
+    {
+      "id": "prehistoric-scapula",
+      "name": "Prehistoric Scapula",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Forest / Town / Skeleton Drop / Bone Nodes"
+      ]
+    },
+    {
+      "id": "prehistoric-tibia",
+      "name": "Prehistoric Tibia",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Railroad / Forest / Pepper Rex Drop / Bone Nodes"
+      ]
+    },
+    {
+      "id": "prehistoric-skull",
+      "name": "Prehistoric Skull",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Mountain / Haunted Skull Drop / Bone Nodes"
+      ]
+    },
+    {
+      "id": "skeletal-hand",
+      "name": "Skeletal Hand",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Backwoods / Beach / Haunted Skull Drop / Bone Nodes"
+      ]
+    },
+    {
+      "id": "prehistoric-rib",
+      "name": "Prehistoric Rib",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Town / Farm / Pepper Rex Drop / Bone Nodes"
+      ]
+    },
+    {
+      "id": "prehistoric-vertebra",
+      "name": "Prehistoric Vertebra",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Bus Stop / Pepper Rex Drop / Bone Nodes"
+      ]
+    },
+    {
+      "id": "skeletal-tail",
+      "name": "Skeletal Tail",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Dig in Mines / Fishing Chest / Bone Nodes"
+      ]
+    },
+    {
+      "id": "nautilus-fossil",
+      "name": "Nautilus Fossil",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Beach / Fishing Chest / Bone Nodes"
+      ]
+    },
+    {
+      "id": "amphibian-fossil",
+      "name": "Amphibian Fossil",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Forest / Mountain / Fishing Chest / Bone Nodes"
+      ]
+    },
+    {
+      "id": "palm-fossil",
+      "name": "Palm Fossil",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Desert / Forest / Beach / Bone Nodes"
+      ]
+    },
+    {
+      "id": "trilobite",
+      "name": "Trilobite",
+      "checked": false,
+      "columns": [
+        "Artifact",
+        "Beach / Forest / Mountain / Bone Nodes"
       ]
     }
   ],
@@ -3243,6 +6084,128 @@
           }
         ]
       }
+    }
+  ],
+  "museumRewards": [
+    {
+      "milestone": "Any 5 Items",
+      "reward": "9 Cauliflower Seeds"
+    },
+    {
+      "milestone": "Any 10 Items",
+      "reward": "9 Melon Seeds"
+    },
+    {
+      "milestone": "Any 15 Items",
+      "reward": "1 Starfruit Seed"
+    },
+    {
+      "milestone": "Any 20 Items",
+      "reward": "\"A Night on Eco-Hill\" Painting"
+    },
+    {
+      "milestone": "Any 25 Items",
+      "reward": "\"Jade Hills\" Painting"
+    },
+    {
+      "milestone": "Any 30 Items",
+      "reward": "Large Futan Bear"
+    },
+    {
+      "milestone": "Any 35 Items",
+      "reward": "9 Pumpkin Seeds"
+    },
+    {
+      "milestone": "Any 40 Items",
+      "reward": "Rarecrow #8"
+    },
+    {
+      "milestone": "Any 50 Items",
+      "reward": "Bear Statue"
+    },
+    {
+      "milestone": "Any 60 Items",
+      "reward": "Rusty Key (mail the next day)"
+    },
+    {
+      "milestone": "Any 70 Items",
+      "reward": "3 Triple Shot Espresso"
+    },
+    {
+      "milestone": "Any 80 Items",
+      "reward": "5 Warp Totem: Farm"
+    },
+    {
+      "milestone": "Any 90 Items",
+      "reward": "Magic Rock Candy"
+    },
+    {
+      "milestone": "All 95 Items",
+      "reward": "Stardrop"
+    },
+    {
+      "milestone": "Any 11 Minerals",
+      "reward": "Standing Geode"
+    },
+    {
+      "milestone": "Any 21 Minerals",
+      "reward": "Singing Stone"
+    },
+    {
+      "milestone": "Any 31 Minerals",
+      "reward": "Obsidian Vase"
+    },
+    {
+      "milestone": "Any 41 Minerals",
+      "reward": "Crystal Chair"
+    },
+    {
+      "milestone": "Any 50 Minerals",
+      "reward": "Crystalarium"
+    },
+    {
+      "milestone": "11 Artifacts incl. Rare Disc & Dwarf Gadget",
+      "reward": "\"Burnt Offering\" Wall Decor"
+    },
+    {
+      "milestone": "Any 15 Artifacts",
+      "reward": "Skeleton Statue"
+    },
+    {
+      "milestone": "Any 20 Artifacts",
+      "reward": "Rarecrow #7"
+    },
+    {
+      "milestone": "3 Artifacts incl. Ancient Drum",
+      "reward": "Drum Block"
+    },
+    {
+      "milestone": "Ancient Seed",
+      "reward": "Ancient Seeds + Crafting Recipe"
+    },
+    {
+      "milestone": "3 Artifacts incl. Bone Flute",
+      "reward": "Flute Block"
+    },
+    {
+      "milestone": "5 Artifacts incl. Chicken Statue (Artifact)",
+      "reward": "Chicken Statue (Furniture)"
+    },
+    {
+      "milestone": "Dwarf Scrolls I, II, III, & IV",
+      "reward": "Dwarvish Translation Guide"
+    },
+    {
+      "milestone": "Prehistoric Skull, Scapula & Skeletal Hand",
+      "reward": "Sloth Skeleton L"
+    },
+    {
+      "milestone": "Prehistoric Rib & Vertebra",
+      "reward": "Sloth Skeleton M"
+    },
+    {
+      "milestone": "Prehistoric Tibia & Skeletal Tail",
+      "reward": "Sloth Skeleton R"
     }
   ]
 }
