@@ -165,6 +165,10 @@ Demo mode is the default, so the first deploy works on its own. When the API is 
 
 Built with AI assistance from Claude (Anthropic). See [AI-USAGE.md](AI-USAGE.md) for details.
 
+## Security checklist
+
+See [SECURITY-CHECKLIST.md](SECURITY-CHECKLIST.md).
+
 ## Author
 
 [Pineda, Mary Alexa Ysabelle V.](https://github.com/hrspnd) — CS - 402
