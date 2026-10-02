@@ -30,7 +30,7 @@ export default function FarmProgress() {
           category: def.category,
           subItems: results[index].map((item) => ({
             id: item.id,
-            label: item.name,
+            label: item.location ? `${item.name} - ${item.location}` : item.name,
             checked: item.checked,
           })),
         }))

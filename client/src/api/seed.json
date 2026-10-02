@@ -875,33 +875,514 @@
   ],
   "walnuts": [
     {
-      "id": "walnut-01",
-      "name": "Walnut Hidden in Tree Stump",
-      "checked": false,
-      "columns": [
-        "North Island",
-        "Break with axe",
-        "Not found"
+      "id": "island-east",
+      "title": "Island East",
+      "items": [
+        {
+          "id": "exploration-bush-in-the-jungle",
+          "label": "Exploration: Bush in the Jungle",
+          "checked": false
+        },
+        {
+          "id": "puzzle-place-banana-on-shrine-left-of-leo-s-treehouse",
+          "label": "Puzzle (+3): Place Banana on Shrine Left of Leo's treehouse",
+          "checked": false
+        },
+        {
+          "id": "puzzle-hit-the-tree-in-leo-s-treehouse-with-axe",
+          "label": "Puzzle: Hit the tree in Leo's treehouse with Axe",
+          "checked": false
+        },
+        {
+          "id": "exploration-bush-hidden-south-of-bird-shrine-to-the-right-of",
+          "label": "Exploration: Bush hidden South of Bird Shrine to the Right of Leo's treehouse",
+          "checked": false
+        },
+        {
+          "id": "puzzle-gem-birds-shrine-in-the-area-to-the-east-of-leo-s-tre",
+          "label": "Puzzle (+5): Gem Birds Shrine in the area to the east of Leo's treehouse",
+          "checked": false
+        }
       ]
     },
     {
-      "id": "walnut-02",
-      "name": "Walnut Buried on Beach",
-      "checked": false,
-      "columns": [
-        "South Island",
-        "Dig with shovel",
-        "Not found"
+      "id": "island-west",
+      "title": "Island West",
+      "items": [
+        {
+          "id": "harvesting-harvest-any-crop-on-the-island-farm",
+          "label": "Harvesting: Harvest any Crop on the Island Farm",
+          "checked": false
+        },
+        {
+          "id": "harvesting-harvest-any-crop-on-the-island-farm-1",
+          "label": "Harvesting: Harvest any Crop on the Island Farm",
+          "checked": false
+        },
+        {
+          "id": "harvesting-harvest-any-crop-on-the-island-farm-2",
+          "label": "Harvesting: Harvest any Crop on the Island Farm",
+          "checked": false
+        },
+        {
+          "id": "harvesting-harvest-any-crop-on-the-island-farm-3",
+          "label": "Harvesting: Harvest any Crop on the Island Farm",
+          "checked": false
+        },
+        {
+          "id": "harvesting-harvest-any-crop-on-the-island-farm-4",
+          "label": "Harvesting: Harvest any Crop on the Island Farm",
+          "checked": false
+        },
+        {
+          "id": "puzzle-grow-melon-then-talk-to-gourmand-frog-in-the-farm-cav",
+          "label": "Puzzle (+5): Grow Melon, then talk to Gourmand Frog in the Farm cave BEFORE harvesting",
+          "checked": false
+        },
+        {
+          "id": "puzzle-grow-wheat-then-talk-to-gourmand-frog-in-the-farm-cav",
+          "label": "Puzzle (+5): Grow Wheat, then talk to Gourmand Frog in the Farm cave BEFORE harvesting",
+          "checked": false
+        },
+        {
+          "id": "puzzle-grow-garlic-then-talk-to-gourmand-frog-in-the-farm-ca",
+          "label": "Puzzle (+5): Grow Garlic, then talk to Gourmand Frog in the Farm cave BEFORE harvesting",
+          "checked": false
+        },
+        {
+          "id": "journal-scrap-6-dig-in-the-northeast-corner-of-the-beach-sou",
+          "label": "Journal Scrap #6: Dig in the Northeast corner of the beach South of the Farm after finding Journal Scrap #6",
+          "checked": false
+        },
+        {
+          "id": "mining-break-mussel-nodes-on-the-beach-south-of-the-farm",
+          "label": "Mining: Break Mussel Nodes on the beach South of the Farm",
+          "checked": false
+        },
+        {
+          "id": "mining-break-mussel-nodes-on-the-beach-south-of-the-farm-1",
+          "label": "Mining: Break Mussel Nodes on the beach South of the Farm",
+          "checked": false
+        },
+        {
+          "id": "mining-break-mussel-nodes-on-the-beach-south-of-the-farm-2",
+          "label": "Mining: Break Mussel Nodes on the beach South of the Farm",
+          "checked": false
+        },
+        {
+          "id": "mining-break-mussel-nodes-on-the-beach-south-of-the-farm-3",
+          "label": "Mining: Break Mussel Nodes on the beach South of the Farm",
+          "checked": false
+        },
+        {
+          "id": "mining-break-mussel-nodes-on-the-beach-south-of-the-farm-4",
+          "label": "Mining: Break Mussel Nodes on the beach South of the Farm",
+          "checked": false
+        },
+        {
+          "id": "exploration-in-the-shipwreck-on-the-southwest-side-of-the-be",
+          "label": "Exploration: In the shipwreck on the Southwest side of the beach South of the Farm",
+          "checked": false
+        },
+        {
+          "id": "puzzle-duggy-whack-a-mole-southeast-of-birdie-s-hut-hit-with",
+          "label": "Puzzle: Duggy 'whack-a-mole' Southeast of Birdie's Hut; hit with upgraded Watering Can",
+          "checked": false
+        },
+        {
+          "id": "exploration-dig-in-the-center-of-the-blue-starfish-triangle-",
+          "label": "Exploration: Dig in the center of the blue starfish triangle by the driftwood on the beach South of the Farm",
+          "checked": false
+        },
+        {
+          "id": "exploration-dig-in-the-center-of-the-blue-and-yellow-starfis",
+          "label": "Exploration: Dig in the center of the blue and yellow starfish diamond near the tide pools",
+          "checked": false
+        },
+        {
+          "id": "exploration-dig-on-the-x-in-between-the-tide-pools",
+          "label": "Exploration: Dig on the X in between the tide pools",
+          "checked": false
+        },
+        {
+          "id": "exploration-dig-in-the-center-of-the-diamond-of-indents-in-t",
+          "label": "Exploration: Dig in the center of the diamond of indents in the sand Southwest of the tide pools",
+          "checked": false
+        },
+        {
+          "id": "exploration-bush-behind-a-coconut-tree-by-the-pond-west-of-t",
+          "label": "Exploration: Bush behind a coconut tree by the pond West of the Farm",
+          "checked": false
+        },
+        {
+          "id": "quest-complete-the-pirate-s-wife-quest",
+          "label": "Quest (+5): Complete \"The Pirate's Wife\" quest",
+          "checked": false
+        },
+        {
+          "id": "journal-scrap-4-dig-in-the-sand-north-of-birdie-s-hut-after-",
+          "label": "Journal Scrap #4: Dig in the sand North of Birdie's Hut after finding Journal Scrap #4",
+          "checked": false
+        },
+        {
+          "id": "exploration-bush-southeast-of-qi-s-walnut-room",
+          "label": "Exploration: Bush Southeast of Qi's Walnut Room",
+          "checked": false
+        },
+        {
+          "id": "exploration-north-of-qi-s-walnut-room-along-the-western-coas",
+          "label": "Exploration: North of Qi's Walnut Room, along the Western coast",
+          "checked": false
+        },
+        {
+          "id": "fighting-kill-tiger-slimes-in-the-grove-north-of-the-pond",
+          "label": "Fighting: Kill Tiger Slimes in the grove North of the pond",
+          "checked": false
+        },
+        {
+          "id": "exploration-bush-behind-a-mahogany-tree-in-the-tiger-slime-g",
+          "label": "Exploration: Bush behind a Mahogany tree in the Tiger Slime Grove",
+          "checked": false
+        },
+        {
+          "id": "exploration-dig-in-the-center-of-a-circle-of-grass-in-the-ti",
+          "label": "Exploration: Dig in the center of a circle of grass in the Tiger Slime Grove",
+          "checked": false
+        },
+        {
+          "id": "exploration-across-bridge-west-of-parrot-express-station-alo",
+          "label": "Exploration: Across bridge West of Parrot Express station, along the South wall",
+          "checked": false
+        },
+        {
+          "id": "puzzle-across-bridge-west-of-parrot-express-station-north-to",
+          "label": "Puzzle (+3): Across bridge West of Parrot Express station; North to hidden cave; complete 'Simon Says' puzzle",
+          "checked": false
+        },
+        {
+          "id": "exploration-follow-the-cliff-s-edge-east-of-tiger-slime-grov",
+          "label": "Exploration: Follow the cliff's edge East of Tiger Slime Grove",
+          "checked": false
+        },
+        {
+          "id": "exploration-dig-in-the-center-of-the-diamond-shaped-pebble-e",
+          "label": "Exploration: Dig in the center of the diamond shaped pebble East of Parrot Express station",
+          "checked": false
+        },
+        {
+          "id": "exploration-east-of-the-parrot-express-station-follow-the-pa",
+          "label": "Exploration: East of the Parrot Express station, follow the path hidden in the trees",
+          "checked": false
+        },
+        {
+          "id": "exploration-south-of-the-parrot-express-station-go-south-alo",
+          "label": "Exploration: South of the Parrot Express station, go South along the cliff",
+          "checked": false
+        }
       ]
     },
     {
-      "id": "walnut-03",
-      "name": "Walnut Behind Waterfall",
-      "checked": true,
-      "columns": [
-        "North Island",
-        "Walk behind waterfall",
-        "Found"
+      "id": "island-north",
+      "title": "Island North",
+      "items": [
+        {
+          "id": "exploration-dig-in-the-stone-circle-west-of-the-entrance-sta",
+          "label": "Exploration: Dig in the stone circle West of the entrance stairs",
+          "checked": false
+        },
+        {
+          "id": "exploration-hidden-path-west-of-the-entrance-stairs",
+          "label": "Exploration: Hidden path West of the entrance stairs",
+          "checked": false
+        },
+        {
+          "id": "exploration-dig-in-the-center-of-a-circle-of-flowers-northea",
+          "label": "Exploration: Dig in the center of a circle of flowers Northeast of the entrance stairs",
+          "checked": false
+        },
+        {
+          "id": "exploration-dig-in-the-stone-circle-east-of-the-circle-of-fl",
+          "label": "Exploration: Dig in the stone circle East of the circle of flowers",
+          "checked": false
+        },
+        {
+          "id": "exploration-southeast-of-the-field-office-dig-the-square-pat",
+          "label": "Exploration: Southeast of the Field Office, dig the square patch of sand in the corner",
+          "checked": false
+        },
+        {
+          "id": "exploration-north-of-the-dig-site-dig-at-the-center-of-the-s",
+          "label": "Exploration: North of the Dig Site, dig at the center of the stone circle",
+          "checked": false
+        },
+        {
+          "id": "exploration-north-of-the-dig-site-then-west-across-the-bridg",
+          "label": "Exploration: North of the Dig Site, then West across the bridge",
+          "checked": false
+        },
+        {
+          "id": "exploration-north-of-the-dig-site-then-east-through-the-hidd",
+          "label": "Exploration: North of the Dig Site, then East through the hidden cliff passage",
+          "checked": false
+        },
+        {
+          "id": "exploration-north-of-the-dig-site-then-east-through-the-hidd-1",
+          "label": "Exploration: North of the Dig Site, then East through the hidden cliff passage",
+          "checked": false
+        },
+        {
+          "id": "island-field-office-complete-the-large-animal-collection-at-",
+          "label": "Island Field Office (+6): Complete the Large Animal collection at the Island Field Office",
+          "checked": false
+        },
+        {
+          "id": "island-field-office-complete-the-snake-collection-at-the-isl",
+          "label": "Island Field Office (+3): Complete the Snake collection at the Island Field Office",
+          "checked": false
+        },
+        {
+          "id": "island-field-office-donate-a-mummified-frog-to-the-island-fi",
+          "label": "Island Field Office: Donate a Mummified Frog to the Island Field Office",
+          "checked": false
+        },
+        {
+          "id": "island-field-office-donate-the-mummified-bat-to-the-island-f",
+          "label": "Island Field Office: Donate the Mummified Bat to the Island Field Office",
+          "checked": false
+        },
+        {
+          "id": "island-field-office-finish-purple-flowers-island-survey",
+          "label": "Island Field Office: Finish Purple Flowers Island Survey",
+          "checked": false
+        },
+        {
+          "id": "island-field-office-finish-purple-starfish-island-survey",
+          "label": "Island Field Office: Finish Purple Starfish Island Survey",
+          "checked": false
+        },
+        {
+          "id": "exploration-southeast-of-the-volcano-entrance-hidden-behind-",
+          "label": "Exploration: Southeast of the Volcano entrance, hidden behind a palm tree",
+          "checked": false
+        },
+        {
+          "id": "exploration-east-of-the-volcano-entrance-dig-in-the-stone-ci",
+          "label": "Exploration: East of the Volcano entrance, dig in the stone circle by two bushes",
+          "checked": false
+        },
+        {
+          "id": "exploration-northeast-of-the-volcano-entrance-in-a-tree-knoc",
+          "label": "Exploration: Northeast of the Volcano entrance, in a tree - knock down with slingshot",
+          "checked": false
+        },
+        {
+          "id": "journal-scrap-10-dig-southwest-of-the-volcano-entrance-insid",
+          "label": "Journal Scrap #10: Dig Southwest of the Volcano entrance, inside the curved palm after finding Journal Scrap #10",
+          "checked": false
+        },
+        {
+          "id": "exploration-far-northwest-of-the-map-dig-in-the-stone-circle",
+          "label": "Exploration: Far Northwest of the map, dig in the stone circle",
+          "checked": false
+        },
+        {
+          "id": "exploration-far-northwest-of-the-map-by-the-purple-starfish-",
+          "label": "Exploration: Far Northwest of the map by the purple starfish, go West through hidden path",
+          "checked": false
+        },
+        {
+          "id": "exploration-inside-the-volcano-using-watering-can-follow-the",
+          "label": "Exploration: Inside the Volcano, using Watering Can, follow the lava river West to an exit",
+          "checked": false
+        },
+        {
+          "id": "exploration-inside-the-volcano-using-watering-can-follow-the-1",
+          "label": "Exploration: Inside the Volcano, using Watering Can, follow the lava river West to an exit",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "island-south",
+      "title": "Island South / Southeast",
+      "items": [
+        {
+          "id": "exploration-east-of-north-entrance-stairs-go-south-through-h",
+          "label": "Exploration: East of North entrance stairs, go South through hidden route behind a tree",
+          "checked": false
+        },
+        {
+          "id": "fishing-fish-in-the-star-shaped-tide-pool",
+          "label": "Fishing: Fish in the star-shaped tide pool",
+          "checked": false
+        },
+        {
+          "id": "exploration-dig-in-the-center-of-the-diamond-of-yellow-starf",
+          "label": "Exploration: Dig in the center of the diamond of yellow starfish",
+          "checked": false
+        },
+        {
+          "id": "puzzle-rainy-day-put-flute-blocks-on-stones-click-2-11-9-5-7",
+          "label": "Puzzle (+5): Rainy day: put flute blocks on stones, click 2/11/9/5/7 times respectively, then run left to right",
+          "checked": false
+        },
+        {
+          "id": "puzzle-non-rainy-even-numbered-days-after-8pm-in-the-pirate-",
+          "label": "Puzzle: Non-rainy, even-numbered days after 8pm in the Pirate's Cove: win a game of darts",
+          "checked": false
+        },
+        {
+          "id": "puzzle-non-rainy-even-numbered-days-after-8pm-in-the-pirate--1",
+          "label": "Puzzle: Non-rainy, even-numbered days after 8pm in the Pirate's Cove: win a second game of darts",
+          "checked": false
+        },
+        {
+          "id": "puzzle-non-rainy-even-numbered-days-after-8pm-in-the-pirate--2",
+          "label": "Puzzle: Non-rainy, even-numbered days after 8pm in the Pirate's Cove: win a third game of darts",
+          "checked": false
+        },
+        {
+          "id": "exploration-in-the-pirate-cove-dig-on-the-exposed-sand-by-th",
+          "label": "Exploration: In the Pirate Cove, dig on the exposed sand by the barrels East of the water",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "volcano",
+      "title": "Volcano",
+      "items": [
+        {
+          "id": "breaking-rocks-break-rocks-in-the-volcano-dungeon",
+          "label": "Breaking Rocks: Break rocks in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "breaking-rocks-break-rocks-in-the-volcano-dungeon-1",
+          "label": "Breaking Rocks: Break rocks in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "breaking-rocks-break-rocks-in-the-volcano-dungeon-2",
+          "label": "Breaking Rocks: Break rocks in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "breaking-rocks-break-rocks-in-the-volcano-dungeon-3",
+          "label": "Breaking Rocks: Break rocks in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "breaking-rocks-break-rocks-in-the-volcano-dungeon-4",
+          "label": "Breaking Rocks: Break rocks in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "killing-monsters-kill-monsters-in-the-volcano-dungeon",
+          "label": "Killing Monsters: Kill monsters in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "killing-monsters-kill-monsters-in-the-volcano-dungeon-1",
+          "label": "Killing Monsters: Kill monsters in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "killing-monsters-kill-monsters-in-the-volcano-dungeon-2",
+          "label": "Killing Monsters: Kill monsters in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "killing-monsters-kill-monsters-in-the-volcano-dungeon-3",
+          "label": "Killing Monsters: Kill monsters in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "killing-monsters-kill-monsters-in-the-volcano-dungeon-4",
+          "label": "Killing Monsters: Kill monsters in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "common-barrels-break-a-common-barrel-in-the-volcano-dungeon",
+          "label": "Common Barrels: Break a common barrel in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "common-barrels-break-a-common-barrel-in-the-volcano-dungeon-1",
+          "label": "Common Barrels: Break a common barrel in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "common-barrels-break-a-common-barrel-in-the-volcano-dungeon-2",
+          "label": "Common Barrels: Break a common barrel in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "common-barrels-break-a-common-barrel-in-the-volcano-dungeon-3",
+          "label": "Common Barrels: Break a common barrel in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "common-barrels-break-a-common-barrel-in-the-volcano-dungeon-4",
+          "label": "Common Barrels: Break a common barrel in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "common-chest-open-a-common-chest-in-the-volcano-dungeon",
+          "label": "Common Chest: Open a common chest in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "rare-chest-open-a-rare-chest-in-the-volcano-dungeon",
+          "label": "Rare Chest: Open a rare chest in the Volcano Dungeon",
+          "checked": false
+        },
+        {
+          "id": "volcano-caldera-found-at-the-volcano-caldera",
+          "label": "Volcano Caldera: Found at the Volcano Caldera",
+          "checked": false
+        },
+        {
+          "id": "volcano-caldera-found-at-the-volcano-caldera-1",
+          "label": "Volcano Caldera: Found at the Volcano Caldera",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "title": "Other",
+      "items": [
+        {
+          "id": "break-golden-coconut-break-a-golden-coconut",
+          "label": "Break Golden Coconut: Break a Golden Coconut",
+          "checked": false
+        },
+        {
+          "id": "fishing-fish-anywhere-on-ginger-island",
+          "label": "Fishing: Fish anywhere on Ginger Island",
+          "checked": false
+        },
+        {
+          "id": "fishing-fish-anywhere-on-ginger-island-1",
+          "label": "Fishing: Fish anywhere on Ginger Island",
+          "checked": false
+        },
+        {
+          "id": "fishing-fish-anywhere-on-ginger-island-2",
+          "label": "Fishing: Fish anywhere on Ginger Island",
+          "checked": false
+        },
+        {
+          "id": "fishing-fish-anywhere-on-ginger-island-3",
+          "label": "Fishing: Fish anywhere on Ginger Island",
+          "checked": false
+        },
+        {
+          "id": "fishing-fish-anywhere-on-ginger-island-4",
+          "label": "Fishing: Fish anywhere on Ginger Island",
+          "checked": false
+        }
       ]
     }
   ],
@@ -4733,6 +5214,11 @@
       "id": "desert-obelisk",
       "name": "Desert Obelisk",
       "checked": false
+    },
+    {
+      "id": "island-obelisk",
+      "name": "Island Obelisk",
+      "checked": false
     }
   ],
   "goldenClock": [
@@ -4744,19 +5230,46 @@
   ],
   "stardrops": [
     {
-      "id": "stardrop-01",
-      "name": "The Mines Level 100",
-      "checked": false
+      "id": "stardew-valley-fair",
+      "name": "Stardew Valley Fair",
+      "checked": false,
+      "location": "Buy for 2,000 Points from Pierre"
     },
     {
-      "id": "stardrop-02",
-      "name": "Old Master Cannoli",
-      "checked": false
+      "id": "the-mines",
+      "name": "The Mines",
+      "checked": false,
+      "location": "Floor 100"
     },
     {
-      "id": "stardrop-03",
-      "name": "Fair Star Drop",
-      "checked": true
+      "id": "marriage",
+      "name": "Marriage",
+      "checked": false,
+      "location": "Reach 12.5 hearts with Spouse"
+    },
+    {
+      "id": "the-sewers",
+      "name": "The Sewers",
+      "checked": false,
+      "location": "Buy for 20,000g from Krobus"
+    },
+    {
+      "id": "the-secret-woods",
+      "name": "The Secret Woods",
+      "checked": false,
+      "location": "Give Old Master Cannoli a Sweet Gem Berry"
+    },
+    {
+      "id": "master-angler",
+      "name": "Master Angler",
+      "checked": false,
+      "location": "Catch every fish"
+    },
+    {
+      "id": "a-complete-collection",
+      "name": "A Complete Collection",
+      "checked": false,
+      "location": "Complete the Museum"
     }
   ],
   "monsterSlayer": [
