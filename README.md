@@ -157,6 +157,10 @@ See [SECURITY-CHECKLIST.md](SECURITY-CHECKLIST.md).
 
 [Pineda, Mary Alexa Ysabelle V.](https://github.com/hrspnd) — CS - 402
 
+## Credits
+
+Stardew Valley and its artwork are by ConcernedApe. The category icons, chicken sprite, and background in `client/src/assets` come from the game and are used here in a free, non-commercial fan project that is not affiliated with or endorsed by ConcernedApe. The headers use the Pixelify Sans font from Google Fonts.
+
 ## Licence
 
 MIT, see [LICENSE](LICENSE).
