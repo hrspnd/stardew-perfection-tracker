@@ -620,6 +620,15 @@ a.layout__pill--active:hover {
   font-size: 2.5rem;
 }
 
+/* SkillTracker: browsers give checkboxes default margins, which pushes the
+   hand-placed level numbers out of line. Give every box the same fixed size so
+   it matches the number labels above it (1rem wide, 0.4rem gap). */
+.skill-tracker__checkboxes input[type='checkbox'] {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+}
+
 @media (max-width: 900px) {
   .dashboard__grid {
     grid-template-columns: 1fr;
@@ -636,3 +645,4 @@ a.layout__pill--active:hover {
     transition: none;
   }
 }
+

@@ -3,7 +3,7 @@ import { listCategory, toggleItem } from '../api'
 import ListTracker from '../components/ListTracker'
 
 // FishCaught (route: "/fish")
-// Uses ListTracker. Same pattern as ProduceShipped.jsx.
+// Uses ListTracker (4 data columns: season, location, time, weather).
 
 const CATEGORY = 'fish'
 

@@ -1,11 +1,10 @@
 /**
  * ListTracker
- * Shared layout for: Produce/Forage Shipped, Golden Walnuts, Fish Caught,
- * Bundles, Cooking Recipes, Crafting Recipes.
+ * Shared layout for: Fish Caught, Cooking Recipes, Crafting Recipes.
  *
  * Renders a checklist as rows: [checkbox] [icon] [name] + N data columns.
- * Column count varies by page (e.g. Cooking/Crafting use 2 columns,
- * Shipped/Walnuts/Fish/Bundles use 3) — pass columns as a prop.
+ * Column count varies by page (Cooking/Crafting use 2, Fish uses 4) -
+ * pass columnHeaders as a prop. Clicking the name toggles the checkbox.
  *
  * Props:
  *   title: string
@@ -38,6 +37,7 @@ export default function ListTracker({ title, items, columnHeaders = [], onToggle
         <div key={item.id} className="list-tracker__row" style={rowStyle}>
           <input
             type="checkbox"
+            id={`list-tracker-${item.id}`}
             checked={Boolean(item.checked)}
             onChange={() => onToggle(item.id)}
           />
@@ -46,7 +46,9 @@ export default function ListTracker({ title, items, columnHeaders = [], onToggle
           ) : (
             <span className="list-tracker__icon list-tracker__icon--placeholder" />
           )}
-          <span className="list-tracker__name">{item.name}</span>
+          <label className="list-tracker__name" htmlFor={`list-tracker-${item.id}`}>
+            {item.name}
+          </label>
           {(item.columns ?? []).map((value, index) => (
             <span key={index} className="list-tracker__column">
               {value}

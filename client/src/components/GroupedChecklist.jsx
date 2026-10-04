@@ -26,11 +26,11 @@ export default function GroupedChecklist({ groups, onToggleItem }) {
         <section key={group.id} className="grouped-checklist__group">
           <header className="grouped-checklist__group-header">
             <h3>{group.title}</h3>
-            {group.requiredCount && (
+            {group.requiredCount ? (
               <span className="grouped-checklist__required-count">
                 (need any {group.requiredCount} of {group.items.length})
               </span>
-            )}
+            ) : null}
           </header>
 
           <ul className="grouped-checklist__items">
@@ -38,6 +38,7 @@ export default function GroupedChecklist({ groups, onToggleItem }) {
               <li key={item.id} className="grouped-checklist__item">
                 <input
                   type="checkbox"
+                  id={`${group.id}-${item.id}`}
                   checked={Boolean(item.checked)}
                   onChange={() => onToggleItem(group.id, item.id)}
                 />
@@ -46,7 +47,7 @@ export default function GroupedChecklist({ groups, onToggleItem }) {
                 ) : (
                   <span className="grouped-checklist__icon grouped-checklist__icon--placeholder" />
                 )}
-                <span>{item.label}</span>
+                <label htmlFor={`${group.id}-${item.id}`}>{item.label}</label>
               </li>
             ))}
 

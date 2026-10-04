@@ -1,14 +1,9 @@
-/**
- * CraftingRecipes (route: "/crafting")
- * Uses ListTracker (2-column variant). Data: recipes known/crafted, materials.
- */
-
 import { useEffect, useState } from 'react'
 import { listCategory, toggleItem } from '../api'
 import ListTracker from '../components/ListTracker'
 
 // CraftingRecipes (route: "/crafting")
-// Uses ListTracker (2-column variant). Same pattern as ProduceShipped.jsx.
+// Uses ListTracker (2 data columns).
 
 const CATEGORY = 'crafting'
 

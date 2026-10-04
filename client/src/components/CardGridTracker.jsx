@@ -28,7 +28,7 @@
  *     subItems?: Array<{ id, label, checked }>,   // grouped cards
  *   }>
  *   size?: "sm" | "lg"
- *   onToggleCard?: (cardId) => void               // leaf cards
+ *   onToggleCard?: (cardId) => void               // leaf cards (clicks are ignored if omitted)
  *   onToggleSubItem?: (cardId, subItemId) => void  // grouped cards
  */
 
@@ -46,11 +46,13 @@ export default function CardGridTracker({ cards, size = 'sm', onToggleCard, onTo
             <header className="card-grid-tracker__card-header">
               <input
                 type="checkbox"
+                id={`card-${card.id}`}
                 checked={headerChecked}
-                readOnly={!isLeaf}
-                onChange={isLeaf ? () => onToggleCard(card.id) : undefined}
+                disabled={!isLeaf}
+                aria-label={isLeaf ? undefined : `${card.title}: all items`}
+                onChange={isLeaf ? () => onToggleCard?.(card.id) : undefined}
               />
-              <h3>{card.title}</h3>
+              <h3>{isLeaf ? <label htmlFor={`card-${card.id}`}>{card.title}</label> : card.title}</h3>
             </header>
 
             <div className="card-grid-tracker__card-body">
@@ -74,10 +76,11 @@ export default function CardGridTracker({ cards, size = 'sm', onToggleCard, onTo
                     <li key={item.id}>
                       <input
                         type="checkbox"
+                        id={`card-${card.id}-${item.id}`}
                         checked={Boolean(item.checked)}
-                        onChange={() => onToggleSubItem(card.id, item.id)}
+                        onChange={() => onToggleSubItem?.(card.id, item.id)}
                       />
-                      <span>{item.label}</span>
+                      <label htmlFor={`card-${card.id}-${item.id}`}>{item.label}</label>
                     </li>
                   ))}
                 </ul>

@@ -35,7 +35,7 @@ const CARD_DEFS = [
     description: 'Catch every fish, including legendary and special fish.' },
 
   { key: 'bundles', label: 'Bundles', href: '/bundles', icon: undefined,
-    description: 'Complete all six rooms of the Community Center.' },
+    description: 'Complete every room of the Community Center.' },
 
   { key: 'cooking', label: 'Cooking Recipes', href: '/cooking', icon: cookingIcon,
     description: 'Cook every recipe available in Stardew Valley.' },

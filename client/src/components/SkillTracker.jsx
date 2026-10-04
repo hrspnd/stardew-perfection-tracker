@@ -64,6 +64,7 @@ export default function SkillTracker({ skills, onToggleLevel, onProfessionChange
                   </div>
 
                   <select
+                    aria-label={`${skill.name} level 5 profession`}
                     value={skill.profession5 ?? ''}
                     onChange={(e) => onProfessionChange(skill.id, 5, e.target.value || null)}
                   >
@@ -101,6 +102,7 @@ export default function SkillTracker({ skills, onToggleLevel, onProfessionChange
                   </div>
 
                   <select
+                    aria-label={`${skill.name} level 10 profession`}
                     value={skill.profession10 ?? ''}
                     onChange={(e) => onProfessionChange(skill.id, 10, e.target.value || null)}
                     disabled={profession10Options.length === 0}
