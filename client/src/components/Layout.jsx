@@ -1,5 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom'
 
+import chickenIcon from '../assets/stardew-chicken.png'
+import bundlesIcon from '../assets/icons/Bundles.png'
 import cookingIcon from '../assets/icons/Cooking.png'
 import craftingIcon from '../assets/icons/Crafting.png'
 import farmerSkillsIcon from '../assets/icons/Farmer Skills.png'
@@ -39,9 +41,11 @@ const SIDEBAR_LINKS = [
 // Big icon at the top of the sidebar, chosen by route. Routes not listed here
 // (the dashboard, Bundles until it has an icon) show the empty mascot slot.
 const PAGE_ICONS = {
+  '/': chickenIcon,
   '/shipped': shippingIcon,
   '/golden-walnuts': walnutIcon,
   '/fish': fishIcon,
+  '/bundles': bundlesIcon,
   '/great-friends': friendsIcon,
   '/farmer-level': farmerSkillsIcon,
   '/monster-slayer': monsterIcon,

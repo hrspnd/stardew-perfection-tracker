@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { listCategory, toggleItem } from '../api'
 import ListTracker from '../components/ListTracker'
+import TrackerPage from '../components/TrackerPage'
 
 // CraftingRecipes (route: "/crafting")
-// Uses ListTracker (2 data columns).
+// Uses TrackerPage + ListTracker (2 data columns).
 
 const CATEGORY = 'crafting'
 
@@ -40,11 +41,13 @@ export default function CraftingRecipes() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <ListTracker
-      title="Crafting Recipes"
-      items={items}
-      columnHeaders={['Source', 'Materials']}
-      onToggle={handleToggle}
-    />
+    <TrackerPage title="Crafting Recipes Made">
+      <ListTracker
+        title="Recipes"
+        items={items}
+        columnHeaders={['Source', 'Materials']}
+        onToggle={handleToggle}
+      />
+    </TrackerPage>
   )
 }

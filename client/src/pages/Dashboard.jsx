@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { getSummary } from '../api'
 import DashboardSummaryCard, { ProgressRing } from '../components/DashboardSummaryCard'
 
+import bundlesIcon from '../assets/icons/Bundles.png'
 import cookingIcon from '../assets/icons/Cooking.png'
 import craftingIcon from '../assets/icons/Crafting.png'
 import farmerSkillsIcon from '../assets/icons/Farmer Skills.png'
@@ -20,43 +21,63 @@ import wizardIcon from '../assets/icons/Wizard.png'
 // Obelisks, Golden Clock, and Stardrops are three separate categories in
 // the API (see seed.json) but live on one page (FarmProgress.jsx), so they
 // get combined into a single "Farm Progress" card here.
-//
-// Bundles has no icon yet - leave `icon` undefined and a placeholder shows.
 
 const CARD_DEFS = [
 
-  { key: 'shipped', label: 'Shipped Items', href: '/shipped', icon: shippingIcon,
-    description: 'Track every item needed for the Full Shipment achievement.' },
+  {
+    key: 'shipped', label: 'Shipped Items', href: '/shipped', icon: shippingIcon,
+    description: 'Track every item needed for the Full Shipment achievement.'
+  },
 
-  { key: 'walnuts', label: 'Golden Walnuts', href: '/golden-walnuts', icon: walnutIcon,
-    description: 'Keep track of all 130 Golden Walnuts on Ginger Island.' },
+  {
+    key: 'walnuts', label: 'Golden Walnuts', href: '/golden-walnuts', icon: walnutIcon,
+    description: 'Keep track of all 130 Golden Walnuts on Ginger Island.'
+  },
 
-  { key: 'fish', label: 'Fish Caught', href: '/fish', icon: fishIcon,
-    description: 'Catch every fish, including legendary and special fish.' },
+  {
+    key: 'fish', label: 'Fish Caught', href: '/fish', icon: fishIcon,
+    description: 'Catch every fish, including legendary and special fish.'
+  },
 
-  { key: 'bundles', label: 'Bundles', href: '/bundles', icon: undefined,
-    description: 'Complete every room of the Community Center.' },
+  {
+    key: 'bundles', label: 'Bundles', href: '/bundles', icon: bundlesIcon,
+    description: 'Complete every room of the Community Center.'
+  },
 
-  { key: 'cooking', label: 'Cooking Recipes', href: '/cooking', icon: cookingIcon,
-    description: 'Cook every recipe available in Stardew Valley.' },
+  {
+    key: 'cooking', label: 'Cooking Recipes', href: '/cooking', icon: cookingIcon,
+    description: 'Cook every recipe available in Stardew Valley.'
+  },
 
-  { key: 'crafting', label: 'Crafting Recipes', href: '/crafting', icon: craftingIcon,
-    description: 'Craft every item needed for the Craft Master achievement.' },
+  {
+    key: 'crafting', label: 'Crafting Recipes', href: '/crafting', icon: craftingIcon,
+    description: 'Craft every item needed for the Craft Master achievement.'
+  },
 
-  { key: 'farmProgress', label: 'Farm Progress', href: '/farm-progress', icon: wizardIcon,
-    description: 'Track Obelisks, the Golden Clock, and Stardrops.' },
+  {
+    key: 'farmProgress', label: 'Farm Progress', href: '/farm-progress', icon: wizardIcon,
+    description: 'Track Obelisks, the Golden Clock, and Stardrops.'
+  },
 
-  { key: 'monsterSlayer', label: 'Monster Slayer', href: '/monster-slayer', icon: monsterIcon,
-    description: 'Complete every Monster Eradication Goal in the Adventurer’s Guild.' },
+  {
+    key: 'monsterSlayer', label: 'Monster Slayer', href: '/monster-slayer', icon: monsterIcon,
+    description: 'Complete every Monster Eradication Goal in the Adventurer’s Guild.'
+  },
 
-  { key: 'museum', label: 'Museum', href: '/museum', icon: museumIcon,
-    description: 'Donate every artifact and mineral to the Museum.' },
+  {
+    key: 'museum', label: 'Museum', href: '/museum', icon: museumIcon,
+    description: 'Donate every artifact and mineral to the Museum.'
+  },
 
-  { key: 'greatFriends', label: 'Great Friends', href: '/great-friends', icon: friendsIcon,
-    description: 'Build full friendships with every villager.' },
+  {
+    key: 'greatFriends', label: 'Great Friends', href: '/great-friends', icon: friendsIcon,
+    description: 'Build full friendships with every villager.'
+  },
 
-  { key: 'farmerLevel', label: 'Farmer Level', href: '/farmer-level', icon: farmerSkillsIcon,
-    description: 'Reach level 10 in Farming, Mining, Foraging, Fishing, and Combat.' },
+  {
+    key: 'farmerLevel', label: 'Farmer Level', href: '/farmer-level', icon: farmerSkillsIcon,
+    description: 'Reach level 10 in Farming, Mining, Foraging, Fishing, and Combat.'
+  },
 
 ]
 

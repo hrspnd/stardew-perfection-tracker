@@ -20,6 +20,13 @@ body {
   margin: 0;
 }
 
+/* Always reserve space for the scrollbar. Without this, short pages (and the
+   "Loading..." screen) have no scrollbar while long pages do, so the page width
+   changes by ~15px on every navigation and the fixed background shifts with it. */
+html {
+  overflow-y: scroll;
+}
+
 .layout {
   --topnav-h: 5.5rem;
   --nav-bg: #0b4a8f;
@@ -36,8 +43,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: var(--font-body);
-  background: linear-gradient(#1c5fa8, #3f7fb5 40%, #4f7f4a);
-  background-attachment: fixed;
+  /* Image stays put while the page scrolls. The colour shows while it loads. */
+  background: #1c5fa8 url('./assets/bg-stardew.png') center / cover no-repeat fixed;
 }
 
 /* ----- Top bar ----- */
@@ -259,31 +266,120 @@ a.layout__pill--active:hover {
   }
 }
 
-/* ---------- ListTracker ---------- */
-/* Row = checkbox + icon + name (fixed widths) + N data columns (equal share).
-   --column-count is set inline per page since it varies (1, 2, or 3). */
+/* ---------- ListTracker (Cooking, Crafting) ---------- */
+/* One wide card inside a TrackerPage. Row = checkbox + icon (if any) + name
+   + N data columns. --column-count is set inline by ListTracker.jsx. */
+
+.list-tracker {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.list-tracker__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4.5rem;
+  padding: 0.75rem 1.75rem;
+  background: var(--card-head);
+}
+
+.list-tracker__header h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+}
+
+.list-tracker__count {
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.list-tracker__body {
+  padding: 1rem 1.75rem 1.5rem;
+}
 
 .list-tracker__row {
   display: grid;
   grid-template-columns:
-    1.5rem            /* checkbox */
-    2rem               /* icon */
-    2fr                /* name - gets more room than data columns */
-    repeat(var(--column-count), 1fr);
+    1.5rem                                          /* checkbox */
+    2.5rem                                          /* icon */
+    minmax(0, 1.2fr)                                /* name */
+    repeat(var(--column-count), minmax(0, 1.6fr));  /* data columns */
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.5rem 0;
+  gap: 1.25rem;
+  padding: 0.55rem 0.25rem;
+}
+
+.list-tracker--no-icons .list-tracker__row {
+  grid-template-columns:
+    1.5rem
+    minmax(0, 1.2fr)
+    repeat(var(--column-count), minmax(0, 1.6fr));
 }
 
 .list-tracker__row--headers {
-  font-weight: bold;
+  padding-bottom: 0.25rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
 }
 
-.list-tracker__icon,
+.list-tracker__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
 .list-tracker__icon--placeholder {
-  width: 1.5rem;
-  height: 1.5rem;
-  display: block;
+  border-radius: 0.4rem;
+  background: rgba(74, 42, 20, 0.12);
+}
+
+.list-tracker__name {
+  font-family: var(--font-display);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.list-tracker__column {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Checked rows fade (the box stays solid so the state is still clear) */
+.list-tracker__row--checked .list-tracker__name,
+.list-tracker__row--checked .list-tracker__column,
+.list-tracker__row--checked .list-tracker__icon {
+  opacity: 0.45;
+}
+
+/* Narrow screens: drop the column headers and stack each row's data under its
+   name, labelled by the header text. */
+@media (max-width: 700px) {
+  .list-tracker__row--headers {
+    display: none;
+  }
+
+  .list-tracker__row {
+    grid-template-columns: 1.5rem 2.5rem minmax(0, 1fr);
+    gap: 0.25rem 1rem;
+  }
+
+  .list-tracker--no-icons .list-tracker__row {
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+  }
+
+  .list-tracker__column {
+    grid-column: -2 / -1;
+  }
+
+  .list-tracker__column::before {
+    content: attr(data-label) ': ';
+    font-weight: bold;
+  }
 }
 
 /* ---------- CardGridTracker ---------- */
@@ -421,9 +517,13 @@ a.layout__pill--active:hover {
   font-family: var(--font-display);
   font-size: 2.5rem;
   color: #fff;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.45); /* stays readable over the image */
 }
 
 .tracker-page__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem; /* between stacked cards (e.g. Museum's two lists) */
   padding: 1.5rem 2rem;
   border-radius: 1.5rem;
   background: var(--panel);
@@ -525,8 +625,9 @@ a.layout__pill--active:hover {
   opacity: 0.8;
 }
 
-/* Checkbox */
-.grouped-checklist__item input[type='checkbox'] {
+/* Checkbox (shared by the group cards and the list rows) */
+.grouped-checklist__item input[type='checkbox'],
+.list-tracker__row input[type='checkbox'] {
   appearance: none;
   display: grid;
   place-content: center;
@@ -540,12 +641,14 @@ a.layout__pill--active:hover {
   cursor: pointer;
 }
 
-.grouped-checklist__item input[type='checkbox']:checked {
+.grouped-checklist__item input[type='checkbox']:checked,
+.list-tracker__row input[type='checkbox']:checked {
   border-color: var(--box-checked);
   background: var(--box-checked);
 }
 
-.grouped-checklist__item input[type='checkbox']:checked::after {
+.grouped-checklist__item input[type='checkbox']:checked::after,
+.list-tracker__row input[type='checkbox']:checked::after {
   content: '';
   width: 0.35rem;
   height: 0.7rem;
@@ -554,7 +657,8 @@ a.layout__pill--active:hover {
   transform: translateY(-1px) rotate(45deg);
 }
 
-.grouped-checklist__item input[type='checkbox']:focus-visible {
+.grouped-checklist__item input[type='checkbox']:focus-visible,
+.list-tracker__row input[type='checkbox']:focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 2px;
 }
@@ -624,6 +728,7 @@ a.layout__pill--active:hover {
   font-family: var(--font-display);
   font-size: 2.5rem;
   color: #fff;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.45); /* stays readable over the image */
 }
 
 .dashboard__panel {
@@ -768,5 +873,198 @@ a.layout__pill--active:hover {
 @media (prefers-reduced-motion: reduce) {
   .progress-ring__fill {
     transition: none;
+  }
+}
+
+/* ---------- GreatFriends ----------
+   Same look as the tracker-page cards: cream body, brown header. Scoped to
+   .great-friends-page so Farm Progress and Monster Slayer are untouched. */
+
+.great-friends-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Universal loves and likes: one card above the villagers, Loves and Likes
+   side by side (stacked on narrow screens). */
+.great-friends-page__universal {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.great-friends-page__universal h2 {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  min-height: 4.5rem;
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+  background: var(--card-head);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+}
+
+.great-friends-page__universal > p {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 1rem 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.great-friends-page__universal h3 {
+  margin: 1rem 0 0.5rem;
+  padding-left: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.great-friends-page__universal ul {
+  margin: 0;
+  padding: 0 1.5rem 0 2.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.great-friends-page__universal h3:nth-of-type(1),
+.great-friends-page__universal ul:nth-of-type(1) {
+  grid-column: 1;
+}
+
+.great-friends-page__universal h3:nth-of-type(2),
+.great-friends-page__universal ul:nth-of-type(2) {
+  grid-column: 2;
+}
+
+.great-friends-page__universal h3 {
+  grid-row: 3;
+}
+
+.great-friends-page__universal ul {
+  grid-row: 4;
+}
+
+/* Villager cards */
+.great-friends-page .card-grid-tracker {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.great-friends-page .card-grid-tracker__card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.great-friends-page .card-grid-tracker__card-header {
+  gap: 0.9rem;
+  min-height: 4.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--card-head);
+}
+
+.great-friends-page .card-grid-tracker__card-header h3 {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+}
+
+/* The whole name is clickable, not just the checkbox */
+.great-friends-page .card-grid-tracker__card-header label {
+  display: block;
+  cursor: pointer;
+}
+
+.great-friends-page .card-grid-tracker__card-body {
+  padding: 1rem 1.5rem 1.25rem;
+}
+
+/* No villager portraits yet: don't reserve an empty box beside the text */
+.great-friends-page .card-grid-tracker__image--placeholder {
+  display: none;
+}
+
+.great-friends-page .card-grid-tracker__details {
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* Birthday first, then Loves and Likes, divided by a thin rule */
+.great-friends-page .card-grid-tracker__details li:first-child {
+  font-family: var(--font-display);
+  font-weight: bold;
+}
+
+.great-friends-page .card-grid-tracker__details li + li {
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(74, 42, 20, 0.18);
+}
+
+/* Checkbox: same as the group cards and list rows */
+.great-friends-page .card-grid-tracker__card-header input[type='checkbox'] {
+  appearance: none;
+  display: grid;
+  place-content: center;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  border: 3px solid var(--box-edge);
+  border-radius: 0.3rem;
+  background: #fffaf0;
+  cursor: pointer;
+}
+
+.great-friends-page .card-grid-tracker__card-header input[type='checkbox']:checked {
+  border-color: var(--box-checked);
+  background: var(--box-checked);
+}
+
+.great-friends-page .card-grid-tracker__card-header input[type='checkbox']:checked::after {
+  content: '';
+  width: 0.35rem;
+  height: 0.7rem;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: translateY(-1px) rotate(45deg);
+}
+
+.great-friends-page .card-grid-tracker__card-header input[type='checkbox']:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Befriended villagers fade, like checked rows elsewhere */
+.great-friends-page .card-grid-tracker__card:has(input:checked) .card-grid-tracker__details {
+  opacity: 0.45;
+}
+
+@media (max-width: 700px) {
+  .great-friends-page__universal {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .great-friends-page__universal h3:nth-of-type(1),
+  .great-friends-page__universal ul:nth-of-type(1),
+  .great-friends-page__universal h3:nth-of-type(2),
+  .great-friends-page__universal ul:nth-of-type(2),
+  .great-friends-page__universal h3,
+  .great-friends-page__universal ul {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .great-friends-page .card-grid-tracker {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

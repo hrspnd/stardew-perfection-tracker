@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { listCategory, toggleItem } from '../api'
 import CardGridTracker from '../components/CardGridTracker'
+import TrackerPage from '../components/TrackerPage'
 
 // GreatFriends (route: "/great-friends")
 // Uses CardGridTracker in leaf-card mode: one card per villager.
@@ -55,6 +56,7 @@ export default function GreatFriends() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
+    <TrackerPage title="Great Friends">
     <div className="great-friends-page">
       {universal && (
         <section className="great-friends-page__universal">
@@ -79,5 +81,6 @@ export default function GreatFriends() {
 
       <CardGridTracker cards={cards} size="sm" onToggleCard={handleToggleCard} />
     </div>
+    </TrackerPage>
   )
 }

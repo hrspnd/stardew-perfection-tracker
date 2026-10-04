@@ -1,46 +1,65 @@
 import { useEffect, useState } from 'react'
 import { listCategory, toggleItem } from '../api'
-import CardGridTracker from '../components/CardGridTracker'
+import ListTracker from '../components/ListTracker'
+import TrackerPage from '../components/TrackerPage'
 
 // Museum (route: "/museum")
-// Uses CardGridTracker in leaf-card mode (lg size): one card per artifact/mineral.
+// Uses TrackerPage + ListTracker, same layout as Cooking and Crafting.
+// The data is one flat list of items with columns [type, where to find], so the
+// page splits it into an Artifacts card and a Minerals card, each with its own
+// "X of Y" count. (Anything with another type lands in an "Other" card.)
 
 const CATEGORY = 'museum'
 
+const TYPES = [
+  { type: 'Artifact', title: 'Artifacts' },
+  { type: 'Mineral', title: 'Minerals' },
+]
+
+function buildLists(items) {
+  const known = TYPES.map(({ type }) => type)
+  const lists = TYPES.map(({ type, title }) => ({
+    id: type,
+    title,
+    items: items.filter((item) => item.columns?.[0] === type),
+  }))
+  const other = items.filter((item) => !known.includes(item.columns?.[0]))
+  if (other.length > 0) lists.push({ id: 'other', title: 'Other', items: other })
+
+  // The type is now the card's title, so each row only needs "where to find".
+  return lists
+    .filter((list) => list.items.length > 0)
+    .map((list) => ({
+      ...list,
+      items: list.items.map((item) => ({ ...item, columns: item.columns?.slice(1) ?? [] })),
+    }))
+}
+
 export default function Museum() {
-  const [cards, setCards] = useState([])
+  const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
     let cancelled = false
     listCategory(CATEGORY)
-      .then((data) => {
-        if (cancelled) return
-        setCards(
-          data.map((item) => ({
-            id: item.id,
-            title: item.name,
-            checked: item.checked,
-            details: item.columns ?? [],
-          }))
-        )
-      })
+      .then((data) => { if (!cancelled) setItems(data) })
       .catch((err) => { if (!cancelled) setError(err.message) })
       .finally(() => { if (!cancelled) setLoading(false) })
     return () => { cancelled = true }
   }, [])
 
-  async function handleToggleCard(cardId) {
-    setCards((current) =>
-      current.map((c) => (c.id === cardId ? { ...c, checked: !c.checked } : c))
+  async function handleToggle(itemId) {
+    setItems((current) =>
+      current.map((item) => (item.id === itemId ? { ...item, checked: !item.checked } : item))
     )
     try {
-      await toggleItem(CATEGORY, cardId)
+      const updated = await toggleItem(CATEGORY, itemId)
+      setItems((current) => current.map((item) => (item.id === itemId ? updated : item)))
     } catch (err) {
       setError(err.message)
-      setCards((current) =>
-        current.map((c) => (c.id === cardId ? { ...c, checked: !c.checked } : c))
+      setItems((current) =>
+        current.map((item) => (item.id === itemId ? { ...item, checked: !item.checked } : item))
       )
     }
   }
@@ -48,5 +67,17 @@ export default function Museum() {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Something went wrong: {error}</p>
 
-  return <CardGridTracker cards={cards} size="lg" onToggleCard={handleToggleCard} />
+  return (
+    <TrackerPage title="Museum Items Donated">
+      {buildLists(items).map((list) => (
+        <ListTracker
+          key={list.id}
+          title={list.title}
+          items={list.items}
+          columnHeaders={['Where to find']}
+          onToggle={handleToggle}
+        />
+      ))}
+    </TrackerPage>
+  )
 }
