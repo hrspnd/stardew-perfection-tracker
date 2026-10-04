@@ -155,7 +155,7 @@ See [SECURITY-CHECKLIST.md](SECURITY-CHECKLIST.md).
 
 ## Author
 
-[Pineda, Mary Alexa Ysabelle V.](https://github.com/hrspnd) — CS - 402
+[Pineda, Mary Alexa Ysabelle V.](https://github.com/hrspnd) — CS - 404
 
 ## Credits
 
