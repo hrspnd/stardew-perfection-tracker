@@ -442,56 +442,6 @@ a.layout__pill--active:hover {
   gap: 0.5rem;
 }
 
-/* ---------- SkillTracker ---------- */
-/* See skill-tracker.css from earlier for the 2-column grid + description
-   styling - merge that in here when you're ready to use it. */
-
-.skill-tracker__row-body {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  flex-wrap: nowrap;
-}
-
-.skill-tracker__tier {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-/* This is the key row: labels + checkboxes + dropdown, all inline, one line */
-.skill-tracker__tier-controls {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  position: relative;
-  padding-top: 1rem; /* leaves room for the level-number labels floated above */
-}
-
-.skill-tracker__level-labels {
-  display: flex;
-  gap: 0.4rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.skill-tracker__checkboxes {
-  display: flex;
-  gap: 0.4rem;
-}
-
-.skill-tracker__level-labels span {
-  width: 1rem;
-  text-align: center;
-  font-size: 0.75rem;
-}
-
-.skill-tracker__description {
-  margin: 0.25rem 0 0 0;
-  font-size: 0.85rem;
-}
-
 /* ---------- Tracker pages: Shipped, Walnuts, Fish, Bundles ---------- */
 /* TrackerPage frame, GroupedChecklist cards and the Bundles page. */
 
@@ -850,15 +800,6 @@ a.layout__pill--active:hover {
   font-size: 2.5rem;
 }
 
-/* SkillTracker: browsers give checkboxes default margins, which pushes the
-   hand-placed level numbers out of line. Give every box the same fixed size so
-   it matches the number labels above it (1rem wide, 0.4rem gap). */
-.skill-tracker__checkboxes input[type='checkbox'] {
-  width: 1rem;
-  height: 1rem;
-  margin: 0;
-}
-
 @media (max-width: 900px) {
   .dashboard__grid {
     grid-template-columns: 1fr;
@@ -952,26 +893,26 @@ a.layout__pill--active:hover {
   grid-row: 4;
 }
 
-/* Villager cards */
-.great-friends-page .card-grid-tracker {
+/* Leaf cards (villagers, monsters): shared by Great Friends and Monster Slayer */
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker {
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.75rem;
 }
 
-.great-friends-page .card-grid-tracker__card {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__card {
   border-radius: 1.5rem;
   overflow: hidden;
   background: var(--cream);
 }
 
-.great-friends-page .card-grid-tracker__card-header {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__card-header {
   gap: 0.9rem;
   min-height: 4.5rem;
   padding: 0.75rem 1.5rem;
   background: var(--card-head);
 }
 
-.great-friends-page .card-grid-tracker__card-header h3 {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__card-header h3 {
   flex: 1;
   min-width: 0;
   font-family: var(--font-display);
@@ -979,39 +920,39 @@ a.layout__pill--active:hover {
 }
 
 /* The whole name is clickable, not just the checkbox */
-.great-friends-page .card-grid-tracker__card-header label {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__card-header label {
   display: block;
   cursor: pointer;
 }
 
-.great-friends-page .card-grid-tracker__card-body {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__card-body {
   padding: 1rem 1.5rem 1.25rem;
 }
 
 /* No villager portraits yet: don't reserve an empty box beside the text */
-.great-friends-page .card-grid-tracker__image--placeholder {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__image--placeholder {
   display: none;
 }
 
-.great-friends-page .card-grid-tracker__details {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__details {
   gap: 0.6rem;
   font-size: 0.95rem;
   line-height: 1.45;
 }
 
-/* Birthday first, then Loves and Likes, divided by a thin rule */
-.great-friends-page .card-grid-tracker__details li:first-child {
+/* First line (birthday / quantity) in bold, then each line divided by a thin rule */
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__details li:first-child {
   font-family: var(--font-display);
   font-weight: bold;
 }
 
-.great-friends-page .card-grid-tracker__details li + li {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__details li + li {
   padding-top: 0.6rem;
   border-top: 1px solid rgba(74, 42, 20, 0.18);
 }
 
 /* Checkbox: same as the group cards and list rows */
-.great-friends-page .card-grid-tracker__card-header input[type='checkbox'] {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__card-header input[type='checkbox'] {
   appearance: none;
   display: grid;
   place-content: center;
@@ -1025,12 +966,12 @@ a.layout__pill--active:hover {
   cursor: pointer;
 }
 
-.great-friends-page .card-grid-tracker__card-header input[type='checkbox']:checked {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__card-header input[type='checkbox']:checked {
   border-color: var(--box-checked);
   background: var(--box-checked);
 }
 
-.great-friends-page .card-grid-tracker__card-header input[type='checkbox']:checked::after {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__card-header input[type='checkbox']:checked::after {
   content: '';
   width: 0.35rem;
   height: 0.7rem;
@@ -1039,13 +980,13 @@ a.layout__pill--active:hover {
   transform: translateY(-1px) rotate(45deg);
 }
 
-.great-friends-page .card-grid-tracker__card-header input[type='checkbox']:focus-visible {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__card-header input[type='checkbox']:focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 2px;
 }
 
 /* Befriended villagers fade, like checked rows elsewhere */
-.great-friends-page .card-grid-tracker__card:has(input:checked) .card-grid-tracker__details {
+:is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__card:has(input:checked) .card-grid-tracker__details {
   opacity: 0.45;
 }
 
@@ -1064,7 +1005,287 @@ a.layout__pill--active:hover {
     grid-row: auto;
   }
 
-  .great-friends-page .card-grid-tracker {
+  :is(.great-friends-page, .monster-slayer-page) .card-grid-tracker {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- SkillTracker (Farmer Skills) ----------
+   One cream card per skill, brown header like the group cards. Body: levels
+   1-5, a profession dropdown, levels 6-10, a second dropdown. Each level
+   number sits directly above its own checkbox. */
+
+.skill-tracker {
+  --skill-edge: #5a3720;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.skill-tracker__row {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.skill-tracker__row-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-height: 4.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--card-head);
+}
+
+.skill-tracker__row-header h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.skill-tracker__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.skill-tracker__row-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1.5rem 2.5rem;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+.skill-tracker__tier {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.skill-tracker__tier-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.skill-tracker__levels {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.6rem;
+}
+
+.skill-tracker__level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Checkbox: dark brown outline, cream fill */
+.skill-tracker__level input[type='checkbox'] {
+  appearance: none;
+  display: grid;
+  place-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0;
+  border: 3px solid var(--skill-edge);
+  border-radius: 0.5rem;
+  background: #fffaf0;
+  cursor: pointer;
+}
+
+.skill-tracker__level input[type='checkbox']:checked {
+  background: var(--skill-edge);
+}
+
+.skill-tracker__level input[type='checkbox']:checked::after {
+  content: '';
+  width: 0.4rem;
+  height: 0.85rem;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: translateY(-1px) rotate(45deg);
+}
+
+.skill-tracker__level input[type='checkbox']:focus-visible,
+.skill-tracker__tier select:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Dropdown: same outline as the boxes, with a filled arrow */
+.skill-tracker__tier select {
+  appearance: none;
+  flex: 1;
+  min-width: 0;
+  height: 2.25rem;
+  padding: 0 2.5rem 0 0.9rem;
+  border: 3px solid var(--skill-edge);
+  border-radius: 0.5rem;
+  background-color: #fffaf0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 4h12L8 13z' fill='%235a3720'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.skill-tracker__tier select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.skill-tracker__description {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Not enough width for both tiers side by side: stack them */
+@media (max-width: 1200px) {
+  .skill-tracker__row-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .skill-tracker__tier-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ---------- FarmProgress ----------
+   Cards for Obelisks, Golden Clock and Stardrops. Same look as the group
+   cards: cream body, brown header, rows that fade when checked. The header
+   checkbox is read-only: it ticks once every row in the card is checked. */
+
+.farm-progress-page .card-grid-tracker {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+  align-items: start; /* cards differ a lot in length, so don't stretch them */
+}
+
+.farm-progress-page .card-grid-tracker__card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.farm-progress-page .card-grid-tracker__card-header {
+  gap: 0.9rem;
+  min-height: 4.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--card-head);
+}
+
+.farm-progress-page .card-grid-tracker__card-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.farm-progress-page .card-grid-tracker__card-body {
+  padding: 1rem 1.5rem 1.25rem;
+}
+
+/* No images for these cards: don't reserve an empty box beside the list */
+.farm-progress-page .card-grid-tracker__image--placeholder {
+  display: none;
+}
+
+.farm-progress-page .card-grid-tracker__sub-items {
+  gap: 0.35rem;
+}
+
+.farm-progress-page .card-grid-tracker__sub-items li {
+  gap: 1rem;
+  padding: 0.35rem 0.25rem;
+}
+
+.farm-progress-page .card-grid-tracker__sub-items label {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+/* Checkboxes: same as the group cards and list rows */
+.farm-progress-page input[type='checkbox'] {
+  appearance: none;
+  display: grid;
+  place-content: center;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  border: 3px solid var(--box-edge);
+  border-radius: 0.3rem;
+  background: #fffaf0;
+  cursor: pointer;
+}
+
+.farm-progress-page input[type='checkbox']:checked {
+  border-color: var(--box-checked);
+  background: var(--box-checked);
+}
+
+.farm-progress-page input[type='checkbox']:checked::after {
+  content: '';
+  width: 0.35rem;
+  height: 0.7rem;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: translateY(-1px) rotate(45deg);
+}
+
+.farm-progress-page input[type='checkbox']:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* The header checkbox only reports progress, so it isn't clickable */
+.farm-progress-page .card-grid-tracker__card-header input[type='checkbox'] {
+  cursor: default;
+}
+
+/* Checked rows fade (the box stays solid so the state is still clear) */
+.farm-progress-page .card-grid-tracker__sub-items li:has(input:checked) label {
+  opacity: 0.45;
+}
+
+/* Rows that check themselves (Master Angler, A Complete Collection): not
+   clickable, with a small note saying why */
+.farm-progress-page .card-grid-tracker__sub-items li:has(input:disabled),
+.farm-progress-page .card-grid-tracker__sub-items input:disabled,
+.farm-progress-page .card-grid-tracker__sub-items li:has(input:disabled) label {
+  cursor: default;
+}
+
+.farm-progress-page .card-grid-tracker__note {
+  display: block;
+  margin-top: 0.15rem;
+  color: #8a6a4a; /* lighter than the main text, still readable on the cream card */
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .farm-progress-page .card-grid-tracker {
     grid-template-columns: minmax(0, 1fr);
   }
 }

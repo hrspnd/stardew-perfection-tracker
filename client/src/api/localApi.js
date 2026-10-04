@@ -36,16 +36,44 @@ function write(data) {
   return data
 }
 
+// Stardrops that tick themselves when another tracker is finished. Their
+// checked value is worked out each time the data is read (never stored), so it
+// can't drift out of step: untick a fish and Master Angler unticks too.
+const allChecked = (items = []) => items.length > 0 && items.every((item) => item.checked)
+
+const AUTO_STARDROPS = {
+  'master-angler': {
+    done: (data) => allChecked(data.fish),
+    note: 'Checks itself when every fish is caught',
+  },
+  'a-complete-collection': {
+    done: (data) => allChecked(data.museum),
+    note: 'Checks itself when the whole Museum is donated',
+  },
+}
+
+// The stardrops list with the automatic ones filled in (marked `auto: true`).
+function withAutoStardrops(data) {
+  return (data.stardrops ?? []).map((item) => {
+    const rule = AUTO_STARDROPS[item.id]
+    return rule ? { ...item, checked: rule.done(data), auto: true, autoNote: rule.note } : item
+  })
+}
+
 export async function listCategory(category) {
   await delay()
   const data = read()
   if (!(category in data)) throw new Error(`Unknown category: ${category}`)
+  if (category === 'stardrops') return withAutoStardrops(data)
   return data[category]
 }
 
 export async function toggleItem(category, itemId) {
   await delay()
   const data = read()
+  if (category === 'stardrops' && itemId in AUTO_STARDROPS) {
+    throw new Error('This Stardrop checks itself and cannot be toggled.')
+  }
   const items = data[category] ?? []
   const index = items.findIndex((item) => String(item.id) === String(itemId))
   if (index === -1) throw new Error('Not found')
@@ -62,10 +90,12 @@ export async function getSummary() {
   await delay()
   const data = read()
   const summary = {}
-  for (const [category, items] of Object.entries(data)) {
+  for (const [category, storedItems] of Object.entries(data)) {
     if (NON_TRACKABLE_CATEGORIES.includes(category)) {
       continue
     }
+    // Count the automatic Stardrops by their worked-out value, not the stored one.
+    const items = category === 'stardrops' ? withAutoStardrops(data) : storedItems
     if (category === 'shipped' || category === 'walnuts') {
       // Grouped shape: array of { items: [...] }
       const allItems = items.flatMap((group) => group.items)

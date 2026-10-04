@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { listCategory, toggleItem } from '../api'
 import CardGridTracker from '../components/CardGridTracker'
+import TrackerPage from '../components/TrackerPage'
 
 // FarmProgress (route: "/farm-progress")
 // One page, CardGridTracker with 3 cards: Obelisks, Golden Clock, Stardrops.
@@ -32,6 +33,9 @@ export default function FarmProgress() {
             id: item.id,
             label: item.location ? `${item.name} - ${item.location}` : item.name,
             checked: item.checked,
+            // Automatic Stardrops follow another tracker, so they can't be clicked.
+            disabled: item.auto,
+            note: item.autoNote,
           })),
         }))
         setCards(built)
@@ -51,6 +55,7 @@ export default function FarmProgress() {
   async function handleToggleSubItem(cardId, subItemId) {
     const card = cards.find((c) => c.id === cardId)
     if (!card) return
+    if (card.subItems.find((item) => item.id === subItemId)?.disabled) return
 
     // Optimistic update
     setCards((current) =>
@@ -89,5 +94,11 @@ export default function FarmProgress() {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Something went wrong: {error}</p>
 
-  return <CardGridTracker cards={cards} size="sm" onToggleSubItem={handleToggleSubItem} />
+  return (
+    <TrackerPage title="Farm Progress">
+      <div className="farm-progress-page">
+        <CardGridTracker cards={cards} size="sm" onToggleSubItem={handleToggleSubItem} />
+      </div>
+    </TrackerPage>
+  )
 }

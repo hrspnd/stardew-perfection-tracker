@@ -11,6 +11,7 @@
  * Props:
  *   skills: Array<{
  *     id, name,
+ *     icon?: string,            (optional image URL shown in the card header)
  *     levels1to5: boolean[5],
  *     profession5: string | null,
  *     profession5Options: Array<{ name, description }>,
@@ -40,26 +41,24 @@ export default function SkillTracker({ skills, onToggleLevel, onProfessionChange
         return (
           <section key={skill.id} className="skill-tracker__row">
             <header className="skill-tracker__row-header">
+              {skill.icon && <img className="skill-tracker__icon" src={skill.icon} alt="" />}
               <h3>{skill.name}</h3>
             </header>
 
             <div className="skill-tracker__row-body">
               <div className="skill-tracker__tier">
                 <div className="skill-tracker__tier-controls">
-                  <div className="skill-tracker__level-labels">
-                    {skill.levels1to5.map((_, index) => (
-                      <span key={`label-5-${index}`}>{index + 1}</span>
-                    ))}
-                  </div>
-                  <div className="skill-tracker__checkboxes">
+                  <div className="skill-tracker__levels">
                     {skill.levels1to5.map((checked, index) => (
-                      <input
-                        key={`5-${index}`}
-                        type="checkbox"
-                        checked={checked}
-                        onChange={() => onToggleLevel(skill.id, 5, index)}
-                        title={`Level ${index + 1}`}
-                      />
+                      <label key={`5-${index}`} className="skill-tracker__level">
+                        <span>{index + 1}</span>
+                        <input
+                          type="checkbox"
+                          checked={checked}
+                          onChange={() => onToggleLevel(skill.id, 5, index)}
+                          aria-label={`${skill.name} level ${index + 1}`}
+                        />
+                      </label>
                     ))}
                   </div>
 
@@ -84,20 +83,17 @@ export default function SkillTracker({ skills, onToggleLevel, onProfessionChange
 
               <div className="skill-tracker__tier">
                 <div className="skill-tracker__tier-controls">
-                  <div className="skill-tracker__level-labels">
-                    {skill.levels6to10.map((_, index) => (
-                      <span key={`label-10-${index}`}>{index + 6}</span>
-                    ))}
-                  </div>
-                  <div className="skill-tracker__checkboxes">
+                  <div className="skill-tracker__levels">
                     {skill.levels6to10.map((checked, index) => (
-                      <input
-                        key={`10-${index}`}
-                        type="checkbox"
-                        checked={checked}
-                        onChange={() => onToggleLevel(skill.id, 10, index)}
-                        title={`Level ${index + 6}`}
-                      />
+                      <label key={`10-${index}`} className="skill-tracker__level">
+                        <span>{index + 6}</span>
+                        <input
+                          type="checkbox"
+                          checked={checked}
+                          onChange={() => onToggleLevel(skill.id, 10, index)}
+                          aria-label={`${skill.name} level ${index + 6}`}
+                        />
+                      </label>
                     ))}
                   </div>
 

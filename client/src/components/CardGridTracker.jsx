@@ -25,7 +25,8 @@
  *     image?: string,
  *     checked?: boolean,                        // leaf cards
  *     details?: string[],                        // leaf cards, optional
- *     subItems?: Array<{ id, label, checked }>,   // grouped cards
+ *     subItems?: Array<{ id, label, checked, note?, disabled? }>,   // grouped cards
+ *                       // note: small text under the label; disabled: shown but not clickable
  *   }>
  *   size?: "sm" | "lg"
  *   onToggleCard?: (cardId) => void               // leaf cards (clicks are ignored if omitted)
@@ -78,9 +79,13 @@ export default function CardGridTracker({ cards, size = 'sm', onToggleCard, onTo
                         type="checkbox"
                         id={`card-${card.id}-${item.id}`}
                         checked={Boolean(item.checked)}
+                        disabled={item.disabled}
                         onChange={() => onToggleSubItem?.(card.id, item.id)}
                       />
-                      <label htmlFor={`card-${card.id}-${item.id}`}>{item.label}</label>
+                      <label htmlFor={`card-${card.id}-${item.id}`}>
+                        {item.label}
+                        {item.note && <small className="card-grid-tracker__note">{item.note}</small>}
+                      </label>
                     </li>
                   ))}
                 </ul>

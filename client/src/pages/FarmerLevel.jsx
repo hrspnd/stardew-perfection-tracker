@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { listCategory, toggleSkillLevel, setSkillProfession } from '../api'
 import SkillTracker from '../components/SkillTracker'
+import TrackerPage from '../components/TrackerPage'
 
 // FarmerLevel (route: "/farmer-level")
 // Uses SkillTracker. Pulls from the "farmerLevel" category, but toggling
@@ -61,10 +62,12 @@ export default function FarmerLevel() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <SkillTracker
-      skills={skills}
-      onToggleLevel={handleToggleLevel}
-      onProfessionChange={handleProfessionChange}
-    />
+    <TrackerPage title="Farmer Skills">
+      <SkillTracker
+        skills={skills}
+        onToggleLevel={handleToggleLevel}
+        onProfessionChange={handleProfessionChange}
+      />
+    </TrackerPage>
   )
 }

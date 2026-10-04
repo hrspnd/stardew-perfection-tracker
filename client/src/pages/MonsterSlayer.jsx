@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { listCategory, toggleItem } from '../api'
 import CardGridTracker from '../components/CardGridTracker'
+import TrackerPage from '../components/TrackerPage'
 
 // MonsterSlayer (route: "/monster-slayer")
 // Uses CardGridTracker in leaf-card mode: one card per monster type.
@@ -48,5 +49,11 @@ export default function MonsterSlayer() {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Something went wrong: {error}</p>
 
-  return <CardGridTracker cards={cards} size="sm" onToggleCard={handleToggleCard} />
+  return (
+    <TrackerPage title="Monster Slayer">
+      <div className="monster-slayer-page">
+        <CardGridTracker cards={cards} size="sm" onToggleCard={handleToggleCard} />
+      </div>
+    </TrackerPage>
+  )
 }
