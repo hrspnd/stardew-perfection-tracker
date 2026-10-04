@@ -1,18 +1,17 @@
 # Stardew Valley Perfection Tracker
 
-**Live site:** <!-- TODO: https://yourusername.github.io/stardew-perfection-tracker/ -->
-**API:** <!-- TODO: https://your-api.onrender.com/healthz -->
+[![Made with AI](https://img.shields.io/badge/Made_with-AI_assistance-blue)](AI-USAGE.md)
+
+**Live site:** [https://hrspnd.github.io/stardew-perfection-tracker/](https://hrspnd.github.io/stardew-perfection-tracker/)
 **Demo video:** <!-- TODO: link -->
 
-> **This deployment is running in demo mode.** The interface is real; the backend
-> is simulated in your browser so the site works without a server. See
-> [Demo mode](#demo-mode) under Setup.
+> **No server and no login.** Everything runs in your browser, and your progress is saved in your browser's `localStorage`. Use the menu in the top bar to export a backup file.
 
 ## 1. Overview
 
-A web app for Stardew Valley players going for 100% perfection. It tracks your progress across shipped items, walnuts, fish, bundles, recipes, museum donations, friendships, and more, and shows it all on one dashboard so you can see what is left.
+A web app for Stardew Valley players going for 100% perfection. It tracks your progress across shipped items, golden walnuts, fish, bundles, recipes, museum donations, friendships, skills, and more, and shows it all on one dashboard so you can see what is left.
 
-It is built with React and Vite on the front end. An Express and PostgreSQL back end is planned but not connected yet, so the app currently runs entirely on a mock API in the browser.
+It is built with React and Vite, with `react-router-dom` for the pages and plain CSS for styling. There is no back end. A small module, `client/src/api/localApi.js`, plays the part of one: it reads and writes your progress in `localStorage`, starting from the game data in `seed.json`. Pages only talk to that module through `client/src/api/index.js`, so the storage could be swapped for a real server later without changing any page.
 
 ## 2. Setup and installation
 
@@ -20,103 +19,91 @@ It is built with React and Vite on the front end. An Express and PostgreSQL back
 
 - Node.js 22 and npm
 - Git
-- Docker and PostgreSQL are only needed for the full stack, which is not working yet
 
 ### Get the code
 
     git clone https://github.com/hrspnd/stardew-perfection-tracker.git
     cd stardew-perfection-tracker
 
-### Install dependencies and configure
-
-This is all you need for demo mode:
+### Install dependencies
 
     cd client
     npm install
-    cp .env.example .env        # VITE_USE_MOCK_API stays true
 
-On Windows cmd, `cp` does not exist. Use `copy .env.example .env`, or run the commands in Git Bash.
+No environment variables are needed. The app runs entirely in the browser.
 
-### Environment variables
+### Starting data
 
-None of these are committed. `.env.example` in each folder lists them with placeholder values.
-
-| Name | Where | What it is | Example |
-| --- | --- | --- | --- |
-| `VITE_USE_MOCK_API` | client, at build time | only `false` turns demo mode off; unset means on | `true` |
-| `VITE_API_BASE_URL` | client, at build time | your API's public URL, no trailing slash. Not needed in demo mode | `https://your-api.example.com` |
-| `DATABASE_URL` | server | PostgreSQL connection string. Contains a password. Not used yet | `postgres://user:password@localhost:5432/stardew` |
-| `CORS_ORIGINS` | server | comma-separated origins allowed to call the API. Not used yet | `http://localhost:5173` |
-| `NODE_ENV` | server | `production` on your host | `development` |
-| `PORT` | server | set by the host, do not set it yourself | |
-
-Every `VITE_` value is compiled into the built JavaScript and is **public**. Never put a key, a password or a connection string in one.
-
-### Demo mode
-
-The client can run two ways, chosen by `VITE_USE_MOCK_API` at **build** time. Demo mode is the default, and only the exact string `false` turns it off.
-
-| `VITE_USE_MOCK_API` | What happens |
-| --- | --- |
-| unset, or `true` | The client answers its own requests from `localStorage`, seeded from the seed file on first load. No server, no database, nothing shared between visitors. |
-| `false` | The client calls the Express API at `VITE_API_BASE_URL`, which reads and writes PostgreSQL. **Not working yet.** |
-
-### Database and seed data
-
-Demo mode needs no database. Starting data comes from `client/src/api/seed.json` and is loaded into your browser's `localStorage` the first time the app runs.
-
-The PostgreSQL scripts are in `server/db/` (`schema.sql`, `seed.sql`), but the client does not use them yet.
+Starting data comes from `client/src/api/seed.json`, a file of Stardew Valley information that I researched myself. It is loaded into your browser's `localStorage` the first time the app runs. After that, your own checkmarks are stored there and the seed file is only used again if you reset your progress.
 
 ## 3. How to run it
 
     cd client
     npm run dev
 
-Open **http://localhost:5173**. You should see the Dashboard, which lists your completion percentage for each category, with a demo-mode notice. The app now has basic CSS styling, though it is not polished yet.
+Open **http://localhost:5173**. You should see the Dashboard, which shows an overall completion percentage and one progress ring per category.
+
+To build and preview the production version:
+
+    npm run build
+    npm run preview
 
 ## 4. Features and usage
 
-**What works now (in demo mode)**
+**What works**
 
-- A **Dashboard** with real completion percentages computed for each category. Obelisks, Golden Clock, and Stardrops are combined into one Farm Progress summary.
-- 11 tracker pages: Produce & Forage Shipped, Golden Walnuts, Fish Caught, Bundles, Cooking Recipes, Crafting Recipes, Farm Progress, Monster Slayer, Museum, Great Friends, and Farmer Level.
-- Check items off on any page. Your progress is saved in your browser's `localStorage`.
-- **Farmer Level** uses real Stardew Valley profession data: tick each skill level and choose a profession, with the level 5 choice deciding which level 10 options you get.
+- A **Dashboard** with a **Total Perfection** percentage and one progress ring per category. Each ring links to that category's page. Obelisks, the Golden Clock, and Stardrops are combined into one Farm Progress ring.
+- **11 tracker pages:** Produce & Forage Shipped, Golden Walnuts, Fish Caught, Bundles, Cooking Recipes, Crafting Recipes, Farm Progress, Monster Slayer, Museum, Great Friends, and Farmer Skills, all filled with the real game lists.
+- Check items off on any page. Checked items fade, and the Dashboard percentages update. Progress is saved in your browser automatically.
+- **Fish** are sorted into Year-Round, Seasonal, Night Market, and Crab Pot cards, with location, time, and weather under each fish.
+- **Bundles** are grouped by Community Center room, with each bundle's reward and how many items it needs.
+- **Museum** donations are split into Artifacts and Minerals.
+- **Great Friends** shows the universal loves and likes once above the villager cards.
+- **Farmer Skills** uses the real profession data: tick each level and pick a profession. Your level 5 choice decides which level 10 options you get.
+- **Self-checking Stardrops.** Master Angler checks itself when every fish is caught, and A Complete Collection checks itself when the whole Museum is donated.
+- **Progress menu** (the hamburger button in the top bar): **Export** your progress to a JSON file, **Import** it back (on another browser or device), or **Reset** everything. Reset asks first and offers a backup download.
 
-[CHECK: does the Dashboard also show one overall percentage? If so, add it to the first bullet.]
+**How to use it.** Open the Dashboard to see your progress, then pick a category from the sidebar. Check off items as you complete them. Because there are no accounts, use Export to back up your progress before you clear your browser data.
 
-**How to use it.** Open the Dashboard to see your progress, then open a category from the navigation. Check off items as you complete them, and the Dashboard percentages update.
-
-**Not done yet.** Bundles, Produce & Forage Shipped, Monster Slayer, and Cooking Recipes now have real data. The other 7 categories still have only 2-3 placeholder items, not the full game lists. See [Known issues and next steps](#7-known-issues-and-next-steps).
-
-**API.** There are no HTTP endpoints yet. The client talks to a mock API module in `client/src/api/` that exposes these functions:
+**The data layer.** Pages never touch storage directly. They call these functions from `client/src/api/index.js`:
 
 | Function | What it does |
 | --- | --- |
-| `listCategory` | returns all items in a category |
-| `toggleItem` | checks or unchecks one item |
-| `toggleSkillLevel` | checks or unchecks a skill level (Farmer Level) |
-| `setSkillProfession` | sets the chosen profession for a skill level (Farmer Level) |
-| `getSummary` | computes completion percentages for the Dashboard |
+| `listCategory` | returns the stored data for one category |
+| `getSummary` | computes completion totals for the Dashboard |
+| `toggleItem` | checks or unchecks one item in a flat list |
+| `toggleGroupedItem` | checks or unchecks an item in a group (Shipped, Golden Walnuts) |
+| `toggleBundleItem` | checks or unchecks an item in a bundle (room, then bundle, then item) |
+| `toggleSkillLevel` | checks or unchecks a skill level (Farmer Skills) |
+| `setSkillProfession` | sets the chosen profession for a skill (Farmer Skills) |
+| `exportData` | returns all saved progress as a JSON string |
+| `importData` | replaces saved progress with an exported file |
+| `resetData` | erases saved progress and restores the starting data |
+
+Every function is async and waits about a quarter of a second, like a real network request, so each page has a loading state.
 
 ## 5. Project structure
 
     client/
       src/
-        api/            index.js (the one interface), mockApi.js, httpApi.js,
+        api/            index.js (the one interface pages import from),
+                         localApi.js (reads and writes localStorage),
                          and seed.json (the starting data)
-        components/     ListTracker, CardGridTracker, SkillTracker,
-                         DashboardSummaryCard, Layout, DemoNotice, ProgressCard,
-                         VillagerTracker
+        components/     Layout, DataMenu, TrackerPage, GroupedChecklist,
+                         ListTracker, CardGridTracker, SkillTracker,
+                         DashboardSummaryCard (also exports ProgressRing)
         pages/          Dashboard, ProduceShipped, GoldenWalnuts, FishCaught,
                          Bundles, CookingRecipes, CraftingRecipes, FarmProgress,
-                         MonsterSlayer, Museum, GreatFriends, FarmerLevel
-    server/              Express API (not connected yet)
-      db/                pool, schema.sql, seed.sql, and a runner for them
+                         MonsterSlayer, Museum, GreatFriends, FarmerLevel, About
+        assets/         icons and background images
+        App.jsx         the routes
+        styles.css      all of the styling
+    server/              the class template's starter Express API.
+                         It is not used by this app.
     docs/                planning documents, weekly reports, and screenshots
       assets/            screenshots used in this README
 
-**How the pieces fit.** The React client reads and writes a mock API that stores data in the browser's `localStorage`. The plan is for the client to call an Express API, which reads and writes a PostgreSQL database, with each piece hosted separately.
+**How the pieces fit.** `App.jsx` puts every page inside `Layout`, which provides the top bar and sidebar. Each page loads its data through `api/index.js`, then hands it to one of four shared layouts: `GroupedChecklist`, `ListTracker`, `CardGridTracker`, or `SkillTracker`. That is how 11 trackers share four components.
 
 ## 6. Screenshots
 
@@ -124,32 +111,31 @@ Open **http://localhost:5173**. You should see the Dashboard, which lists your c
 *The Dashboard with completion percentages per category.*
 
 ![Bundles](docs/assets/bundles.png)
-*Bundles with real data and basic styling.*
+*Bundles, grouped by room.*
 
 ![Produce & Forage Shipped](docs/assets/produce-shipped.png)
-*Produce & Forage Shipped with real data and basic styling.*
+*Produce & Forage Shipped.*
 
 ![Monster Slayer](docs/assets/monster-slayer.png)
-*Monster Slayer with real data and basic styling.*
+*Monster Slayer.*
 
 ![Cooking Recipes](docs/assets/cooking-recipes.png)
-*Cooking Recipes with real data and basic styling.*
+*Cooking Recipes.*
 
 ## 7. Known issues and next steps
 
 **Known issues**
 
-- 4 of the 11 categories (Bundles, Produce & Forage Shipped, Monster Slayer, Cooking Recipes) now have real data. The other 7 still have only 2-3 placeholder items instead of the full game lists.
-- Basic CSS styling exists, but it is not polished yet.
-- There is no working backend. The app runs only on the mock API, so progress lives in one browser and is not shared.
-- No game images or sprites are used yet, only text data.
-- If you edit `seed.json` and the app still shows old data, clear the site's `localStorage` (browser DevTools, Application tab, Local Storage) and reload. The mock API keeps its own cached copy.
+- Progress lives in one browser. It is not shared between devices, and clearing your browser data erases it. Use **Export progress** to keep a backup.
+- There is no back end, so there are no accounts and no syncing.
+- Individual items do not have their own sprites yet. Only the categories have icons.
+- If you edit `seed.json` and the app still shows old data, use **Reset progress** in the menu, or clear the site's `localStorage` (browser DevTools, Application tab, Local Storage), and reload. The app keeps its own saved copy of the data.
 
 **Next steps**
 
-1. Connect the client to the Express and PostgreSQL back end, deploy it, and turn demo mode off.
-2. Fill in the full Stardew Valley data for the remaining 7 categories.
-3. Continue polishing the styling.
+1. Add sprites for individual items.
+2. Add search and filters, and check the layout on small screens.
+3. Optionally, add a real back end and accounts so progress can sync between devices.
 
 ## Deploying
 
@@ -157,13 +143,11 @@ Open **http://localhost:5173**. You should see the Dashboard, which lists your c
 
 1. **Settings > Pages > Build and deployment > Source: GitHub Actions.** Without this the workflow goes green and publishes nothing.
 
-Demo mode is the default, so the first deploy works on its own. When the API is live, add `VITE_USE_MOCK_API` = `false` and `VITE_API_BASE_URL` under **Settings > Secrets and variables > Actions > Variables**, then re-run the workflow. The repository must be **public** for Pages to serve it on a free account.
-
-**API and database.** Not automated. Point your host at the `server/` folder, set the environment variables in its dashboard, and run `server/db/schema.sql` once against the hosted database.
+The workflow sets the site's base path automatically, and `App.jsx` passes it to the router as its `basename`, so the pages work from the repository subfolder. No variables or secrets are needed, because the app has no back end. The repository must be **public** for Pages to serve it on a free account.
 
 ## AI usage
 
-Built with AI assistance from Claude (Anthropic). See [AI-USAGE.md](AI-USAGE.md) for details.
+Built with AI assistance from Claude (Anthropic). I used it heavily for the page layouts, shared components, and styling, and I researched the game data and wrote the routing and the API entry point myself. See [AI-USAGE.md](AI-USAGE.md) for the full record, including where the AI got things wrong.
 
 ## Security checklist
 
@@ -175,4 +159,4 @@ See [SECURITY-CHECKLIST.md](SECURITY-CHECKLIST.md).
 
 ## Licence
 
-MIT, see [LICENSE](LICENSE). <!-- TODO: put your own name in LICENSE -->
+MIT, see [LICENSE](LICENSE).
