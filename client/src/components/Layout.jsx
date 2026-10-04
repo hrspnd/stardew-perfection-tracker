@@ -1,4 +1,15 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
+
+import cookingIcon from '../assets/icons/Cooking.png'
+import craftingIcon from '../assets/icons/Crafting.png'
+import farmerSkillsIcon from '../assets/icons/Farmer Skills.png'
+import fishIcon from '../assets/icons/Fish Caught.png'
+import walnutIcon from '../assets/icons/Golden Walnut.png'
+import friendsIcon from '../assets/icons/Great Friends.png'
+import monsterIcon from '../assets/icons/Monster Slayer.png'
+import museumIcon from '../assets/icons/Museum.png'
+import shippingIcon from '../assets/icons/Shipping.png'
+import wizardIcon from '../assets/icons/Wizard.png'
 
 /**
  * Layout
@@ -7,7 +18,8 @@ import { NavLink } from 'react-router-dom'
  * See App.jsx for how routes map to sidebar items.
  *
  * Art slots: drop your logo into .layout__logo-img and the chicken sprite into
- * .layout__mascot (see the comments below) when you have the files.
+ * .layout__mascot (see the comments below) when you have the files. Pages with
+ * an entry in PAGE_ICONS show their own big icon at the top of the sidebar.
  */
 
 const SIDEBAR_LINKS = [
@@ -24,10 +36,28 @@ const SIDEBAR_LINKS = [
   { to: '/bundles', label: 'Bundles' },
 ]
 
+// Big icon at the top of the sidebar, chosen by route. Routes not listed here
+// (the dashboard, Bundles until it has an icon) show the empty mascot slot.
+const PAGE_ICONS = {
+  '/shipped': shippingIcon,
+  '/golden-walnuts': walnutIcon,
+  '/fish': fishIcon,
+  '/great-friends': friendsIcon,
+  '/farmer-level': farmerSkillsIcon,
+  '/monster-slayer': monsterIcon,
+  '/cooking': cookingIcon,
+  '/crafting': craftingIcon,
+  '/farm-progress': wizardIcon,
+  '/museum': museumIcon,
+}
+
 const pillClass = ({ isActive }) =>
   isActive ? 'layout__pill layout__pill--active' : 'layout__pill'
 
 export default function Layout({ children }) {
+  const { pathname } = useLocation()
+  const pageIcon = PAGE_ICONS[pathname]
+
   return (
     <div className="layout">
       <header className="layout__topnav">
@@ -58,8 +88,12 @@ export default function Layout({ children }) {
 
       <div className="layout__body">
         <aside className="layout__sidebar" aria-label="Categories">
-          {/* Swap for <img src={chicken} alt="" /> when you have the sprite */}
-          <div className="layout__mascot" aria-hidden="true" />
+          {pageIcon ? (
+            <img className="layout__page-icon" src={pageIcon} alt="" />
+          ) : (
+            /* No icon for this page: swap for <img src={chicken} alt="" /> when you have the sprite */
+            <div className="layout__mascot" aria-hidden="true" />
+          )}
           <nav className="layout__sidebar-nav">
             {SIDEBAR_LINKS.map((link) => (
               <NavLink

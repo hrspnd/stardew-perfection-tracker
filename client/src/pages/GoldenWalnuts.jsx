@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { listCategory, toggleGroupedItem } from '../api'
 import GroupedChecklist from '../components/GroupedChecklist'
+import TrackerPage from '../components/TrackerPage'
 
 // GoldenWalnuts (route: "/golden-walnuts")
-// Uses GroupedChecklist, same pattern as ProduceShipped. Groups = regions
-// (Island East/West/North/South, Volcano, Other), each item is one of the
-// 130 real walnut discoveries, labeled with its type and how many walnuts
-// it's worth when more than 1.
+// Uses TrackerPage + GroupedChecklist. Groups = regions (Island East/West/
+// North/South, Volcano, Other). Each item is a walnut discovery, labeled with
+// its type and how many walnuts it's worth when more than 1 (130 in total).
 
 export default function GoldenWalnuts() {
   const [groups, setGroups] = useState([])
@@ -58,5 +58,9 @@ export default function GoldenWalnuts() {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Something went wrong: {error}</p>
 
-  return <GroupedChecklist groups={groups} onToggleItem={handleToggleItem} />
+  return (
+    <TrackerPage title="Golden Walnuts Found">
+      <GroupedChecklist groups={groups} onToggleItem={handleToggleItem} />
+    </TrackerPage>
+  )
 }

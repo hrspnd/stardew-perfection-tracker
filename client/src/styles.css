@@ -1,7 +1,9 @@
 /* ============================================================
-   LAYOUT ONLY - no colors, no fonts, no theming yet.
-   Purpose: get every page's structure/spacing right so we can
-   see exactly what data/props are missing before we style anything.
+   Stardew Perfection Tracker styles.
+   Sections: page shell (Layout), ListTracker, CardGridTracker,
+   SkillTracker, tracker pages (GroupedChecklist + Bundles), Dashboard.
+   Fonts: set --font-display / --font-body in .layout, .tracker-page
+   and .dashboard once your fonts are loaded.
    ============================================================ */
 
 * {
@@ -9,7 +11,6 @@
 }
 
 /* ---------- Page shell (Layout.jsx) ----------
-   Replace the old "Page shell" section of styles.css with this.
    Top bar is sticky; the sidebar sticks directly beneath it and scrolls
    on its own if it gets taller than the screen. */
 
@@ -154,6 +155,17 @@ a.layout__pill--active:hover {
   display: none;
 }
 
+/* Big per-page icon (set by route in Layout.jsx) */
+.layout__page-icon {
+  display: block;
+  width: 9rem;
+  height: 9rem;
+  flex-shrink: 0;
+  align-self: center;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
 .layout__sidebar-nav {
   display: flex;
   flex-direction: column;
@@ -232,7 +244,8 @@ a.layout__pill--active:hover {
     padding: 0.5rem 0.75rem;
   }
 
-  .layout__mascot {
+  .layout__mascot,
+  .layout__page-icon {
     display: none;
   }
 
@@ -383,40 +396,95 @@ a.layout__pill--active:hover {
   font-size: 0.85rem;
 }
 
-/* ---------- GroupedChecklist ---------- */
-/* Used by Shipped (no reward) and by Bundles, where each "group" passed in
-   is actually one Bundle within a Room. */
+/* ---------- Tracker pages: Shipped, Walnuts, Fish, Bundles ---------- */
+/* TrackerPage frame, GroupedChecklist cards and the Bundles page. */
+
+/* ---------- Page frame (TrackerPage) ---------- */
+
+.tracker-page {
+  --cream: #f6ecd0;
+  --card-head: #bf7d52;
+  --ink: #4a2a14;
+  --box-edge: #b8a688;
+  --box-checked: #8d8573;
+  --gold: #e3a43a;
+  --panel: rgba(70, 90, 110, 0.85);
+  --font-display: inherit;
+  --font-body: inherit;
+
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+.tracker-page__title {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.tracker-page__panel {
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
+  background: var(--panel);
+}
+
+/* ---------- Group cards (GroupedChecklist) ---------- */
+/* GroupedChecklist.jsx splits the cards into balanced columns and sets
+   --columns (2, or 1 on narrow screens). */
 
 .grouped-checklist {
+  display: grid;
+  grid-template-columns: repeat(var(--columns, 2), minmax(0, 1fr));
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.grouped-checklist__column {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.75rem;
+  min-width: 0;
+}
+
+.grouped-checklist__group {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--cream);
 }
 
 .grouped-checklist__group-header {
   display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  align-items: center;
+  gap: 0.9rem;
+  min-height: 4.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--card-head);
 }
 
 .grouped-checklist__group-header h3 {
   margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.grouped-checklist__group-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
 
 .grouped-checklist__required-count {
-  font-size: 0.8rem;
-}
-
-.bundles-page__room-reward {
+  margin-left: auto;
   font-size: 0.85rem;
-  font-weight: normal;
 }
 
 .grouped-checklist__items {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 1rem 1.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -425,60 +493,116 @@ a.layout__pill--active:hover {
 .grouped-checklist__item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+  padding: 0.35rem 0.25rem;
 }
 
-.grouped-checklist__icon,
-.grouped-checklist__icon--placeholder {
-  width: 1.25rem;
-  height: 1.25rem;
+.grouped-checklist__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
 
+.grouped-checklist__label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.grouped-checklist__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Checkbox */
+.grouped-checklist__item input[type='checkbox'] {
+  appearance: none;
+  display: grid;
+  place-content: center;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  border: 3px solid var(--box-edge);
+  border-radius: 0.3rem;
+  background: #fffaf0;
+  cursor: pointer;
+}
+
+.grouped-checklist__item input[type='checkbox']:checked {
+  border-color: var(--box-checked);
+  background: var(--box-checked);
+}
+
+.grouped-checklist__item input[type='checkbox']:checked::after {
+  content: '';
+  width: 0.35rem;
+  height: 0.7rem;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: translateY(-1px) rotate(45deg);
+}
+
+.grouped-checklist__item input[type='checkbox']:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Checked rows fade (the box stays solid so the state is still clear) */
+.grouped-checklist__item--checked .grouped-checklist__label,
+.grouped-checklist__item--checked .grouped-checklist__icon {
+  opacity: 0.45;
+}
+
+/* Bundle reward line: a non-checkbox row at the bottom of the card */
 .grouped-checklist__reward {
-  margin-top: 0.25rem;
-  padding: 0.35rem 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.75rem;
+  background: rgba(191, 125, 82, 0.25);
+  font-size: 0.95rem;
 }
 
-/* ---------- Bundles page ---------- */
-/* Wraps one GroupedChecklist per Room (Crafts Room, Pantry, ...) */
+/* ---------- Bundles page: one block of cards per room ---------- */
 
 .bundles-page {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1rem;
 }
 
-.bundles-page__room h2 {
-  margin-bottom: 1rem;
+.bundles-page__room-title {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: #fff;
 }
 
-/* ---------- Dashboard ---------- */
-
-.dashboard__total-perfection {
-  margin-bottom: 1.5rem;
+.bundles-page__room-reward {
+  font-size: 0.95rem;
+  font-weight: normal;
+  opacity: 0.85;
 }
 
-.dashboard__total-perfection-number {
-  font-size: 2rem;
-  margin: 0;
-}
-
-.dashboard__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 0.75rem;
-}
-
-.dashboard-summary-card {
-  display: block;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
+@media (max-width: 900px) {
+  .tracker-page__panel {
+    padding: 1rem;
+  }
 }
 
 /* ---------- Dashboard ----------
-   Replace the old "Dashboard" section at the bottom of styles.css with this.
-   Colors are CSS variables so you can retune them in one place.
-   Set --font-body / --font-display to your loaded fonts. */
+   Colors are CSS variables so you can retune them in one place. */
 
 .dashboard {
   --cream: #fdf6e3;
@@ -499,6 +623,7 @@ a.layout__pill--active:hover {
   margin: 0 0 1rem;
   font-family: var(--font-display);
   font-size: 2.5rem;
+  color: #fff;
 }
 
 .dashboard__panel {
@@ -645,4 +770,3 @@ a.layout__pill--active:hover {
     transition: none;
   }
 }
-

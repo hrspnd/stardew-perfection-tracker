@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { listCategory, toggleGroupedItem } from '../api'
 import GroupedChecklist from '../components/GroupedChecklist'
+import TrackerPage from '../components/TrackerPage'
 
 // ProduceShipped (route: "/shipped")
-// Uses GroupedChecklist. Groups = categories (Spring Foraging, Animal
-// Products, Fruit Trees, ...). Each group is a plain checklist: icon + name
-// only, no other columns.
+// Uses TrackerPage + GroupedChecklist. Groups = categories (Spring Foraging,
+// Animal Products, Fruit Trees, ...). Each group is a plain checklist.
 
 export default function ProduceShipped() {
   const [groups, setGroups] = useState([])
@@ -57,5 +57,9 @@ export default function ProduceShipped() {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Something went wrong: {error}</p>
 
-  return <GroupedChecklist groups={groups} onToggleItem={handleToggleItem} />
+  return (
+    <TrackerPage title="Produce and Forage Shipped">
+      <GroupedChecklist groups={groups} onToggleItem={handleToggleItem} />
+    </TrackerPage>
+  )
 }
