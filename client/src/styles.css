@@ -8,49 +8,242 @@
   box-sizing: border-box;
 }
 
-/* ---------- Page shell (Layout.jsx) ---------- */
+/* ---------- Page shell (Layout.jsx) ----------
+   Replace the old "Page shell" section of styles.css with this.
+   Top bar is sticky; the sidebar sticks directly beneath it and scrolls
+   on its own if it gets taller than the screen. */
+
+/* Removes the browser's default 8px body margin (the white border) */
+html,
+body {
+  margin: 0;
+}
 
 .layout {
+  --topnav-h: 5.5rem;
+  --nav-bg: #0b4a8f;
+  --nav-edge: #2b1a12;
+  --side-bg: rgba(10, 45, 90, 0.82);
+  --cream: #fdf6e3;
+  --cream-edge: #c9a96b;
+  --gold: #e3a43a;
+  --ink: #4a2a14;
+  --font-display: inherit;
+  --font-body: inherit;
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: var(--font-body);
+  background: linear-gradient(#1c5fa8, #3f7fb5 40%, #4f7f4a);
+  background-attachment: fixed;
 }
 
+/* ----- Top bar ----- */
+
 .layout__topnav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
-  gap: 1rem;
+  gap: 1.5rem;
+  height: var(--topnav-h);
+  padding: 0 1.5rem;
+  background: var(--nav-bg);
+  border-bottom: 8px solid var(--nav-edge);
+}
+
+.layout__logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  color: var(--gold);
+  text-decoration: none;
+  font-family: var(--font-display);
+  text-shadow: 2px 2px 0 var(--nav-edge);
+}
+
+.layout__logo-title {
+  font-size: 1.6rem;
+}
+
+.layout__logo-subtitle {
+  font-size: 0.9rem;
+  color: var(--cream);
+}
+
+.layout__logo-img {
+  height: 3.5rem;
+  image-rendering: pixelated;
 }
 
 .layout__topnav-links {
   display: flex;
-  gap: 1rem;
+  flex: 1;
+  gap: 1.5rem;
+  margin-left: 1rem;
 }
+
+.layout__pill {
+  min-width: 10rem;
+  padding: 0.5rem 1.5rem;
+  border: 3px solid var(--cream-edge);
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-display);
+  text-align: center;
+  text-decoration: none;
+}
+
+a.layout__pill:hover,
+a.layout__pill:focus-visible {
+  background: #ffecb8;
+}
+
+.layout__pill--active,
+a.layout__pill--active:hover {
+  background: var(--gold);
+  border-color: #b9782a;
+}
+
+.layout__user {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 3px solid var(--cream);
+  border-radius: 50%;
+  color: var(--cream);
+}
+
+/* ----- Body: sidebar + content ----- */
 
 .layout__body {
   display: flex;
   flex: 1;
+  align-items: flex-start; /* lets the sidebar stay its own height so sticky works */
 }
 
 .layout__sidebar {
+  position: sticky;
+  top: var(--topnav-h);
   display: flex;
   flex-direction: column;
-  width: 220px;
+  align-items: stretch;
+  gap: 1.25rem;
+  width: 250px;
   flex-shrink: 0;
-  padding: 1rem;
-  gap: 0.5rem;
+  height: calc(100vh - var(--topnav-h));
+  overflow-y: auto;
+  padding: 1.25rem 1.25rem 2rem;
+  background: var(--side-bg);
+}
+
+.layout__mascot {
+  width: 9rem;
+  height: 9rem;
+  flex-shrink: 0;
+  image-rendering: pixelated;
+}
+
+/* No sprite yet: don't reserve empty space above the links */
+.layout__mascot:empty {
+  display: none;
+}
+
+.layout__sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
 }
 
 .layout__sidebar-link {
-  padding: 0.5rem 0.75rem;
+  padding: 0.4rem 0.75rem;
+  border: 3px solid var(--cream-edge);
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.layout__sidebar-link:hover,
+.layout__sidebar-link:focus-visible {
+  background: #ffecb8;
+}
+
+.layout__sidebar-link--active,
+.layout__sidebar-link--active:hover {
+  background: var(--gold);
+  border-color: #b9782a;
+}
+
+.layout__pill:focus-visible,
+.layout__sidebar-link:focus-visible,
+.layout__logo:focus-visible {
+  outline: 3px solid var(--cream);
+  outline-offset: 2px;
 }
 
 .layout__content {
   flex: 1;
   padding: 1.5rem;
   min-width: 0; /* prevents flex children from overflowing on wide tables */
+}
+
+/* ----- Small screens: sidebar becomes a sticky strip under the top bar ----- */
+
+@media (max-width: 800px) {
+  .layout {
+    --topnav-h: 4rem;
+  }
+
+  .layout__topnav {
+    padding: 0 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .layout__logo-subtitle,
+  .layout__topnav-links .layout__pill:not(.layout__pill--active) {
+    display: none;
+  }
+
+  .layout__pill {
+    min-width: 0;
+  }
+
+  .layout__body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .layout__sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    overflow-y: visible;
+    overflow-x: auto;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .layout__mascot {
+    display: none;
+  }
+
+  .layout__sidebar-nav {
+    flex-direction: row;
+    width: max-content;
+  }
+
+  .layout__sidebar-link {
+    white-space: nowrap;
+  }
 }
 
 /* ---------- ListTracker ---------- */
