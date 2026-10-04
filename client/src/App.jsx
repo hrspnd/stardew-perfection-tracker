@@ -13,6 +13,7 @@ import MonsterSlayer from './pages/MonsterSlayer'
 import Museum from './pages/Museum'
 import GreatFriends from './pages/GreatFriends'
 import FarmerLevel from './pages/FarmerLevel'
+import About from './pages/About'
 
 // App
 // Top-level routes — one <Route> per page, wrapped in <Layout>.
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/museum" element={<Museum />} />
           <Route path="/great-friends" element={<GreatFriends />} />
           <Route path="/farmer-level" element={<FarmerLevel />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Layout>
     </BrowserRouter>

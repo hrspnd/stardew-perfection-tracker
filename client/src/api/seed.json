@@ -6597,9 +6597,9 @@
       "id": "farming",
       "name": "Farming",
       "levels1to5": [
-        true,
-        true,
-        true,
+        false,
+        false,
+        false,
         false,
         false
       ],
@@ -6649,8 +6649,8 @@
       "id": "mining",
       "name": "Mining",
       "levels1to5": [
-        true,
-        true,
+        false,
+        false,
         false,
         false,
         false
@@ -6701,7 +6701,7 @@
       "id": "foraging",
       "name": "Foraging",
       "levels1to5": [
-        true,
+        false,
         false,
         false,
         false,

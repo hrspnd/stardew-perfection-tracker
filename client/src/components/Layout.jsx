@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom'
+import DataMenu from './DataMenu'
 
 import chickenIcon from '../assets/stardew-chicken.png'
 import bundlesIcon from '../assets/icons/Bundles.png'
@@ -15,7 +16,7 @@ import wizardIcon from '../assets/icons/Wizard.png'
 
 /**
  * Layout
- * Shared page wrapper: sticky top nav (logo, dashboard/wiki/about, user icon)
+ * Shared page wrapper: sticky top nav (logo, dashboard/wiki/about, progress menu)
  * and a sticky left sidebar. Only .layout__content scrolls.
  * See App.jsx for how routes map to sidebar items.
  *
@@ -39,7 +40,7 @@ const SIDEBAR_LINKS = [
 ]
 
 // Big icon at the top of the sidebar, chosen by route. Routes not listed here
-// (the dashboard, Bundles until it has an icon) show the empty mascot slot.
+// show the empty mascot slot.
 const PAGE_ICONS = {
   '/': chickenIcon,
   '/shipped': shippingIcon,
@@ -75,19 +76,21 @@ export default function Layout({ children }) {
           <NavLink to="/" end className={pillClass}>
             Dashboard
           </NavLink>
-          {/* TODO: replace with real wiki/about destinations, or drop these
-              if the project doesn't need them */}
-          <span className="layout__pill">Wiki</span>
-          <span className="layout__pill">About</span>
+          <a
+            href="https://stardewvalleywiki.com/Stardew_Valley_Wiki"
+            className="layout__pill"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Opens the Stardew Valley Wiki in a new tab"
+          >
+            Wiki
+          </a>
+          <NavLink to="/about" className={pillClass}>
+            About
+          </NavLink>
         </nav>
 
-        <div className="layout__user" aria-label="Account">
-          {/* TODO: user icon / account */}
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <circle cx="12" cy="8" r="4" />
-            <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" />
-          </svg>
-        </div>
+        <DataMenu />
       </header>
 
       <div className="layout__body">

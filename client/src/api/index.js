@@ -36,6 +36,13 @@
  *                                                  10 (levels 6-10)
  *   setSkillProfession(skillId, tier, value)       changing the level-5 pick
  *                                                  clears the level-10 pick
+ *
+ * Backup (no accounts, so progress can be saved to a file and loaded back):
+ *   exportData()                -> JSON string of all saved progress
+ *   importData(jsonString)      -> replaces saved progress; rejects if the
+ *                                  text isn't a progress file
+ *   resetData()                 -> erases all saved progress (back to the
+ *                                  starting data)
  */
 
 export {
@@ -46,4 +53,7 @@ export {
   toggleBundleItem,
   toggleSkillLevel,
   setSkillProfession,
+  exportData,
+  importData,
+  resetData,
 } from './localApi.js'

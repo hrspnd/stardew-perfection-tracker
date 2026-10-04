@@ -27,8 +27,11 @@ function read() {
       localStorage.removeItem(KEY)
     }
   }
-  localStorage.setItem(KEY, JSON.stringify(seed))
-  return seed
+  // Hand out a copy, never `seed` itself: toggles edit the object they get
+  // back, and that would quietly change the starting data in memory.
+  const fresh = structuredClone(seed)
+  localStorage.setItem(KEY, JSON.stringify(fresh))
+  return fresh
 }
 
 function write(data) {
@@ -208,4 +211,54 @@ export async function setSkillProfession(skillId, tier, value) {
 
   write(data)
   return skills[index]
+}
+
+// --- Backup: export / import ---
+// There are no accounts, so progress lives only in this browser. These let the
+// visitor save it to a file and load it back (on another browser or device).
+// Only stored progress is exported; the automatic Stardrops are worked out
+// from the other categories, so they come back by themselves.
+
+// Resolves with the saved progress as a JSON string.
+export async function exportData() {
+  await delay()
+  return JSON.stringify(read(), null, 2)
+}
+
+// Replaces the saved progress with the contents of an exported file (a JSON
+// string). Rejects, without changing anything, if the file isn't a progress
+// file. Categories missing from the file keep their starting data.
+export async function importData(text) {
+  await delay()
+
+  let parsed
+  try {
+    parsed = JSON.parse(text)
+  } catch {
+    throw new Error('That file is not valid JSON.')
+  }
+  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+    throw new Error('That file is not a progress file.')
+  }
+
+  const next = structuredClone(seed)
+  let matched = 0
+  for (const key of Object.keys(seed)) {
+    if (!(key in parsed)) continue
+    if (Array.isArray(seed[key]) !== Array.isArray(parsed[key])) {
+      throw new Error(`The data for "${key}" has the wrong format.`)
+    }
+    next[key] = parsed[key]
+    matched += 1
+  }
+  if (matched === 0) throw new Error('That file is not a progress file.')
+
+  write(next)
+  return next
+}
+
+// Throws away all saved progress and goes back to the starting data.
+export async function resetData() {
+  await delay()
+  return write(structuredClone(seed))
 }
