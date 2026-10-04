@@ -6,6 +6,8 @@
    and .dashboard once your fonts are loaded.
    ============================================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -37,7 +39,7 @@ html {
   --cream-edge: #c9a96b;
   --gold: #e3a43a;
   --ink: #4a2a14;
-  --font-display: inherit;
+  --font-display: 'Pixelify Sans', system-ui, sans-serif;
   --font-body: inherit;
 
   display: flex;
@@ -77,7 +79,8 @@ html {
 }
 
 .layout__logo-title {
-  font-size: 1.6rem;
+  font-size: 1.65rem;
+  white-space: nowrap; /* keep "Stardew Valley" on one line inside the nav bar */
 }
 
 .layout__logo-subtitle {
@@ -106,6 +109,8 @@ html {
   font-family: var(--font-display);
   text-align: center;
   text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
 }
 
 a.layout__pill:hover,
@@ -169,9 +174,10 @@ a.layout__pill--active:hover {
   background: transparent;
   color: var(--ink);
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: left;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .data-menu__item:hover,
@@ -217,7 +223,7 @@ a.layout__pill--active:hover {
 .data-menu__dialog h2 {
   margin: 0 0 0.75rem;
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.9rem;
 }
 
 .data-menu__dialog p {
@@ -239,8 +245,9 @@ a.layout__pill--active:hover {
   background: #fffaf0;
   color: var(--ink);
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .data-menu__action:hover {
@@ -317,9 +324,10 @@ a.layout__pill--active:hover {
   background: var(--cream);
   color: var(--ink);
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .layout__sidebar-link:hover,
@@ -423,7 +431,7 @@ a.layout__pill--active:hover {
 .list-tracker__header h3 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .list-tracker__count {
@@ -542,7 +550,7 @@ a.layout__pill--active:hover {
 
 .card-grid-tracker__card-header h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .card-grid-tracker__card-body {
@@ -589,7 +597,7 @@ a.layout__pill--active:hover {
   --box-checked: #8d8573;
   --gold: #e3a43a;
   --panel: rgba(70, 90, 110, 0.85);
-  --font-display: inherit;
+  --font-display: 'Pixelify Sans', system-ui, sans-serif;
   --font-body: inherit;
 
   font-family: var(--font-body);
@@ -599,7 +607,7 @@ a.layout__pill--active:hover {
 .tracker-page__title {
   margin: 0 0 1rem;
   font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   color: #fff;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.45); /* stays readable over the image */
 }
@@ -649,7 +657,7 @@ a.layout__pill--active:hover {
 .grouped-checklist__group-header h3 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
 }
 
@@ -773,7 +781,7 @@ a.layout__pill--active:hover {
 .bundles-page__room-title {
   margin: 0 0 1rem;
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #fff;
 }
 
@@ -800,7 +808,7 @@ a.layout__pill--active:hover {
   --green: #4f8a35;
   --track: #ddd6c6;
   --panel: rgba(70, 90, 110, 0.85);
-  --font-display: inherit;
+  --font-display: 'Pixelify Sans', system-ui, sans-serif;
   --font-body: inherit;
 
   font-family: var(--font-body);
@@ -810,7 +818,7 @@ a.layout__pill--active:hover {
 .dashboard__title {
   margin: 0 0 1rem;
   font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   color: #fff;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.45); /* stays readable over the image */
 }
@@ -842,7 +850,7 @@ a.layout__pill--active:hover {
 .dashboard__total-perfection h3 {
   margin: 0 0 1rem;
   font-family: var(--font-display);
-  font-size: 2.25rem;
+  font-size: 2.8rem;
 }
 
 .dashboard__total-perfection p {
@@ -893,7 +901,7 @@ a.layout__pill--active:hover {
 .dashboard-summary-card__title {
   margin: 0 0 0.35rem;
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.85rem;
 }
 
 .dashboard-summary-card__description {
@@ -982,7 +990,7 @@ a.layout__pill--active:hover {
   padding: 0.75rem 1.5rem;
   background: var(--card-head);
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.75rem;
 }
 
 .great-friends-page__universal > p {
@@ -996,7 +1004,7 @@ a.layout__pill--active:hover {
   margin: 1rem 0 0.5rem;
   padding-left: 1.5rem;
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.45rem;
 }
 
 .great-friends-page__universal ul {
@@ -1050,7 +1058,7 @@ a.layout__pill--active:hover {
   flex: 1;
   min-width: 0;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.75rem;
 }
 
 /* The whole name is clickable, not just the checkbox */
@@ -1174,7 +1182,7 @@ a.layout__pill--active:hover {
 .skill-tracker__row-header h3 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
 }
 
@@ -1327,7 +1335,7 @@ a.layout__pill--active:hover {
 
 .farm-progress-page .card-grid-tracker__card-header h3 {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
 }
 
@@ -1444,7 +1452,7 @@ a.layout__pill--active:hover {
 .about-page__header h3 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
 }
 
