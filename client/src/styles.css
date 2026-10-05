@@ -1436,6 +1436,8 @@ a.layout__pill--active:hover {
 /* One cream card with a brown header, like the group cards. */
 
 .about-page {
+  max-width: calc(70ch + 3rem); /* as wide as the text column plus its padding */
+  margin: 0 auto; /* centers the card in the panel */
   border-radius: 1.5rem;
   overflow: hidden;
   background: var(--cream);
@@ -1444,6 +1446,7 @@ a.layout__pill--active:hover {
 .about-page__header {
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 4.5rem;
   padding: 0.75rem 1.5rem;
   background: var(--card-head);
@@ -1462,7 +1465,7 @@ a.layout__pill--active:hover {
 
 .about-page__body p {
   max-width: 70ch; /* keeps lines a comfortable length on wide screens */
-  margin: 0 0 1rem;
+  margin: 0 auto 1rem; /* centers the text column in the card */
   line-height: 1.6;
 }
 
