@@ -1473,3 +1473,179 @@ a.layout__pill--active:hover {
 .about-page__body p:last-child {
   margin-bottom: 0;
 }
+
+/* ---------- Tablet and phone fixes ----------
+   Kept at the end of the file so they win over the desktop sizes above. */
+
+@media (max-width: 1000px) {
+  .layout {
+    --sidebar-w: 210px;
+  }
+
+  .layout__topnav {
+    gap: 1rem;
+  }
+
+  .layout__topnav-links {
+    gap: 0.75rem;
+  }
+
+  .layout__pill {
+    min-width: 0;
+    padding: 0.4rem 1.1rem;
+    font-size: 1rem;
+  }
+
+  .layout__logo-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* Dashboard: the Total Perfection card stacks its text above the ring once
+   the page is too narrow for them side by side, and the grid drops to one
+   column before the cards get cramped. */
+@media (max-width: 1600px) {
+  .dashboard__total-perfection {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .dashboard__total-perfection h3 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .dashboard__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard__total-perfection {
+    grid-row: auto;
+  }
+}
+
+/* On small screens the category strip sits over scrolling content, so make it
+   solid instead of see-through. */
+@media (max-width: 800px) {
+  .layout__sidebar {
+    background: #0a2d5a;
+    /* the strip scrolls sideways: give its scrollbar the app's colors */
+    scrollbar-width: thin;
+    scrollbar-color: var(--cream-edge) #0a2d5a;
+  }
+
+  /* show the full name, "Stardew Valley / Perfection Tracker" */
+  .layout__logo-subtitle {
+    display: block;
+    font-size: 0.8rem;
+  }
+
+  /* hamburger without the circle (keyboard focus outline is kept) */
+  .data-menu__toggle {
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 0;
+  }
+
+  .data-menu__toggle:hover,
+  .data-menu__toggle[aria-expanded='true'] {
+    background: transparent;
+  }
+}
+
+/* Keep the sticky category strip above page content (the progress rings are
+   positioned, so they were painting on top of it while scrolling). */
+.layout__sidebar {
+  z-index: 10;
+}
+
+@media (max-width: 600px) {
+  .layout__logo-title {
+    font-size: 1.2rem;
+  }
+
+  .layout__pill {
+    padding: 0.3rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .layout__content {
+    padding: 1rem;
+  }
+
+  .tracker-page__title,
+  .dashboard__title {
+    font-size: 2.2rem;
+  }
+
+  .dashboard__panel {
+    padding: 1rem;
+  }
+
+  .dashboard__grid {
+    grid-template-columns: minmax(0, 1fr); /* lets cards shrink to the screen */
+    gap: 1rem;
+  }
+
+  .dashboard-summary-card__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .dashboard__total-perfection {
+    padding: 1.5rem 1rem;
+  }
+
+  .dashboard__total-perfection h3 {
+    font-size: 2rem;
+  }
+
+  .dashboard-summary-card {
+    padding: 1rem;
+  }
+
+  .dashboard-summary-card__title {
+    font-size: 1.4rem;
+  }
+
+  .grouped-checklist__group-header h3,
+  .skill-tracker__row-header h3,
+  .about-page__header h3,
+  :is(.great-friends-page, .monster-slayer-page) .card-grid-tracker__card-header h3,
+  .farm-progress-page .card-grid-tracker__card-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .list-tracker__header h3,
+  .bundles-page__room-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Very small phones (320px and up): tighten the top bar so the menu button stays on screen. */
+@media (max-width: 380px) {
+  .layout__topnav {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .layout__logo-title {
+    font-size: 1.05rem;
+  }
+
+  .layout__logo-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .layout__pill {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .data-menu__toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
