@@ -3,7 +3,7 @@
 [![Made with AI](https://img.shields.io/badge/Made_with-AI_assistance-blue)](AI-USAGE.md)
 
 **Live site:** [https://hrspnd.github.io/stardew-perfection-tracker/](https://hrspnd.github.io/stardew-perfection-tracker/)
-**Demo video:** <!-- TODO: link -->
+**Demo video:** [Demo Video](https://drive.google.com/drive/u/2/folders/1c0oyCHUA_G5HzJot7bC9TwC1keuajAE1)
 
 > **No server and no login.** Everything runs in your browser, and your progress is saved in your browser's `localStorage`. Use the menu in the top bar to export a backup file.
 
