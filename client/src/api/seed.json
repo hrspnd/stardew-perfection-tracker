@@ -2692,9 +2692,14 @@
               "id": "bream",
               "label": "Bream",
               "checked": false
+            },
+            {
+              "id": "eel",
+              "label": "Eel",
+              "checked": false
             }
           ],
-          "reward": "Eel"
+          "reward": "Small Glow Ring"
         },
         {
           "id": "crab-pot-bundle",
@@ -6348,7 +6353,8 @@
       "checked": false,
       "columns": [
         "Birthday: Fall 24",
-        "Loves: Fried Mushroom, Leek"
+        "Loves: Fried Mushroom, Leek",
+        "Likes: Daffodil"
       ]
     },
     {
