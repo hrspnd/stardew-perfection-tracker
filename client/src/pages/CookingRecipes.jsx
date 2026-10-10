@@ -12,6 +12,7 @@ export default function CookingRecipes() {
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [actionError, setActionError] = useState(null)
 
   useEffect(() => {
     let cancelled = false
@@ -23,6 +24,7 @@ export default function CookingRecipes() {
   }, [])
 
   async function handleToggle(itemId) {
+    setActionError(null)
     setItems((current) =>
       current.map((item) => (item.id === itemId ? { ...item, checked: !item.checked } : item))
     )
@@ -30,7 +32,7 @@ export default function CookingRecipes() {
       const updated = await toggleItem(CATEGORY, itemId)
       setItems((current) => current.map((item) => (item.id === itemId ? updated : item)))
     } catch (err) {
-      setError(err.message)
+      setActionError(err.message)
       setItems((current) =>
         current.map((item) => (item.id === itemId ? { ...item, checked: !item.checked } : item))
       )
@@ -41,7 +43,11 @@ export default function CookingRecipes() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <TrackerPage title="Cooking Recipes Made">
+    <TrackerPage
+      title="Cooking Recipes Made"
+      error={actionError}
+      onDismissError={() => setActionError(null)}
+    >
       <ListTracker
         title="Recipes"
         items={items}

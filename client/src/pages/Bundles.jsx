@@ -13,6 +13,7 @@ export default function Bundles() {
   const [rooms, setRooms] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [actionError, setActionError] = useState(null)
 
   useEffect(() => {
     let cancelled = false
@@ -24,6 +25,7 @@ export default function Bundles() {
   }, [])
 
   async function handleToggleItem(roomId, bundleId, itemId) {
+    setActionError(null)
     setRooms((current) =>
       current.map((room) =>
         room.id !== roomId
@@ -47,7 +49,7 @@ export default function Bundles() {
     try {
       await toggleBundleItem(roomId, bundleId, itemId)
     } catch (err) {
-      setError(err.message)
+      setActionError(err.message)
       // Roll back on failure (re-toggle)
       setRooms((current) =>
         current.map((room) =>
@@ -75,7 +77,11 @@ export default function Bundles() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <TrackerPage title="Bundles">
+    <TrackerPage
+      title="Bundles"
+      error={actionError}
+      onDismissError={() => setActionError(null)}
+    >
       <div className="bundles-page">
         {rooms.map((room) => (
           <section key={room.id} className="bundles-page__room">

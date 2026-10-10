@@ -11,6 +11,7 @@ export default function ProduceShipped() {
   const [groups, setGroups] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [actionError, setActionError] = useState(null)
 
   useEffect(() => {
     let cancelled = false
@@ -22,6 +23,7 @@ export default function ProduceShipped() {
   }, [])
 
   async function handleToggleItem(groupId, itemId) {
+    setActionError(null)
     setGroups((current) =>
       current.map((group) =>
         group.id !== groupId
@@ -38,7 +40,7 @@ export default function ProduceShipped() {
     try {
       await toggleGroupedItem('shipped', groupId, itemId)
     } catch (err) {
-      setError(err.message)
+      setActionError(err.message)
       setGroups((current) =>
         current.map((group) =>
           group.id !== groupId
@@ -58,7 +60,11 @@ export default function ProduceShipped() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <TrackerPage title="Produce and Forage Shipped">
+    <TrackerPage
+      title="Produce and Forage Shipped"
+      error={actionError}
+      onDismissError={() => setActionError(null)}
+    >
       <GroupedChecklist groups={groups} onToggleItem={handleToggleItem} />
     </TrackerPage>
   )

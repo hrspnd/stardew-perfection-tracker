@@ -12,6 +12,7 @@ export default function MonsterSlayer() {
   const [cards, setCards] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [actionError, setActionError] = useState(null)
 
   useEffect(() => {
     let cancelled = false
@@ -33,13 +34,14 @@ export default function MonsterSlayer() {
   }, [])
 
   async function handleToggleCard(cardId) {
+    setActionError(null)
     setCards((current) =>
       current.map((c) => (c.id === cardId ? { ...c, checked: !c.checked } : c))
     )
     try {
       await toggleItem(CATEGORY, cardId)
     } catch (err) {
-      setError(err.message)
+      setActionError(err.message)
       setCards((current) =>
         current.map((c) => (c.id === cardId ? { ...c, checked: !c.checked } : c))
       )
@@ -50,7 +52,11 @@ export default function MonsterSlayer() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <TrackerPage title="Monster Slayer">
+    <TrackerPage
+      title="Monster Slayer"
+      error={actionError}
+      onDismissError={() => setActionError(null)}
+    >
       <div className="monster-slayer-page">
         <CardGridTracker cards={cards} size="sm" onToggleCard={handleToggleCard} />
       </div>

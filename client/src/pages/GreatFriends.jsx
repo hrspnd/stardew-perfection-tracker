@@ -17,6 +17,7 @@ export default function GreatFriends() {
   const [universal, setUniversal] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [actionError, setActionError] = useState(null)
 
   useEffect(() => {
     let cancelled = false
@@ -39,13 +40,14 @@ export default function GreatFriends() {
   }, [])
 
   async function handleToggleCard(cardId) {
+    setActionError(null)
     setCards((current) =>
       current.map((c) => (c.id === cardId ? { ...c, checked: !c.checked } : c))
     )
     try {
       await toggleItem(CATEGORY, cardId)
     } catch (err) {
-      setError(err.message)
+      setActionError(err.message)
       setCards((current) =>
         current.map((c) => (c.id === cardId ? { ...c, checked: !c.checked } : c))
       )
@@ -56,7 +58,11 @@ export default function GreatFriends() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <TrackerPage title="Great Friends">
+    <TrackerPage
+      title="Great Friends"
+      error={actionError}
+      onDismissError={() => setActionError(null)}
+    >
     <div className="great-friends-page">
       {universal && (
         <section className="great-friends-page__universal">

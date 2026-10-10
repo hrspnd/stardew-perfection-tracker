@@ -12,6 +12,7 @@ export default function GoldenWalnuts() {
   const [groups, setGroups] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [actionError, setActionError] = useState(null)
 
   useEffect(() => {
     let cancelled = false
@@ -23,6 +24,7 @@ export default function GoldenWalnuts() {
   }, [])
 
   async function handleToggleItem(groupId, itemId) {
+    setActionError(null)
     setGroups((current) =>
       current.map((group) =>
         group.id !== groupId
@@ -39,7 +41,7 @@ export default function GoldenWalnuts() {
     try {
       await toggleGroupedItem('walnuts', groupId, itemId)
     } catch (err) {
-      setError(err.message)
+      setActionError(err.message)
       setGroups((current) =>
         current.map((group) =>
           group.id !== groupId
@@ -59,7 +61,11 @@ export default function GoldenWalnuts() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <TrackerPage title="Golden Walnuts Found">
+    <TrackerPage
+      title="Golden Walnuts Found"
+      error={actionError}
+      onDismissError={() => setActionError(null)}
+    >
       <GroupedChecklist groups={groups} onToggleItem={handleToggleItem} />
     </TrackerPage>
   )

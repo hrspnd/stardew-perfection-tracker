@@ -1,3 +1,5 @@
+import ErrorBanner from './ErrorBanner'
+
 /**
  * TrackerPage
  * Shared page frame for Shipped, Golden Walnuts, Fish Caught and Bundles:
@@ -8,11 +10,14 @@
  * Props:
  *   title: string
  *   children: the page content (usually a GroupedChecklist)
+ *   error?: string            (a failed save: shown in a banner above the panel)
+ *   onDismissError?: () => void
  */
-export default function TrackerPage({ title, children }) {
+export default function TrackerPage({ title, children, error, onDismissError }) {
   return (
     <div className="tracker-page">
       <h2 className="tracker-page__title">{title}</h2>
+      {error && <ErrorBanner message={error} onDismiss={onDismissError} />}
       <div className="tracker-page__panel">{children}</div>
     </div>
   )

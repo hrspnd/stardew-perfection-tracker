@@ -12,6 +12,7 @@ export default function FarmerLevel() {
   const [skills, setSkills] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [actionError, setActionError] = useState(null)
 
   useEffect(() => {
     let cancelled = false
@@ -24,6 +25,8 @@ export default function FarmerLevel() {
 
   async function handleToggleLevel(skillId, tier, levelIndex) {
     const key = tier === 5 ? 'levels1to5' : 'levels6to10'
+    const before = skills.find((skill) => skill.id === skillId)?.[key]
+    setActionError(null)
 
     // Optimistic update
     setSkills((current) =>
@@ -39,12 +42,18 @@ export default function FarmerLevel() {
       const updated = await toggleSkillLevel(skillId, tier, levelIndex)
       setSkills((current) => current.map((s) => (s.id === skillId ? updated : s)))
     } catch (err) {
-      setError(err.message)
+      setActionError(err.message)
+      // Roll back on failure
+      if (before) {
+        setSkills((current) => current.map((s) => (s.id === skillId ? { ...s, [key]: before } : s)))
+      }
     }
   }
 
   async function handleProfessionChange(skillId, tier, value) {
     const key = tier === 5 ? 'profession5' : 'profession10'
+    const before = skills.find((skill) => skill.id === skillId)
+    setActionError(null)
 
     setSkills((current) =>
       current.map((skill) => (skill.id === skillId ? { ...skill, [key]: value } : skill))
@@ -54,7 +63,17 @@ export default function FarmerLevel() {
       const updated = await setSkillProfession(skillId, tier, value)
       setSkills((current) => current.map((s) => (s.id === skillId ? updated : s)))
     } catch (err) {
-      setError(err.message)
+      setActionError(err.message)
+      // Roll back on failure (changing the level-5 pick also clears the level-10 pick)
+      if (before) {
+        setSkills((current) =>
+          current.map((s) =>
+            s.id === skillId
+              ? { ...s, profession5: before.profession5, profession10: before.profession10 }
+              : s
+          )
+        )
+      }
     }
   }
 
@@ -62,7 +81,11 @@ export default function FarmerLevel() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <TrackerPage title="Farmer Skills">
+    <TrackerPage
+      title="Farmer Skills"
+      error={actionError}
+      onDismissError={() => setActionError(null)}
+    >
       <SkillTracker
         skills={skills}
         onToggleLevel={handleToggleLevel}

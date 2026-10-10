@@ -18,6 +18,7 @@ export default function FarmProgress() {
   const [cards, setCards] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [actionError, setActionError] = useState(null)
 
   useEffect(() => {
     let cancelled = false
@@ -53,6 +54,7 @@ export default function FarmProgress() {
   }, [])
 
   async function handleToggleSubItem(cardId, subItemId) {
+    setActionError(null)
     const card = cards.find((c) => c.id === cardId)
     if (!card) return
     if (card.subItems.find((item) => item.id === subItemId)?.disabled) return
@@ -74,7 +76,7 @@ export default function FarmProgress() {
     try {
       await toggleItem(card.category, subItemId)
     } catch (err) {
-      setError(err.message)
+      setActionError(err.message)
       // Roll back on failure
       setCards((current) =>
         current.map((c) =>
@@ -95,7 +97,11 @@ export default function FarmProgress() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <TrackerPage title="Farm Progress">
+    <TrackerPage
+      title="Farm Progress"
+      error={actionError}
+      onDismissError={() => setActionError(null)}
+    >
       <div className="farm-progress-page">
         <CardGridTracker cards={cards} size="sm" onToggleSubItem={handleToggleSubItem} />
       </div>

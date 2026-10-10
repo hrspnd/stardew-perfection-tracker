@@ -39,6 +39,7 @@ export default function Museum() {
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [actionError, setActionError] = useState(null)
 
   useEffect(() => {
     let cancelled = false
@@ -50,6 +51,7 @@ export default function Museum() {
   }, [])
 
   async function handleToggle(itemId) {
+    setActionError(null)
     setItems((current) =>
       current.map((item) => (item.id === itemId ? { ...item, checked: !item.checked } : item))
     )
@@ -57,7 +59,7 @@ export default function Museum() {
       const updated = await toggleItem(CATEGORY, itemId)
       setItems((current) => current.map((item) => (item.id === itemId ? updated : item)))
     } catch (err) {
-      setError(err.message)
+      setActionError(err.message)
       setItems((current) =>
         current.map((item) => (item.id === itemId ? { ...item, checked: !item.checked } : item))
       )
@@ -68,7 +70,11 @@ export default function Museum() {
   if (error) return <p>Something went wrong: {error}</p>
 
   return (
-    <TrackerPage title="Museum Items Donated">
+    <TrackerPage
+      title="Museum Items Donated"
+      error={actionError}
+      onDismissError={() => setActionError(null)}
+    >
       {buildLists(items).map((list) => (
         <ListTracker
           key={list.id}

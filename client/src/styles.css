@@ -620,6 +620,48 @@ a.layout__pill--active:hover {
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.45); /* stays readable over the image */
 }
 
+/* Notice for a change that could not be saved (shown by TrackerPage) */
+.error-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  padding: 0.75rem 1.25rem;
+  border: 3px solid #9b2c1d;
+  border-radius: 1rem;
+  background: #f6d9d3;
+  color: #6e1d12;
+}
+
+.error-banner__message {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.error-banner__dismiss {
+  flex-shrink: 0;
+  padding: 0.25rem 0.9rem;
+  border: 3px solid #9b2c1d;
+  border-radius: 999px;
+  background: #fffaf0;
+  color: #6e1d12;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.error-banner__dismiss:hover {
+  background: #fde8e3;
+}
+
+.error-banner__dismiss:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
 .tracker-page__panel {
   display: flex;
   flex-direction: column;
@@ -1573,6 +1615,11 @@ a.layout__pill--active:hover {
     font-size: 1.2rem;
   }
 
+  .layout__pill {
+    padding: 0.3rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
   .layout__content {
     padding: 1rem;
   }
@@ -1639,6 +1686,11 @@ a.layout__pill--active:hover {
 
   .layout__logo-subtitle {
     font-size: 0.7rem;
+  }
+
+  .layout__pill {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.85rem;
   }
 
   .data-menu__toggle {

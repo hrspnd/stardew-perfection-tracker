@@ -18,7 +18,12 @@ const KEY = 'stardew-tracker:progress'
 const delay = (ms = 250) => new Promise((resolve) => setTimeout(resolve, ms))
 
 function read() {
-  const stored = localStorage.getItem(KEY)
+  let stored = null
+  try {
+    stored = localStorage.getItem(KEY)
+  } catch {
+    // Storage blocked (some private modes): fall through to the starting data.
+  }
   if (stored) {
     try {
       return JSON.parse(stored)
@@ -30,12 +35,20 @@ function read() {
   // Hand out a copy, never `seed` itself: toggles edit the object they get
   // back, and that would quietly change the starting data in memory.
   const fresh = structuredClone(seed)
-  localStorage.setItem(KEY, JSON.stringify(fresh))
+  try {
+    localStorage.setItem(KEY, JSON.stringify(fresh))
+  } catch {
+    // Can't save yet. Reading still works; a change reports the problem when it writes.
+  }
   return fresh
 }
 
 function write(data) {
-  localStorage.setItem(KEY, JSON.stringify(data))
+  try {
+    localStorage.setItem(KEY, JSON.stringify(data))
+  } catch {
+    throw new Error('Browser storage is full or blocked.')
+  }
   return data
 }
 
