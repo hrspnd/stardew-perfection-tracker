@@ -349,6 +349,12 @@ a.layout__pill--active:hover {
   outline-offset: 2px;
 }
 
+/* Phone-only copies of the top-bar links (Dashboard, Wiki, About): hidden here,
+   shown in the small-screen block below */
+.layout__sidebar-link--mobile-only {
+  display: none;
+}
+
 .layout__content {
   flex: 1;
   padding: 1.5rem;
@@ -371,13 +377,10 @@ a.layout__pill--active:hover {
     width: auto;
   }
 
-  .layout__logo-subtitle,
-  .layout__topnav-links .layout__pill:not(.layout__pill--active) {
+  /* The top-bar pills don't fit next to the logo and menu button: Dashboard,
+     Wiki and About move into the category strip instead */
+  .layout__topnav-links {
     display: none;
-  }
-
-  .layout__pill {
-    min-width: 0;
   }
 
   .layout__body {
@@ -406,6 +409,10 @@ a.layout__pill--active:hover {
 
   .layout__sidebar-link {
     white-space: nowrap;
+  }
+
+  .layout__sidebar-link--mobile-only {
+    display: block;
   }
 }
 
@@ -1566,11 +1573,6 @@ a.layout__pill--active:hover {
     font-size: 1.2rem;
   }
 
-  .layout__pill {
-    padding: 0.3rem 0.9rem;
-    font-size: 0.95rem;
-  }
-
   .layout__content {
     padding: 1rem;
   }
@@ -1637,11 +1639,6 @@ a.layout__pill--active:hover {
 
   .layout__logo-subtitle {
     font-size: 0.7rem;
-  }
-
-  .layout__pill {
-    padding: 0.3rem 0.7rem;
-    font-size: 0.85rem;
   }
 
   .data-menu__toggle {

@@ -89,6 +89,12 @@ export async function toggleItem(category, itemId) {
 // getSummary skips these since they have no total/completed to count.
 const NON_TRACKABLE_CATEGORIES = ['greatFriendsUniversal', 'museumRewards']
 
+// Walnuts an entry is worth: the number in "(+N)" in its label, otherwise 1.
+function walnutValue(item) {
+  const match = /\(\+(\d+)\)/.exec(item.label)
+  return match ? Number(match[1]) : 1
+}
+
 export async function getSummary() {
   await delay()
   const data = read()
@@ -99,7 +105,18 @@ export async function getSummary() {
     }
     // Count the automatic Stardrops by their worked-out value, not the stored one.
     const items = category === 'stardrops' ? withAutoStardrops(data) : storedItems
-    if (category === 'shipped' || category === 'walnuts') {
+    if (category === 'walnuts') {
+      // Grouped shape, but each entry is worth a different number of walnuts
+      // (its label says "(+3)", "(+5)", ...; no tag means 1). Count walnuts,
+      // not entries, so the total is the 130 the game has.
+      const allItems = items.flatMap((group) => group.items)
+      summary[category] = {
+        total: allItems.reduce((sum, item) => sum + walnutValue(item), 0),
+        completed: allItems
+          .filter((item) => item.checked)
+          .reduce((sum, item) => sum + walnutValue(item), 0),
+      }
+    } else if (category === 'shipped') {
       // Grouped shape: array of { items: [...] }
       const allItems = items.flatMap((group) => group.items)
       summary[category] = {
@@ -107,12 +124,18 @@ export async function getSummary() {
         completed: allItems.filter((item) => item.checked).length,
       }
     } else if (category === 'bundles') {
-      // Nested shape: array of rooms > bundles > items
-      const allItems = items.flatMap((room) => room.bundles.flatMap((bundle) => bundle.items))
-      summary[category] = {
-        total: allItems.length,
-        completed: allItems.filter((item) => item.checked).length,
+      // Nested shape: array of rooms > bundles > items. Some bundles only need
+      // some of their items ("any 5 of 9", via requiredCount), so each bundle
+      // counts for what it needs, and ticking extras can't push it past that.
+      const allBundles = items.flatMap((room) => room.bundles)
+      let total = 0
+      let completed = 0
+      for (const bundle of allBundles) {
+        const needed = bundle.requiredCount ?? bundle.items.length
+        total += needed
+        completed += Math.min(bundle.items.filter((item) => item.checked).length, needed)
       }
+      summary[category] = { total, completed }
     } else if (category === 'farmerLevel') {
       // Skills don't have a flat `checked` field - progress here means
       // how many of the 10 levels (5 + 5) are checked, summed across skills.

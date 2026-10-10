@@ -59,6 +59,14 @@ const PAGE_ICONS = {
 const pillClass = ({ isActive }) =>
   isActive ? 'layout__pill layout__pill--active' : 'layout__pill'
 
+// Dashboard, Wiki and About are pills in the top bar on wide screens. On phones
+// the top bar has no room for them, so copies sit in the category strip instead
+// (the CSS hides these copies on wide screens, and the pills on phones).
+const mobileLinkClass = ({ isActive }) =>
+  isActive
+    ? 'layout__sidebar-link layout__sidebar-link--mobile-only layout__sidebar-link--active'
+    : 'layout__sidebar-link layout__sidebar-link--mobile-only'
+
 export default function Layout({ children }) {
   const { pathname } = useLocation()
   const pageIcon = PAGE_ICONS[pathname]
@@ -102,6 +110,9 @@ export default function Layout({ children }) {
             <div className="layout__mascot" aria-hidden="true" />
           )}
           <nav className="layout__sidebar-nav">
+            <NavLink to="/" end className={mobileLinkClass}>
+              Dashboard
+            </NavLink>
             {SIDEBAR_LINKS.map((link) => (
               <NavLink
                 key={link.to}
@@ -115,6 +126,17 @@ export default function Layout({ children }) {
                 {link.label}
               </NavLink>
             ))}
+            <NavLink to="/about" className={mobileLinkClass}>
+              About
+            </NavLink>
+            <a
+              href="https://stardewvalleywiki.com/Stardew_Valley_Wiki"
+              className="layout__sidebar-link layout__sidebar-link--mobile-only"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Wiki
+            </a>
           </nav>
         </aside>
 
