@@ -7,7 +7,7 @@ repository, so it is versioned alongside the thing it describes.
 | --- | --- | --- |
 | [01-proposal.md](01-proposal.md) | the revised proposal | finals, m8a1 |
 | [02-mockup.md](02-mockup.md) | what the app will look like | finals, m8a2 |
-| [03-design-system.md](03-design-system.md) | colours, type, components | finals, m8a3 |
+| [03-design-system.pdf](03-design-system.pdf) | colours, type, components | finals, m8a3 |
 | [04-weekly-reports.md](04-weekly-reports.md) | a few lines a week | every week |
 | [05-demo-video.md](05-demo-video.md) | the recording, and its plan | the end |
 | [06-security-and-privacy.md](06-security-and-privacy.md) | what you checked before making this public | before your first push |
