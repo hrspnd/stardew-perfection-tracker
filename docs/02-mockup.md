@@ -63,5 +63,8 @@ with a profession select after each group of five, instead of a plain list.
 - **Sidebar items.** The mockup sidebar lists Wizard Shop and Stardrops, which are
   not pages in the app (Stardrops are tracked inside Farm Progress and
   auto-checked), and it leaves out Farm Progress and Bundles, which the app has.
+- **Item sprites.** The mockup shows a sprite beside each checklist item (a
+  placeholder chicken stands in for most of them). I did not get to adding item
+  sprites to the app.
 - **Profile icon.** The mockup top bar has a user icon. The app has no accounts
   or login, so it was left out.
